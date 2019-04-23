@@ -1,0 +1,48 @@
+nav.navbar, navbar-toggler {
+    height:70px;
+    font-family: Arial;
+    font-size: 30px;
+    top: 10px;
+    
+  }
+  
+  header {
+    background-color:#FCEE5B;
+    height: 154px;
+    font-size: 45px;
+  
+  }
+
+  .slogan{
+    font-size: 25px;
+   } 
+  .logo{
+    width:140px;
+    height:140px;
+   } 
+
+aside {
+  text-align: center;
+top: 20px;
+background: #FCEE5B;
+}
+
+main {
+top: 20px;
+background: #FCEE5B;
+}
+
+footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:40px;
+  width:100%;
+  background:#F7C3E5;
+}
+
+#adds {
+  top: 40px;
+  background: #FCEE5B;
+  }
+  

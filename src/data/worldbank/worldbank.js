@@ -2836,7 +2836,7 @@ const WORLDBANK = {
         },
         "countryName": "Perú",
         "countryCode": "PER",
-        "indicatorName": "Educacin terciaria, profesores (% de mujeres)",
+        "indicatorName": "Educación terciaria, profesores (% de mujeres)",
         "indicatorCode": "SE.TER.TCHR.FE.ZS"
       },
       {
@@ -10036,7 +10036,7 @@ const WORLDBANK = {
         },
         "countryName": "México",
         "countryCode": "MEX",
-        "indicatorName": "Educacin terciaria, profesores (% de mujeres)",
+        "indicatorName": "Educación terciaria, profesores (% de mujeres)",
         "indicatorCode": "SE.TER.TCHR.FE.ZS"
       },
       {
@@ -18622,7 +18622,7 @@ const WORLDBANK = {
         },
         "countryName": "Brasil",
         "countryCode": "BRA",
-        "indicatorName": "Educacin terciaria, profesores (% de mujeres)",
+        "indicatorName": "Educación terciaria, profesores (% de mujeres)",
         "indicatorCode": "SE.TER.TCHR.FE.ZS"
       },
       {
@@ -30376,7 +30376,7 @@ const WORLDBANK = {
         },
         "countryName": "Chile",
         "countryCode": "CHL",
-        "indicatorName": "Educacin terciaria, profesores (% de mujeres)",
+        "indicatorName": "Educación terciaria, profesores (% de mujeres)",
         "indicatorCode": "SE.TER.TCHR.FE.ZS"
       },
       {

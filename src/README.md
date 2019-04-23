@@ -57,13 +57,12 @@ EQUIDAD DE GENERO, página informativa.  Página Web que proporciona informacion
 
 #### Historia de Usuario:
 
-* Usuario nº1
-       
-Usuario definido: Estudiante
+## Usuario nº1
+### Estudiante
 
-        "Como estudiante quiero buscar la tasa de participacion de mujeres de 15 a 24 años en la fuerza laboral".
+*Como estudiante quiero buscar la tasa de participacion de mujeres de 15 a 24 años en la fuerza laboral.*
 
-Criterios de aceptación -  Usuario n°1:
+**Criterios de aceptación:**
 
 El usuario debe ingresar a la pagina web.
 El usuario hace click en botón "Empleo".
@@ -71,16 +70,29 @@ El usuario selecciona: pregunta, año y país.
 El usuario selecciona la pregunta = "Tasa de participación".
 El usuario hace click en botón "Resultados"
 El usuario visualiza tabla de filtrado e información.
+# Historia de Usuario
+
+## Mapa de usuario
+
+---
+Al pensar en los diferentes usuarios que visitarian la página pensamos en que harian los usuarios y que necesitarian ,para lograr sus resultados deseados. Para eso se creo el siguente mapa de usuario
+
+img
+
+------------
 
 
 
-* Usuario nº2
 
-Usuario definido: Mujer 30 años victima de violencia.
 
-        "Como mujer que sufre violencia intrafamiliar busca saber que tan común es la violencia por parte de los maridos en Chile".
 
-Criterios de aceptación - Usuario n°2:
+
+## Usuario nº2
+### Mujer 30 años victima de violencia.
+
+*Como mujer que sufre violencia intrafamiliar busca saber que tan común es la violencia por parte de los maridos en Chile. *
+
+**Criterios de aceptación:**
 
 El usuario debe ingresar a la pagina web.
 El usuario hace click en botón "social".
@@ -90,14 +102,12 @@ El usuario hace click en botón "Resultados"
 El usuario visualiza tabla de filtrado e información.
 
 
+## Usuario nº3
+### Representante de ONG
 
-* Usuario nº3
+*Como representante de ONG  quiero buscar el % de población, mayor de 25 años que tiene un nivel de instrucción avanzado.*
 
-Usuario definido: Representante de ONG
-
-        "Como representante de ONG quiero buscar el % de población, mayor de 25 años que tiene un nivel de instrucción avanzado".
-
-Criterios de aceptación - Usuario nn°3:
+**Criterios de aceptación:**
 
 El usuario debe ingresar a la pagina web.
 El usuario hace click en botón "Educación".
@@ -126,18 +136,18 @@ El estudio de la información que proporciona la data se visualiza en las siguie
 
 - Indices - Area Educación:
 
-![Indices - Área Educación ](imagenes/indicadorEducacion.png)
+![Indices - Área Educación ](img/indicadorEducacion.png)
 <br>
 
 - Indices - Área Laboral: 
 
-![Indices - Área Laboral ](imagenes/indicadorLaboral.png)
+![Indices - Área Laboral ](img/indicadorLaboral.png)
  <br>v
 
  - Indices - Área Social:
  <br>
  <br>
-![Indices - Área Social ](imagenes/indicadorSocial.png)
+![Indices - Área Social ](img/indicadorSocial.png)
 
 
 Etapa n°3:
@@ -149,7 +159,7 @@ En el siguiente link, es posible visualizar la encuesta. https://forms.gle/mBkYh
 
 La encuesta contiene una pregunta abierta, en la cual se le pregunta a los encuentados : "¿Qué información buscarías sobre equidad en Latinoamérica?". En la cual la mayoria de las respuestas, los encuestados solicitaban informacion respecto al rol de la mujer en la sociedad, la diferencia de sueldo, informacion de diferencias en educacion y diferencias en el ambito laboral (Ver imagen - Resultados encuesta - pregunta abierta).
 
-![Resultados encuesta (segmento representativo)- pregunta abierta](imagenes/preguntaAbiertaEncuesta.png)
+![Resultados encuesta (segmento representativo)- pregunta abierta](img/preguntaAbiertaEncuesta.png)
 
 
 Etapa n°4: 
@@ -160,31 +170,31 @@ A continuacion imagenes del bosquejo:
 
 * Imagen - PROTOTIPO BAJA FIDELIDAD -Home:
 <br> 
-![PROTOTIPO BAJA FIDELIDAD -Home ](imagenes/homePrototipoBajaF.jpg)
+![PROTOTIPO BAJA FIDELIDAD -Home ](img/homePrototipoBajaF.jpg)
 <br>
 <br>
 <br>
 * Imagen - PROTOTIPO BAJA FIDELIDAD -Botones Menu Principal -click:
 <br> 
-![PROTOTIPO BAJA FIDELIDAD -Boton Menu ](imagenes/sectionEducacionPrototipoBajaF.jpg)
+![PROTOTIPO BAJA FIDELIDAD -Boton Menu ](img/sectionEducacionPrototipoBajaF.jpg)
 <br>
 <br>
 <br>
 * Imagen - PROTOTIPO BAJA FIDELIDAD -Menu Dos:
 <br> 
-![PROTOTIPO BAJA FIDELIDAD -Menu Dos](imagenes/tablaMenuDos.jpg)
+![PROTOTIPO BAJA FIDELIDAD -Menu Dos](img/tablaMenuDos.jpg)
 <br>
 <br>
 <br>
 * Imagen - PROTOTIPO BAJA FIDELIDAD -Visualización de Datos:
 <br>
-![PROTOTIPO BAJA FIDELIDAD - Datos](imagenes/visualizacionDatosPrototipo.jpg)
+![PROTOTIPO BAJA FIDELIDAD - Datos](img/visualizacionDatosPrototipo.jpg)
 <br>
 <br>
 <br>
 * Imagen - PROTOTIPO BAJA FIDELIDAD -Visualización de "Datos Ordenados":
 <br>
-![PROTOTIPO BAJA FIDELIDAD - Datos ordenados ](imagenes/DatosOrdenadosPrototipoBaja.jpg)
+![PROTOTIPO BAJA FIDELIDAD - Datos ordenados ](img/DatosOrdenadosPrototipoBaja.jpg)
 <br>
 <br>
 <br>
@@ -192,11 +202,62 @@ A continuacion imagenes del bosquejo:
 
 #### **Prototipo de alta fidelidad**
 
+### Prueba con muestra de Alta Fidelidad
+
+A cada usuario se le presenta la pagina , pidiendoles que resulvan una petición, la cual es la siquiente.
+- Busca información sobre el porcentaje de educación de nivel secundario alumnos mujeres en Chile en la decada del 90 y luego vuelve al inicio.
+Al finalizar prueba se les pregunta:
+- ¿Cómo encontraron la página?
+- ¿Qué agregarian?
+- ¿sabes de que trata la página?
+El link es el siguiente
+
+[prototype figma](http://https://www.figma.com/proto/XNkXKMYF6CDWPQXkNZVhte3I/Untitled?node-id=2%3A2&scaling=min-zoom "prototype figma")
+
+#### Usuario 1
+##### Carlos, 30 años, trabajador.
+No tuvo problemas para resolver la petición. DIce que menús e información se encuentra clara y de facil acceso.
+Agregaria apoyo visual, como imagenes atras de los menús.
+que resultado sea mas llamativo y no tan formal.
+Carlos responde que pagina trata sobre porcentajes del rol de la mujer en la sociedad.
+[http://mfnkfnr](http://mfnkfnr)
+
+#### Usuario 2
+##### Alejandra, 17 años, estudiante.
+Alejandra pregunto una vez para resolver la peticion ya que no le quedo clara la division de segmentos, pero al aclararle las divisiones no tuvo problema para resolverlo. Dice que las subcategorias deberian tener una breve explicacion. para guiar.
+Ella dice que la páina trata sobre diferencias de la mujer en la sociedad.
+[http://mfnkfnr](http://mfnkfnr)
+
+#### Usuario 1
+##### Alicia, 58 años, trabajador.
+Siguio los pasos correctamente, llegó a ver los resultados.
+Dice que agregaria informacion extra sobre mujeres en Latinoamerica y links que den mas informacion.
+Alicia dice que se nota que la página da porcentaje de diferencias economicas de la mujer en America.
+[http://mfnkfnr](http://mfnkfnr)
+
+
+
+
 
 
 #### **Testeos de usabilidad**
 
 
+#Diseño
+---
+Para el diseño de la página nos enfocamos principalmente en las necesidades del usuario, que buscaban, que necesitan y la comodidad del usuario.
+Para esto nos enfocamos en crear una pagina simple y directa donde facilmente pueda encontrar la información que busca.
+
+## Criterios de diseño
+
+- Forma: primero lo que quisimos lograr es que los menús fueran de libre acceso. que se mantuvieran los mismos menús durante todo el recorrido de la página, para que el usuario no tuviera confusiones y pudiera volver a los diferentes menús.
+
+- Color : La pagina esta hecha con colores llamativos para lla mar la atención del usuario y que no pierda la atencion.
+La pagina esta en base a cuatro tonos, blanco, negro, amarillo y rosa.
+Elegimos blanco y negro para que sea  mas legible la información. y loo otros son porque el amarillo es el color del sol y se traduce en optimismo, alegría, felicidad, energía, brillo, calor, inteligencia.Si es un amarillo puro se usa para llamar la atención, es símbolo de alerta, especialmente si se combina con el negro.
+El color rosa se asocia fuertemente a la feminidad  y tambien en el rosa palido lo podemos unir con la inocencia.
+
+- Tipografia:
 
 ### **4.4 Implementación de la Interfaz de Usuario (HTML/CSS/JS)**
 
