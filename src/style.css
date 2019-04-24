@@ -46,3 +46,46 @@ footer {
   background: #FCEE5B;
   }
   
+.card {  
+    width: 18rem;
+    height: 426px;
+    
+    }
+
+.card-img-top {  
+width: 18rem;
+height: 213px;
+
+}
+#btnSection {
+background-color: #F7C3E5;
+border-color: #F7C3E5;
+
+}
+
+#btnSection:hover{
+  background-color: palevioletred;
+}
+
+
+.styled-select select {
+  background: #F7C3E5;
+  border: none;
+  font-size: 14px;
+  height: 29px;
+  width: 268px;
+}
+
+#select:hover {
+  background-color: #fc0; /* poner el color que gustes */
+}
+
+#btnDataNivEdu {
+  background-color: #F7C3E5;
+  border-color: #F7C3E5;
+  
+  }
+  
+  #btnDataNivEdu:hover{
+    background-color: palevioletred;
+  }
