@@ -1,4 +1,15 @@
+// let edubtn = document.getElementById('edubtn');
 
+// const homepage = document.getElementById('homepage');
+// const sectionEdu = document.getElementById('sectionEdu');
+// sectionEdu.style.display='none';
+// sectionLab.style.display = 'none';
+// sectionSoc.style.display = 'none';
+// selectNivEdu.style.display = 'none';
+
+// edubtn.addEventListener('click', () =>{
+//     homepage.style.display = 'none';
+//   })
 
 function countrySelec() {
     let selectNivEduCountry = ["Perú", "Mexico", "Brasil", "Chile"]; //Tu array de provincias

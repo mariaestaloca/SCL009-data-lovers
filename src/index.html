@@ -70,8 +70,9 @@
 
 
 				<main class="col-md-8">
-					<h2>Estadisticas y datos de mujeres en Latino America</h2>
-					<div class="bd-example">
+					
+		<div id="homePage" class="bd-example">
+							<h2>Estadisticas y datos de mujeres en Latino America</h2>
 							<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 								<ol class="carousel-indicators">
 									<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -110,14 +111,15 @@
 									<span class="sr-only">Next</span>
 								</a>
 							</div>
+							<p>Si bien entre 2000 y 2015 se produjeron avances a nivel mundial con relación a la igualdad entre los géneros gracias a los Objetivos de Desarrollo 
+									del Milenio (incluida la igualdad de acceso a la enseñanza primaria), las mujeres y las niñas siguen sufriendo la discriminación y la violencia en todos los lugares del mundo.
+									La igualdad entre los géneros no es solo un derecho humano fundamental, sino la base necesaria para conseguir un mundo pacífico, próspero y sostenible. Lamentablemente, en la actualidad, 1 de cada 5 mujeres y niñas entre 15 y 49 años de edad afirmaron haber experimentado violencia física o sexual, o ambas, en manos de su pareja en los 12 meses anteriores a ser preguntadas sobre este asunto. Además, 49 países no tienen leyes que protejan a las mujeres de la violencia doméstica. Asimimso, aunque se ha avanzado a la hora de proteger a las mujeres y niñas de prácticas nocivas como el matrimonio infantil y la mutilación genital femenina (MGF), que ha disminuido en un 30% en la última década, aún queda mucho trabajo por hacer para acabar con esas prácticas.
+									Si se facilita la igualdad a las mujeres y niñas en el acceso a la educación, a la atención médica, a un trabajo decente, y una representación en los procesos de adopción de decisiones políticas y económicas, se estarán impulsando las economías sostenibles y las sociedades y la humanidad en su conjunto se beneficiarán al mismo tiempo.
+									Estableciendo nuevos marcos legales sobre la igualdad de las mujeres en el lugar de trabajo y la erradicación de las prácticas nocivas sobre las mujeres es crucial para acabar con la discriminación basada en el género que prevalece en muchos países del mundo.</p>
 						</div>
-					<p>Si bien entre 2000 y 2015 se produjeron avances a nivel mundial con relación a la igualdad entre los géneros gracias a los Objetivos de Desarrollo 
-						del Milenio (incluida la igualdad de acceso a la enseñanza primaria), las mujeres y las niñas siguen sufriendo la discriminación y la violencia en todos los lugares del mundo.
-						La igualdad entre los géneros no es solo un derecho humano fundamental, sino la base necesaria para conseguir un mundo pacífico, próspero y sostenible. Lamentablemente, en la actualidad, 1 de cada 5 mujeres y niñas entre 15 y 49 años de edad afirmaron haber experimentado violencia física o sexual, o ambas, en manos de su pareja en los 12 meses anteriores a ser preguntadas sobre este asunto. Además, 49 países no tienen leyes que protejan a las mujeres de la violencia doméstica. Asimimso, aunque se ha avanzado a la hora de proteger a las mujeres y niñas de prácticas nocivas como el matrimonio infantil y la mutilación genital femenina (MGF), que ha disminuido en un 30% en la última década, aún queda mucho trabajo por hacer para acabar con esas prácticas.
-						Si se facilita la igualdad a las mujeres y niñas en el acceso a la educación, a la atención médica, a un trabajo decente, y una representación en los procesos de adopción de decisiones políticas y económicas, se estarán impulsando las economías sostenibles y las sociedades y la humanidad en su conjunto se beneficiarán al mismo tiempo.
-						Estableciendo nuevos marcos legales sobre la igualdad de las mujeres en el lugar de trabajo y la erradicación de las prácticas nocivas sobre las mujeres es crucial para acabar con la discriminación basada en el género que prevalece en muchos países del mundo.</p>
+					
 
-<div id="sectionEdu">
+    <div id="sectionEdu">
 <h2>Sección Educación</h2>
 <div class="card-group" >
 	
@@ -199,20 +201,22 @@
 								
 							</div>
 						</div>
-						</div>
-            <div class="selectDataNivEdu" class="row">
+		</div>
+    <div id="selectNivEdu"class="selectDataNivEdu" class="row">
 							<h2>Nivel de Educación</h2>
 							<div class="styled-select slate">
 								<h4>País</h4>
 								<div class="col-md-2">
 									<select id="selectNivEduCountry" onchange="showSelector()"></select>
-									</div>
+								</div>
+							 </div>	
 								<div class="styled-select slate">
 										<h4>Pregunta</h4>
 										<div class="col-md-2">
 											<select id="selectNivEduIndicator" onchange="nivEdu()"></select>
 								
 										</div> 
+								</div>
 								<div class="styled-select slate">
 										<h4>Decada</h4>
 										<div class="col-md-2">
@@ -220,9 +224,8 @@
 									</div>
 										<button id="btnDataNivEdu">Ver datos</button>
 								</div>
-								
-
-								</div>
+		</div>
+	
 				</main>
 
 
