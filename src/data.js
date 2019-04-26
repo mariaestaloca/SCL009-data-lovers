@@ -14,7 +14,6 @@ window.example = example;
 */
 
 
-let {PER,MEX,BRA,CHL} = WORLDBANK;
 
 /*
 // al banco le saco sus 4 objetos 

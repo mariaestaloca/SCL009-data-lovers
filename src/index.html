@@ -203,24 +203,20 @@
             <div class="selectDataNivEdu" class="row">
 							<h2>Nivel de Educación</h2>
 							<div class="styled-select slate">
+								<h4>País</h4>
 								<div class="col-md-2">
-									<select id="selectNivEduCountry"></select>
+									<select id="selectNivEduCountry" onchange="showSelector()"></select>
 									</div>
-								<div class="col-md-2">
-								<h4>Pregunta</h4>
-									<select>
-											<option></option>
-											<option>The second option</option>
-											<option>The third option</option>
-										</select>
-										</div>
-								<div class="col-md-2">
-								<h4>Decada</h4>		
-									<select>
-											<option>Decada</option>
-											<option>The second option</option>
-											<option>The third option</option>
-										</select>
+								<div class="styled-select slate">
+										<h4>Pregunta</h4>
+										<div class="col-md-2">
+											<select id="selectNivEduIndicator" onchange="nivEdu()"></select>
+								
+										</div> 
+								<div class="styled-select slate">
+										<h4>Decada</h4>
+										<div class="col-md-2">
+											<select id="selectNivEduDecade"></select>
 									</div>
 										<button id="btnDataNivEdu">Ver datos</button>
 								</div>
@@ -275,8 +271,8 @@
 			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-		<script src="data.js"></script>
+      <script src="./data/worldbank/worldbank.js"></script>
+		  <script src="data.js"></script>
 			<script src="main.js"></script>
 </body>
 
@@ -284,7 +280,7 @@
 		<footer class="row">
 				<div class="col">
 					<h4>Copyrights P&P</h4>
-				</div>
+				</div> 
 			</footer>
 			
 
