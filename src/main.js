@@ -1,15 +1,124 @@
-// let edubtn = document.getElementById('edubtn');
+let edubtn = document.getElementById('edubtn');
 
-// const homepage = document.getElementById('homepage');
-// const sectionEdu = document.getElementById('sectionEdu');
-// sectionEdu.style.display='none';
-// sectionLab.style.display = 'none';
-// sectionSoc.style.display = 'none';
-// selectNivEdu.style.display = 'none';
+const homePage = document.getElementById('homePage');
+const sectionEdu = document.getElementById('sectionEdu');
+sectionEdu.style.display='none';
+sectionLab.style.display = 'none';
+sectionSoc.style.display = 'none';
+selectNivEdu.style.display = 'none';
+selectInsSco.style.display = 'none';
+selectNivIns.style.display = 'none';
+selectNivDes.style.display = 'none';
+selectLabFor.style.display = 'none';
+selectParLab.style.display = 'none';
+selectNivVio.style.display = 'none';
+tableDataPage.style.display = 'none';
 
-// edubtn.addEventListener('click', () =>{
-//     homepage.style.display = 'none';
-//   })
+edubtn.addEventListener('click', function(){
+
+    sectionLab.style.display = 'none';
+    sectionSoc.style.display = 'none';
+    selectNivEdu.style.display = 'none';
+    selectInsSco.style.display = 'none';
+    selectNivIns.style.display = 'none';
+    selectNivDes.style.display = 'none';
+    selectLabFor.style.display = 'none';
+    selectParLab.style.display = 'none';
+    selectNivVio.style.display = 'none';
+    homePage.style.display = 'none';
+    tableDataPage.style.display = 'none';
+    sectionEdu.style.display = 'block';
+  })
+
+  socbtn.addEventListener('click', function(){
+    homePage.style.display = 'none';
+    sectionEdu.style.display='none';
+    sectionLab.style.display = 'none';
+    selectNivEdu.style.display = 'none';
+    selectInsSco.style.display = 'none';
+    selectNivIns.style.display = 'none';
+    selectNivDes.style.display = 'none';
+    selectLabFor.style.display = 'none';
+    selectParLab.style.display = 'none';
+    selectNivVio.style.display = 'none';
+    tableDataPage.style.display = 'none';
+    sectionSoc.style.display = 'block';
+    
+  })
+
+  labbtn.addEventListener('click', function(){
+    homePage.style.display = 'none';
+    sectionSoc.style.display = 'none';
+    sectionEdu.style.display='none';
+    selectNivEdu.style.display = 'none';
+    selectInsSco.style.display = 'none';
+    selectNivIns.style.display = 'none';
+    selectNivDes.style.display = 'none';
+    selectLabFor.style.display = 'none';
+    selectParLab.style.display = 'none';
+    selectNivVio.style.display = 'none';
+    tableDataPage.style.display = 'none';
+    sectionLab.style.display = 'block';
+  })
+
+  homebtn.addEventListener('click', function(){
+    sectionLab.style.display = 'none';
+    sectionSoc.style.display = 'none';
+    sectionEdu.style.display='none';
+    selectNivEdu.style.display = 'none';
+    selectInsSco.style.display = 'none';
+    selectNivIns.style.display = 'none';
+    selectNivDes.style.display = 'none';
+    selectLabFor.style.display = 'none';
+    selectParLab.style.display = 'none';
+    selectNivVio.style.display = 'none';
+    tableDataPage.style.display = 'none';
+    homePage.style.display = 'block';
+  })
+
+  btnSecNivEdu.addEventListener('click', function(){
+    sectionEdu.style.display = 'none';
+    selectNivEdu.style.display = 'block';
+  })
+
+  btnSecInsSco.addEventListener('click', function(){
+    sectionEdu.style.display = 'none';
+    selectInsSco.style.display = 'block';
+  })
+  btnSecNivIns.addEventListener('click', function(){
+    sectionEdu.style.display = 'none';
+    selectNivIns.style.display = 'block';
+  })
+
+  btnSecNivDes.addEventListener('click', function(){
+    sectionLab.style.display = 'none';
+    selectNivDes.style.display = 'block';
+  })
+
+  btnSecLabFor.addEventListener('click', function(){
+    sectionLab.style.display = 'none';
+    selectLabFor.style.display = 'block';
+  })
+
+  btnSecParLab.addEventListener('click', function(){
+    sectionLab.style.display = 'none';
+    selectParLab.style.display = 'block';
+  })
+
+  btnSecNivVio.addEventListener('click', function(){
+    sectionSoc.style.display = 'none';
+    selectNivVio.style.display = 'block';
+  })
+
+  
+  btnData.addEventListener('click', function(){
+    selectNivEdu.style.display = 'none';
+    tableDataPage.style.display = 'block';
+  })
+
+  
+
+  
 
 function countrySelec() {
     let selectNivEduCountry = ["Perú", "Mexico", "Brasil", "Chile"]; //Tu array de provincias
@@ -56,6 +165,7 @@ function nivDec(){
     document.getElementById("selectNivEduDecade").innerHTML="";
     let selectNivEduDecade = Object.keys(values.indicators[answerSelector].data); //
     console.log(selectNivEduDecade)
+  
     
     
     for(let i=0; i < selectNivEduDecade.length; i++){ 
