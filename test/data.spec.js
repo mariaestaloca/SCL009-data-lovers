@@ -11,6 +11,6 @@ describe('example', () => {
   });
 
   it('debería retornar "example"', () => {
-    assert.equal(example(), 'example');
+    assert.deepEqual(example(), 'example');
   });
 })
