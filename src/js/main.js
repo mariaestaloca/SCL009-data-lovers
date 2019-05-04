@@ -81,7 +81,6 @@ document.getElementById('homebtn').addEventListener('click', () => {
 btnSecNivEdu.addEventListener('click', function () {
     sectionEdu.style.display = 'none';
     selectNivEdu.style.display = 'block';
-
     selectNivEduOption();
 });
 // click cuando se hace click en inscripcion escolar 
