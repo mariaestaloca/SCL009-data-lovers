@@ -322,9 +322,7 @@ document.getElementById("btnData").addEventListener("click", () => {
         aplicar(year, question, country);
         tableDataPage.style.display = 'block';
     }
-    console.log(year);
-    console.log(question);
-    console.log(country);
+
 });
 
 document.getElementById("btnDataInsSco").addEventListener("click", () => {
@@ -412,6 +410,6 @@ function pais(condition) {
         country = arrChile;
     }
 
-    console.log(country)
+
     //  return country;
 }
