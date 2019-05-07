@@ -1,7 +1,14 @@
+const homePage = document.getElementById("homePage");
+const sectionEdu = document.getElementById("sectionEdu");
+const sectionLab = document.getElementById("sectionLab");
+const sectionSoc = document.getElementById("sectionSoc");
+const contact = document.getElementById("contact");
+// const tableDataPage = document.getElementById("tableDataPage");
+
 sectionEdu.style.display = 'none';
 sectionLab.style.display = 'none';
 sectionSoc.style.display = 'none';
-selectNivEdu.style.display = 'none';
+document.getElementById("selectNivEdu").style.display = 'none';
 selectInsSco.style.display = 'none';
 selectNivIns.style.display = 'none';
 selectNivDes.style.display = 'none';
@@ -94,43 +101,46 @@ document.getElementById('contactbtn').addEventListener('click', () => {
 });
 //                                       CLICK SUBCATEGORIA EDUCACION 
 //click cuando se hace click en nivel de educacion 
-btnSecNivEdu.addEventListener('click', function () {
+document.getElementById('btnSecNivEdu').addEventListener('click', () => {
+
     sectionEdu.style.display = 'none';
     selectNivEdu.style.display = 'block';
     selectNivEduOption();
 });
 // click cuando se hace click en inscripcion escolar 
-btnSecInsSco.addEventListener('click', function () {
+    document.getElementById('btnSecInsSco').addEventListener('click', () => {
     sectionEdu.style.display = 'none';
     selectInsSco.style.display = 'block';
     selectInsScoOption(); 
 });
 // click cuando se hace click en nivel de inscripcion
-btnSecNivIns.addEventListener('click', function () {
+
+    document.getElementById('btnSecNivIns').addEventListener('click', () => {
     sectionEdu.style.display = 'none';
     selectNivIns.style.display = 'block';
     selectNivInsOption();
 });
 //                                       CLICK SUBCATEGORIA LABORAL
 // click cuando se hace click en nivel de desempleo
-btnSecNivDes.addEventListener('click', function () {
+    document.getElementById('btnSecNivDes').addEventListener('click', () => {
     sectionLab.style.display = 'none';
     selectNivDes.style.display = 'block';
     selectNiveDesOption();
 })
-btnSecLabFor.addEventListener('click', function () {
+
+    document.getElementById('btnSecLabFor').addEventListener('click', () => {
     sectionLab.style.display = 'none';
     selectLabFor.style.display = 'block';
     selectForLabOption();
 });
-btnSecParLab.addEventListener('click', function () {
+    document.getElementById('btnSecParLab').addEventListener('click', () => {
     sectionLab.style.display = 'none';
     selectParLab.style.display = 'block';
     selectParLabOption();
 });
 //                                       CLICK SUBCATEGORIA SOCIAL
 // click cuando se hace click en nivel de desempleo
-btnSecNivVio.addEventListener('click', function () {
+    document.getElementById('btnSecNivVio').addEventListener('click', () => {
     sectionSoc.style.display = 'none';
     selectNivVio.style.display = 'block';
     selectNivVioOption();
@@ -146,7 +156,7 @@ let country = "";
 const selectNivEduCountrySave = document.getElementById("selectNivEduCountry");
 selectNivEduCountrySave.addEventListener("change", () => {
     condition = selectNivEduCountrySave.options[selectNivEduCountrySave.selectedIndex].text;
-    console.log(condition)
+  
     pais(condition);
 });
 // Indicators Selection:
@@ -154,21 +164,21 @@ const selectNivEduIndicatorSave = document.getElementById("selectNivEduIndicator
 // const containerDos = document.getElementById("containerselectNivEduPreguntas");
 selectNivEduIndicatorSave.addEventListener("change", () => {
     question = selectNivEduIndicatorSave.options[selectNivEduIndicatorSave.selectedIndex].text;
-    console.log(question);
+    
 });
 //Year Selection
 const selectNivEduDecadeSave = document.getElementById("selectNivEduDecade");
 // const year = document.getElementById("containerselectNivEduDecada");
 selectNivEduDecadeSave.addEventListener("change", () => {
     year = selectNivEduDecadeSave.options[selectNivEduDecadeSave.selectedIndex].text;
-    console.log(year);
+   
 });
 // STORING USER SELECTION - SCHOOL REGISTRATION
 // Country Selection:
 const selectInsScoCountrySave = document.getElementById("selectInsScoCountry");
 selectInsScoCountrySave.addEventListener("change", () => {
     condition = selectInsScoCountrySave.options[selectInsScoCountrySave.selectedIndex].text;
-    console.log(condition)
+    
     pais(condition);
 });
 // Indicators Selection:
@@ -176,110 +186,111 @@ const selectInsScoIndicatorSave= document.getElementById("selectInsScoIndicator"
 // const containerDos = document.getElementById("containerselectNivEduPreguntas");
 selectInsScoIndicatorSave.addEventListener("change", () => {
     question = selectInsScoIndicatorSave.options[selectInsScoIndicatorSave.selectedIndex].text;
-    console.log(question);
+    
 });
 //Year Selection
 const selectInsScoDecadeSave = document.getElementById("selectInsScoDecade");
 selectInsScoDecadeSave.addEventListener("change", () => {
     year = selectInsScoDecadeSave.options[selectInsScoDecadeSave.selectedIndex].text;
-    console.log(year);
+   
 });
 // STORING USER SELECTION - LEVEL OF INSTRUCTION 
 // Country Selection:
 const selectNivInsCountrySave = document.getElementById("selectNivInsCountry");
 selectNivInsCountrySave.addEventListener("change", () => {
     condition = selectNivInsCountrySave.options[selectNivInsCountrySave.selectedIndex].text;
-    console.log(condition);
+  
     pais(condition);
 }); 
 // Indicators Selection:  
 const selectNivInsIndicatorSave = document.getElementById("selectNivInsIndicator");
 selectNivInsIndicatorSave.addEventListener("change", () => {
     question = selectNivInsIndicatorSave.options[selectNivInsIndicatorSave.selectedIndex].text;
-    console.log(question);
+    
 });
 //Year Selection
 const selectNivInsDecadeSave = document.getElementById("selectNivInsDecade");
 selectNivInsDecadeSave.addEventListener("change", () => {
     year = selectNivInsDecadeSave.options[selectNivInsDecadeSave.selectedIndex].text;
-    console.log(year);
+   
 });
 // STORING USER SELECTION -   LEVEL OF UNEMPLOYMENT
 // Country Selection:
 const selectNivDesCountrySave = document.getElementById("selectNivDesCountry");
 selectNivDesCountrySave.addEventListener("change", () => {
     condition = selectNivDesCountrySave.options[selectNivDesCountrySave.selectedIndex].text;
-    console.log(condition);
+    
     pais(condition);
 }); 
 // Indicators Selection:  
 const selectNivDesIndicatorSave = document.getElementById("selectNivDesIndicator");
 selectNivDesIndicatorSave.addEventListener("change", () => {
     question = selectNivDesIndicator.options[selectNivDesIndicator.selectedIndex].text;
-    console.log(question);
+  
 });
 //Year Selection
 const selectNivDesDecadeSave = document.getElementById("selectNivDesDecade");
 selectNivDesDecadeSave.addEventListener("change", () => {
     year = selectNivDesDecadeSave.options[selectNivDesDecadeSave.selectedIndex].text;
-    console.log(year);
+  
 });
 // obteniendo eleccion de usuario -   FUERZA LABORAL
 const selectLabForCountrySave = document.getElementById("selectLabForCountry");
 selectLabForCountrySave.addEventListener("change", () => {
     condition = selectLabForCountrySave.options[selectLabForCountrySave.selectedIndex].text;
-    console.log(condition);
+    
     pais(condition);
 }); 
   
 const selectLabForIndicatorSave = document.getElementById("selectLabForIndicator");
 selectLabForIndicatorSave.addEventListener("change", () => {
     question = selectLabForIndicatorSave.options[selectLabForIndicatorSave.selectedIndex].text;
-    console.log(question);
+   
 });
 const selectLabForDecadeSave = document.getElementById("selectLabForDecade");
 selectLabForDecadeSave.addEventListener("change", () => {
     year = selectLabForDecadeSave.options[selectLabForDecadeSave.selectedIndex].text;
-    console.log(year);
+  
 });
 // obteniendo eleccion de usuario -   PARTICIPACION LABORAL 
 const selectParLabCountrySave = document.getElementById("selectParLabCountry");
 selectParLabCountrySave.addEventListener("change", () => {
     condition = selectParLabCountrySave.options[selectParLabCountrySave.selectedIndex].text;
-    console.log(condition);
+  
     pais(condition);
 }); 
   
 const selectParLabIndicatorSave = document.getElementById("selectParLabIndicator");
 selectParLabIndicatorSave.addEventListener("change", () => {
     question = selectParLabIndicatorSave.options[selectParLabIndicatorSave.selectedIndex].text;
-    console.log(question);
+   
 });
 const selectParLabDecadeSave = document.getElementById("selectParLabDecade");
 selectParLabDecadeSave.addEventListener("change", () => {
     year = selectParLabDecadeSave.options[selectParLabDecadeSave.selectedIndex].text;
-    console.log(year);
+  
 });
 // obteniendo eleccion de usuario -   NIVEL DE VIOLENCIA INTRAFAMILIAR
 const selectNivVioCountrySave = document.getElementById("selectNivVioCountry");
 selectNivVioCountrySave.addEventListener("change", () => {
     condition = selectNivVioCountrySave.options[selectNivVioCountrySave.selectedIndex].text;
-    console.log(condition);
+  
     pais(condition);
 }); 
   
 const selectNivVioIndicatorSave = document.getElementById("selectNivVioIndicator");
 selectNivVioIndicatorSave.addEventListener("change", () => {
     question = selectNivVioIndicatorSave.options[selectNivVioIndicatorSave.selectedIndex].text;
-    console.log(question);
+   
 });
 const selectNivVioDecadeSave = document.getElementById("selectNivVioDecade");
 selectNivVioDecadeSave.addEventListener("change", () => {
     year = selectNivVioDecadeSave.options[selectNivVioDecadeSave.selectedIndex].text;
-    console.log(year);
+   
 });
 //   M O S T R A R      D A T O S ; 
 //VARIABLES VACIAS fx aplicar()
+
 document.getElementById("btnData").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
         alert("Debe completar todos los datos requeridos");
@@ -295,9 +306,7 @@ document.getElementById("btnDataInsSco").addEventListener("click", () => {
         aplicar(year, question, country);
         tableDataPage.style.display = 'block';
     }
-    console.log(year);
-    console.log(question);
-    console.log(country);
+  
 });
 document.getElementById("btnDataNivIns").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
@@ -306,9 +315,7 @@ document.getElementById("btnDataNivIns").addEventListener("click", () => {
         aplicar(year, question, country);
         tableDataPage.style.display = 'block';
     }
-    console.log(year);
-    console.log(question);
-    console.log(country);
+   
 });
 document.getElementById("btnDataNivDes").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
@@ -317,9 +324,7 @@ document.getElementById("btnDataNivDes").addEventListener("click", () => {
         aplicar(year, question, country);
         tableDataPage.style.display = 'block';
     }
-    console.log(year);
-    console.log(question);
-    console.log(country);
+   
 });
 document.getElementById("btnDataLabFor").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
@@ -328,9 +333,7 @@ document.getElementById("btnDataLabFor").addEventListener("click", () => {
         aplicar(year, question, country);
         tableDataPage.style.display = 'block';
     }
-    console.log(year);
-    console.log(question);
-    console.log(country);
+
 });
 document.getElementById("btnDataParLab").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
@@ -339,9 +342,7 @@ document.getElementById("btnDataParLab").addEventListener("click", () => {
         aplicar(year, question, country);
         tableDataPage.style.display = 'block';
     }
-    console.log(year);
-    console.log(question);
-    console.log(country);
+ 
 });
 document.getElementById("btnDataNivVio").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
@@ -350,9 +351,7 @@ document.getElementById("btnDataNivVio").addEventListener("click", () => {
         aplicar(year, question, country);
         tableDataPage.style.display = 'block';
     }
-    console.log(year);
-    console.log(question);
-    console.log(country);
+   
 });
 // funcion condicional pais
 function pais(condition) {
@@ -371,17 +370,17 @@ function pais(condition) {
 
 
 const arrSelectGralCountry = ["PERU", "MEXICO", "BRASIL", "CHILE"];
-// console.log(arrSelectGralCountry);
+
 const intervalos = ["1999", 
                     "2000", "2001", "2002", "2003", "2004", "2005", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", 
                     "2014", "2015", "2016", "2017"];
-// console.log(intervalos);
+
 const {PER,MEX,BRA, CHL} = WORLDBANK;
 const arrPeru = PER.indicators;
 const arrMexico = MEX.indicators;
 const arrBrasil = BRA.indicators;
 const arrChile = CHL.indicators;
-// console.log(arrSelectNivEduIndicators);
+
 // // const sectionEdu = document.getElementById('sectionEdu');
 // // inicialmente 
 //                                                          I N D I C A T O R S          S U B C  A T E G  O R  I  A 
@@ -423,9 +422,9 @@ const arrselectLabForIndicators = [ "Fuerza laboral con educación avanzada (% d
                               "Fuerza laboral con educación intermedia, varones (% de la fuerza laboral masculina)"];
   
 const arrselectLabParIndicators = [ "Tasa de población activa, mujeres (% de la población femenina mayor de 15 años) (estimación modelado OIT)",
-                              "Tasa de participación en la fuerza laboral, de 15 a 24 años, mujeres (%) (estimación nacional)",
-                              "Tasa de participación en la fuerza laboral, de 15 a 24 años, total (%) (estimación nacional)",
-                              "Tasa de participación en la fuerza laboral, de 15 a 24 años, varones (%) (estimación nacional)",
+                              "Tasa de participación en la fuerza laboral, de 15 a 24 años, mujeres (%) (estimación nacional)",
+                              "Tasa de participación en la fuerza laboral, de 15 a 24 años, total (%) (estimación nacional)",
+                              "Tasa de participación en la fuerza laboral, de 15 a 24 años, varones (%) (estimación nacional)",
                               "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-64 años) (estimación modelado OIT)",
                               "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-64 años) (estimación modelado OIT)",
                               "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina mayor de 15 años) (estimación nacional)",
