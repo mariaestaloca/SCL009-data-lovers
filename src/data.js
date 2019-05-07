@@ -103,7 +103,66 @@
 //                     // creates a <td> element
 //                     mycurrent_cell = document.createElement("td");
 //                     // creates a Text Node
-//                     currenttext = document.createTextNode(i);
+//                     currenttext = document.createTextNode(i);nuevos mensajes
+￼
+Hame (AcheZeta)16:44
+La importancia de la visibilización de las mujeres.
+
+¿Conocen el proyecto de la Correctora?
+
+https://m.facebook.com/story.php?story_fbid=642334562860554&id=250332328727448
+Sin título ￼
+￼
+￼
+￼
+￼
+:grito:
+7
+￼
+:mujer_mano_en_la_cara:
+14
+￼
+:seriously:
+9
+￼
+:angry_fb:
+3
+￼
+￼
+￼
+￼
+3 respuestas
+Última respuesta hace 3 díasVer hilo
+￼
+Lizzie (lizzie136)21:15
+De cuando aprovechas el html semántico 
+https://twitter.com/calebporzio/status/1122924167769264130?s=21
+Pueden ver la documentación de summary aquí https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary
+￼Caleb Porzio@calebporzio
+:fuego::grito: Something you probably didn't know HTML/CSS could do. SUPER useful!
+￼Twitter29 abr.
+￼
+￼
+￼MDN Web Docs
+: The Disclosure Summary element
+The HTML Disclosure Summary element (summary) element specifies a summary, caption, or legend for a details element's disclosure box.
+￼
+:heart_fb:
+4
+￼
+:ojos_estrella:
+2
+￼
+:monito:
+2
+￼
+￼
+Hame (AcheZeta)23:24
+Un curso gratuito (: 
+https://www.udemy.com/share/1004p8B0ESclxSR3Q=/
+￼Udemy
+React vs Angular vs Vue.js by Example | Udemy
+Decide for yourself which you like the best. - Free Course(8 k
                     
 //                     // appends the Text Node we created into the cell <td>
 //                     mycurrent_cell.appendChild(currenttext);
