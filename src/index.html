@@ -18,16 +18,16 @@
 
 			<!-- encabeza, colocar: titulo - frase - logo pagina  -->
 			<header class= "row" >
-					<div class="col-6 align-self-center " >
+					<div id="genderEquality" class="col-6 align-self-center " >
 						<h1>EQUIDAD DE GÉNERO</h1>
 					</div>
 					
-					<div id=slogan class="col-4 align-self-end">
+					<div id="slogan" class="col-4 align-self-end d-none d-lg-block ">
 							<h3>Generando Identidad</h3>
 					</div>
 
 
-					<div class="col-2" id=logoHeader>
+					<div class="col-2 align-right" id="logoHeader">
 							<img class="logo" src="img/comfeminista-212x300.png" href="logo">
 					</div>
 			
@@ -41,19 +41,19 @@
                  </button>
                  <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
-                     <li class="nav-item active">
+                     <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
                          <button id="homebtn">HOME <span class="sr-only">(current)</span></button>
                      </li>
-                     <li class="nav-item">
-				         <button id="edubtn">EDUCACIÓN</button>
+                     <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+				         <button data-toggle="collapse" id="edubtn">EDUCACIÓN</button>
                      </li>
-                     <li class="nav-item">
+                     <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
                          <button id="socbtn">SOCIAL</button>
                      </li>
-                     <li class="nav-item">
+                     <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
                          <button id="labbtn">LABORAL</button>
-                         <li class="nav-item">
-                             <button id="gallerybtn">GALERIA</button>
+                         <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+                             <button id="contactbtn">CONTACTO</button>
                          </li>
                       </li> 
                   </ul>
@@ -107,11 +107,9 @@
 									<span class="sr-only">Next</span>
 								</a>
 							</div>
-							<p>Si bien entre 2000 y 2015 se produjeron avances a nivel mundial con relación a la igualdad entre los géneros gracias a los Objetivos de Desarrollo 
+							<p id="parrafo">Si bien entre 2000 y 2015 se produjeron avances a nivel mundial con relación a la igualdad entre los géneros gracias a los Objetivos de Desarrollo 
 									del Milenio (incluida la igualdad de acceso a la enseñanza primaria), las mujeres y las niñas siguen sufriendo la discriminación y la violencia en todos los lugares del mundo.
-									La igualdad entre los géneros no es solo un derecho humano fundamental, sino la base necesaria para conseguir un mundo pacífico, próspero y sostenible. Lamentablemente, en la actualidad, 1 de cada 5 mujeres y niñas entre 15 y 49 años de edad afirmaron haber experimentado violencia física o sexual, o ambas, en manos de su pareja en los 12 meses anteriores a ser preguntadas sobre este asunto. Además, 49 países no tienen leyes que protejan a las mujeres de la violencia doméstica. Asimimso, aunque se ha avanzado a la hora de proteger a las mujeres y niñas de prácticas nocivas como el matrimonio infantil y la mutilación genital femenina (MGF), que ha disminuido en un 30% en la última década, aún queda mucho trabajo por hacer para acabar con esas prácticas.
-									Si se facilita la igualdad a las mujeres y niñas en el acceso a la educación, a la atención médica, a un trabajo decente, y una representación en los procesos de adopción de decisiones políticas y económicas, se estarán impulsando las economías sostenibles y las sociedades y la humanidad en su conjunto se beneficiarán al mismo tiempo.
-									Estableciendo nuevos marcos legales sobre la igualdad de las mujeres en el lugar de trabajo y la erradicación de las prácticas nocivas sobre las mujeres es crucial para acabar con la discriminación basada en el género que prevalece en muchos países del mundo.</p>
+									La igualdad entre los géneros no es solo un derecho humano fundamental, sino la base necesaria para conseguir un mundo pacífico, próspero y sostenible. </p>
 					</div>
 
                     <div id="sectionEdu" >
@@ -196,6 +194,10 @@
 							     </div>
 						    </div>
 		            </div>
+
+	
+
+ 
                     <!-- select por categoria -->
                     <div id="selectNivEdu"class="selectDataNivEdu" class="row">
 							<h2>Nivel de Educación</h2>
@@ -367,6 +369,22 @@
 		                     <button id="btnOrdenar" class="btn btn-primary">Ordenar datos</button>
 						 </div>
 					</div>
+								<div id="contact">
+					<h3>Contactanos</h3>
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">Nombre</label>
+    <input type="text" id="fname" name="firstname" placeholder="Tu nombre...">
+
+    <label for="lname">Apellido</label>
+    <input type="text" id="lname" name="lastname" placeholder="tu apellido..">
+
+    <label for="subject">Mensaje</label>
+    <textarea id="subject" name="subject" placeholder="Tu mensaje.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
 				</main>
 
 				<aside id="aside" class="col-md-4">
@@ -391,6 +409,7 @@
             <script src="./data/worldbank/worldbank.js"></script>
 		    <script src="js/data.js"></script>
 			<script src="js/main.js"></script>
+			<script src="js/selectCreationFunctions.js"></script>
 			<!--<script src="main.js"></script>-->
     </body>
 
