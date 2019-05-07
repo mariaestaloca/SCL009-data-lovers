@@ -2,6 +2,7 @@
 //            EDUCACION
 
 //     creacion de select para nivel de educacion
+
 function selectNivEduOption() {
     //Tu array de PAISES  aqui en el array tenemos el contenido de las opciones y tienen un id por pais PER,MEX,BRA,CHL
     let selectCountryNivEdu = document.getElementById("selectNivEduCountry");

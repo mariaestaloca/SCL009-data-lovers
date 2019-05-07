@@ -9,6 +9,7 @@ selectLabFor.style.display = 'none'
 selectParLab.style.display = 'none';
 selectNivVio.style.display = 'none';
 tableDataPage.style.display = 'none';
+contact.style.display = 'none';
 
 //                                      EVENTOS CATEGORIAS EDU/SOC/LAB
 // evento click categoria educacion
@@ -23,6 +24,7 @@ document.getElementById('edubtn').addEventListener('click', () => {
     selectLabFor.style.display = 'none';
     selectParLab.style.display = 'none';
     selectNivVio.style.display = 'none';
+    contact.style.display = 'none';
     homePage.style.display = 'none';
     tableDataPage.style.display = 'none';
     sectionEdu.style.display = 'block';
@@ -31,6 +33,7 @@ document.getElementById('edubtn').addEventListener('click', () => {
 document.getElementById('socbtn').addEventListener('click', () => {
 
     homePage.style.display = 'none';
+    contact.style.display = 'none';
     sectionEdu.style.display = 'none';
     sectionLab.style.display = 'none';
     selectNivEdu.style.display = 'none';
@@ -48,6 +51,7 @@ document.getElementById('socbtn').addEventListener('click', () => {
 document.getElementById('labbtn').addEventListener('click', () => {
 
     homePage.style.display = 'none';
+    contact.style.display = 'none';
     sectionSoc.style.display = 'none';
     sectionEdu.style.display = 'none';
     selectNivEdu.style.display = 'none';
@@ -64,6 +68,7 @@ document.getElementById('labbtn').addEventListener('click', () => {
 document.getElementById('homebtn').addEventListener('click', () => {
 
     sectionLab.style.display = 'none';
+    contact.style.display = 'none';
     sectionSoc.style.display = 'none';
     sectionEdu.style.display = 'none';
     selectNivEdu.style.display = 'none';
@@ -75,6 +80,23 @@ document.getElementById('homebtn').addEventListener('click', () => {
     selectNivVio.style.display = 'none';
     // tableDataPage.style.display = 'none';
     homePage.style.display = 'block';
+});
+
+document.getElementById('contactbtn').addEventListener('click', () => {
+
+    homePage.style.display = 'none';
+    sectionLab.style.display = 'none';
+    sectionSoc.style.display = 'none';
+    sectionEdu.style.display = 'none';
+    selectNivEdu.style.display = 'none';
+    selectInsSco.style.display = 'none';
+    selectNivIns.style.display = 'none';
+    selectNivDes.style.display = 'none';
+    selectLabFor.style.display = 'none';
+    selectParLab.style.display = 'none';
+    selectNivVio.style.display = 'none';
+    // tableDataPage.style.display = 'none';
+    contact.style.display = 'block';
 });
 //                                       CLICK SUBCATEGORIA EDUCACION 
 //click cuando se hace click en nivel de educacion 

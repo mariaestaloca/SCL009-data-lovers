@@ -13,13 +13,13 @@ nav.navbar, navbar-toggler {
 
 
 
-  #edubtn, #socbtn, #labbtn, #homebtn, #gallerybtn {
+  #edubtn, #socbtn, #labbtn, #homebtn, #contactbtn {
     background-color: transparent;
     color: white;
     border:none;
   }
   
-  #edubtn:hover, #socbtn:hover, #labbtn:hover, #homebtn:hover, #gallerybtn:hover {
+  #edubtn:hover, #socbtn:hover, #labbtn:hover, #homebtn:hover, #contactbtn:hover {
     background-color: transparent;
     color:#F7C3E5;
     border:none;
@@ -31,6 +31,9 @@ nav.navbar, navbar-toggler {
     
   
   }
+   #slogan-xs{
+     display: none;
+   }
 
    
   .logo{
@@ -42,6 +45,10 @@ aside {
 text-align: center;
 top: 20px;
 background: #FCEE5B;
+}
+
+#parrafo{
+  margin-bottom:100px;
 }
 
 main {
@@ -79,13 +86,15 @@ width: 18rem;
 height: 213px;
 
 }
-#btnSection, #btnSecNivEdu, #btnSecNivIns, #btnSecInsSco, #btnSecNivDes, #btnSecLabFor, #btnSecParLab, #btnSecNivVio {
+#btnSection, #btnSecNivEdu, #btnSecNivIns, #btnSecInsSco, #btnSecNivDes, #btnSecLabFor, #btnSecParLab, #btnSecNivVio, #btnData, #btnDataNivIns, #btnDataInsSco, #btnDataNivDes, #btnDataLabFor, #btnDataParLab, #btnDataNivVio {
 background-color: #F7C3E5;
 border-color: #F7C3E5;
+margin-bottom:100px;
+border-radius: 15px;
 
 }
 
-#btnSection:hover, #btnSecNivEdu:hover, #btnSecNivIns:hover, #btnSecInsSco:hover, #btnSecNivDes:hover, #btnSecLabFor:hover, #btnSecParLab:hover, #btnSecNivVio:hover{
+#btnSection:hover, #btnSecNivEdu:hover, #btnSecNivIns:hover, #btnSecInsSco:hover, #btnSecNivDes:hover, #btnSecLabFor:hover, #btnSecParLab:hover, #btnSecNivVio:hover, #btnData:hover, #btnDataNivIns:hover, #btnDataInsSco:hover, #btnDataNivDes:hover, #btnDataLabFor:hover, #btnDataParLab:hover, #btnDataNivVio:hover{
   background-color: palevioletred;
 }
 
@@ -103,15 +112,7 @@ border-color: #F7C3E5;
   background-color: #fc0; /* poner el color que gustes */
 }
 
-#btnData {
-  background-color: #F7C3E5;
-  border-color: #F7C3E5;
-  margin-bottom: 4rem;
-}
- 
-  #btnData:hover{
-    background-color: palevioletred;
-  }
+
 
   table {
     overflow: hidden;
@@ -184,3 +185,36 @@ border-color: #F7C3E5;
   
   
   }
+
+
+
+  input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #F7C3E5 ;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: palevioletred;
+}
+
+.container {
+  border-radius: 30px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom:100px;
+}
