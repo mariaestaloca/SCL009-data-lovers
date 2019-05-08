@@ -92,3 +92,46 @@ function aplicar(year,question,country) {
 
   
 window.aplicar=aplicar;
+
+// funcion ordenar
+function orderData(dataGeneral) {// dudas 
+
+
+  let dataListaIndicadores = (dataGeneral) => {
+    let valor = dataGeneral.BRA.indicators;
+    return valor;
+  }
+
+  let data = dataListaIndicadores(WORLDBANK);
+
+  let ordenandoListaIndicadores = (data) => {
+    let contenedorLista = [];
+    for (let element of data) {
+      contenedorLista.push(element.indicatorName);
+    }
+    return contenedorLista.sort();
+  }
+
+  let arrayListaIndicadoresDom = ordenandoListaIndicadores(data);
+  return arrayListaIndicadoresDom;
+
+}
+
+orderData(dataGeneral);
+
+
+
+let arrayGralOrder = orderData(WORLDBANK);
+// arrayListaPage debe ser  --> arrayGralOrder
+function listaIndicadoresEnPage(arrayListaPage) {
+
+  var ul = document.createElement("ul");
+  document.getElementById("containerDivList").appendChild(ul);
+  arrayListaPage.forEach(function (nombre) {
+    var li = document.createElement("li");
+    ul.appendChild(li);
+    li.innerHTML += nombre;
+  });
+};
+
+listaIndicadoresEnPage(//dudas); 
