@@ -29,7 +29,7 @@ function aplicar(year,question,country) {
         let fila = document.createElement('tr');
         let columna = document.createElement('td')
   
-        columna.innerHTML = "años";
+        columna.innerHTML = "Años";
         fila.appendChild(columna);
         newtabla.appendChild(fila);
   
@@ -50,7 +50,7 @@ function aplicar(year,question,country) {
   
         newtabla.appendChild(fila2);
         columna = document.createElement('td');
-        columna.innerHTML = "valores";
+        columna.innerHTML = "Valores";
         fila2.appendChild(columna);
   
         for (let j = posicionYearKeys; j < (posicionYearKeys + 5); j++) {
