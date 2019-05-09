@@ -98,7 +98,7 @@ height: 14rem;
 #selectNivEdu, #selectNivIns,#selectInsSco, #selectNivDes, #selectLabFor, #selectParLab, #selectNivVio{
   margin-left: 1rem;
 }
-#btnSection, #btnSecNivEdu, #btnSecNivIns, #btnSecInsSco, #btnSecNivDes, #btnSecLabFor, #btnSecParLab, #btnSecNivVio, #btnData, #btnDataNivIns, #btnDataInsSco, #btnDataNivDes, #btnDataLabFor, #btnDataParLab, #btnDataNivVio, #orderAZbtn, #orderZAbtn {
+#btnSection, #btnSecNivEdu, #btnSecNivIns, #btnSecInsSco, #btnSecNivDes, #btnSecLabFor, #btnSecParLab, #btnSecNivVio, #btnData, #btnDataNivIns, #btnDataInsSco, #btnDataNivDes, #btnDataLabFor, #btnDataParLab, #btnDataNivVio, #orderAZbtn, #orderZAbtn, #btnInformacion, #closeModalbtn {
 background-color: #F7C3E5;
 border-color: #F7C3E5;
 margin-bottom:6rem;
@@ -106,7 +106,7 @@ border-radius: 1rem;
 
 }
 
-#btnSection:hover, #btnSecNivEdu:hover, #btnSecNivIns:hover, #btnSecInsSco:hover, #btnSecNivDes:hover, #btnSecLabFor:hover, #btnSecParLab:hover, #btnSecNivVio:hover, #btnData:hover, #btnDataNivIns:hover, #btnDataInsSco:hover, #btnDataNivDes:hover, #btnDataLabFor:hover, #btnDataParLab:hover, #btnDataNivVio:hover, #orderAZbtn:hover, #orderZAbtn:hover{
+#btnSection:hover, #btnSecNivEdu:hover, #btnSecNivIns:hover, #btnSecInsSco:hover, #btnSecNivDes:hover, #btnSecLabFor:hover, #btnSecParLab:hover, #btnSecNivVio:hover, #btnData:hover, #btnDataNivIns:hover, #btnDataInsSco:hover, #btnDataNivDes:hover, #btnDataLabFor:hover, #btnDataParLab:hover, #btnDataNivVio:hover, #orderAZbtn:hover, #orderZAbtn:hover, #btnInformacion:hover,#closeModalbtn{
   background-color: palevioletred;
 }
 
@@ -130,7 +130,7 @@ border-radius: 1rem;
     width: 40rem;
     height: 15rem;
     margin-left: 4rem;
-    margin-bottom: 20rem;
+    margin-bottom: 2rem;
     font-weight: bold;
     font-size: 20px;
     border-color: #F7C3E5
@@ -147,8 +147,13 @@ border-radius: 1rem;
   th:focus::after {
     background-color: lightblue;
   }
-  
-  
+  #exampleModal{
+   border-radius:1rem;
+
+  }
+  .modal-content{
+    background-color:#ffa;
+  }
   
 
   #ordenar{

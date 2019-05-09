@@ -1113,7 +1113,9 @@ document.getElementById("btnInformacion").addEventListener("click", () => {
     }
     info();
 
-    // aqui una section para la informacion - aplicando function calcular en comparacion empleo por genero
+    
+    
+   
 
 
 });
