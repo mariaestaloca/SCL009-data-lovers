@@ -94,44 +94,74 @@ function aplicar(year,question,country) {
 window.aplicar=aplicar;
 
 // funcion ordenar
-function orderData(dataGeneral) {// dudas 
 
+window.WORLDBANK = WORLDBANK;
 
-  let dataListaIndicadores = (dataGeneral) => {
-    let valor = dataGeneral.BRA.indicators;
-    return valor;
+hhh
+function orderData(dataGral) {
+
+  let data = dataGral.BRA.indicators;
+
+  let contenedorLista = [];
+  for (let element of data) {
+    contenedorLista.push(element.indicatorName);
   }
 
-  let data = dataListaIndicadores(WORLDBANK);
+  contenedorLista.sort();
+  console.log(contenedorLista);
+  return contenedorLista;
 
+
+}
+
+let resultFxOrdenar = orderData(WORLDBANK);
+
+function creandoListaorderData(resultFxOrdenar) {
+
+
+  let arrayListaIndicadoresDom = resultFxOrdenar;
+   
+  var ul = document.createElement("ul");
+  document.getElementById("OrdenarAscendentecontenedor").appendChild(ul);
+  arrayListaIndicadoresDom.forEach(function (nombre) {
+    var li = document.createElement("li");
+    ul.appendChild(li);
+    li.innerHTML += nombre;
+  });
+
+  
+}
+
+
+
+
+
+
+function orderDataDescendente(dataGral) {
+
+  let data = dataGral.BRA.indicators; 
   let ordenandoListaIndicadores = (data) => {
     let contenedorLista = [];
     for (let element of data) {
       contenedorLista.push(element.indicatorName);
     }
-    return contenedorLista.sort();
+
+    let listaOrdenadaAscendente = contenedorLista.sort();
+   return listaOrdenadaAscendente.reverse();
   }
 
   let arrayListaIndicadoresDom = ordenandoListaIndicadores(data);
-  return arrayListaIndicadoresDom;
-
-}
-
-orderData(dataGeneral);
-
-
-
-let arrayGralOrder = orderData(WORLDBANK);
-// arrayListaPage debe ser  --> arrayGralOrder
-function listaIndicadoresEnPage(arrayListaPage) {
-
+  
   var ul = document.createElement("ul");
-  document.getElementById("containerDivList").appendChild(ul);
-  arrayListaPage.forEach(function (nombre) {
+  document.getElementById("OrdenarDescendentecontenedor").appendChild(ul);
+  arrayListaIndicadoresDom.forEach(function (nombre) {
     var li = document.createElement("li");
     ul.appendChild(li);
     li.innerHTML += nombre;
   });
-};
 
-listaIndicadoresEnPage(//dudas); 
+}
+
+orderDataDescendente(dataGral);
+
+

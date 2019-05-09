@@ -1,22 +1,23 @@
+
 const homePage = document.getElementById("homePage");
 const sectionEdu = document.getElementById("sectionEdu");
 const sectionLab = document.getElementById("sectionLab");
 const sectionSoc = document.getElementById("sectionSoc");
 const contact = document.getElementById("contact");
-// const tableDataPage = document.getElementById("tableDataPage");
 
 sectionEdu.style.display = 'none';
 sectionLab.style.display = 'none';
 sectionSoc.style.display = 'none';
-document.getElementById("selectNivEdu").style.display = 'none';
-selectInsSco.style.display = 'none';
-selectNivIns.style.display = 'none';
-selectNivDes.style.display = 'none';
-selectLabFor.style.display = 'none'
-selectParLab.style.display = 'none';
-selectNivVio.style.display = 'none';
-tableDataPage.style.display = 'none';
 contact.style.display = 'none';
+document.getElementById("selectNivEdu").style.display = 'none';
+document.getElementById("selectInsSco").style.display = 'none';
+document.getElementById("selectNivIns").style.display = 'none';
+document.getElementById("selectNivDes").style.display = 'none';
+document.getElementById("selectLabFor").style.display = 'none'
+document.getElementById("selectParLab").style.display = 'none';
+document.getElementById("selectNivVio").style.display = 'none';
+document.getElementById("tableDataPage").style.display = 'none';
+
 
 
 //                                      EVENTOS CATEGORIAS EDU/SOC/LAB
@@ -24,16 +25,16 @@ contact.style.display = 'none';
 document.getElementById('edubtn').addEventListener('click', () => {
     sectionLab.style.display = 'none';
     sectionSoc.style.display = 'none';
-    selectNivEdu.style.display = 'none';
-    selectInsSco.style.display = 'none';
-    selectNivIns.style.display = 'none';
-    selectNivDes.style.display = 'none';
-    selectLabFor.style.display = 'none';
-    selectParLab.style.display = 'none';
-    selectNivVio.style.display = 'none';
+    document.getElementById("selectNivEdu").style.display = 'none';
+    document.getElementById("selectInsSco").style.display = 'none';
+    document.getElementById("selectNivIns").style.display = 'none';
+    document.getElementById("selectNivDes").style.display = 'none';
+    document.getElementById("selectLabFor").style.display = 'none';
+    document.getElementById("selectParLab").style.display = 'none';
+    document.getElementById("selectNivVio").style.display = 'none';
     contact.style.display = 'none';
     homePage.style.display = 'none';
-    tableDataPage.style.display = 'none';
+    document.getElementById("tableDataPage").style.display = 'none';
     sectionEdu.style.display = 'block';
 });
 // evento click categoria social
@@ -42,13 +43,13 @@ document.getElementById('socbtn').addEventListener('click', () => {
     contact.style.display = 'none';
     sectionEdu.style.display = 'none';
     sectionLab.style.display = 'none';
-    selectNivEdu.style.display = 'none';
-    selectInsSco.style.display = 'none';
-    selectNivIns.style.display = 'none';
-    selectNivDes.style.display = 'none';
-    selectLabFor.style.display = 'none';
-    selectParLab.style.display = 'none';
-    selectNivVio.style.display = 'none';
+    document.getElementById("selectNivEdu").style.display = 'none';
+    document.getElementById("selectInsSco").style.display = 'none';
+    document.getElementById("selectNivIns").style.display = 'none';
+    document.getElementById("selectNivDes").style.display = 'none';
+    document.getElementById("selectLabFor").style.display = 'none';
+    document.getElementById("selectParLab").style.display = 'none';
+    document.getElementById("selectNivVio").style.display = 'none';
     // tableDataPage.style.display = 'none';
     sectionSoc.style.display = 'block';
 });
@@ -58,13 +59,13 @@ document.getElementById('labbtn').addEventListener('click', () => {
     contact.style.display = 'none';
     sectionSoc.style.display = 'none';
     sectionEdu.style.display = 'none';
-    selectNivEdu.style.display = 'none';
-    selectInsSco.style.display = 'none';
-    selectNivIns.style.display = 'none';
-    selectNivDes.style.display = 'none';
-    selectLabFor.style.display = 'none';
-    selectParLab.style.display = 'none';
-    selectNivVio.style.display = 'none';
+    document.getElementById("selectNivEdu").style.display = 'none';
+    document.getElementById("selectInsSco").style.display = 'none';
+    document.getElementById("selectNivIns").style.display = 'none';
+    document.getElementById("selectNivDes").style.display = 'none';
+    document.getElementById("selectLabFor").style.display = 'none';
+    document.getElementById("selectParLab").style.display = 'none';
+    document.getElementById("selectNivVio").style.display = 'none';
     // tableDataPage.style.display = 'none';
     sectionLab.style.display = 'block';
 });
@@ -74,13 +75,13 @@ document.getElementById('homebtn').addEventListener('click', () => {
     contact.style.display = 'none';
     sectionSoc.style.display = 'none';
     sectionEdu.style.display = 'none';
-    selectNivEdu.style.display = 'none';
-    selectInsSco.style.display = 'none';
-    selectNivIns.style.display = 'none';
-    selectNivDes.style.display = 'none';
-    selectLabFor.style.display = 'none';
-    selectParLab.style.display = 'none';
-    selectNivVio.style.display = 'none';
+    document.getElementById("selectNivEdu").style.display = 'none';
+    document.getElementById("selectInsSco").style.display = 'none';
+    document.getElementById("selectNivIns").style.display = 'none';
+    document.getElementById("selectNivDes").style.display = 'none';
+    document.getElementById("selectLabFor").style.display = 'none';
+    document.getElementById("selectParLab").style.display = 'none';
+    document.getElementById("selectNivVio").style.display = 'none';
     // tableDataPage.style.display = 'none';
     homePage.style.display = 'block';
 });
@@ -89,13 +90,13 @@ document.getElementById('contactbtn').addEventListener('click', () => {
     sectionLab.style.display = 'none';
     sectionSoc.style.display = 'none';
     sectionEdu.style.display = 'none';
-    selectNivEdu.style.display = 'none';
-    selectInsSco.style.display = 'none';
-    selectNivIns.style.display = 'none';
-    selectNivDes.style.display = 'none';
-    selectLabFor.style.display = 'none';
-    selectParLab.style.display = 'none';
-    selectNivVio.style.display = 'none';
+    document.getElementById("selectNivEdu").style.display = 'none';
+    document.getElementById("selectInsSco").style.display = 'none';
+    document.getElementById("selectNivIns").style.display = 'none';
+    document.getElementById("selectNivDes").style.display = 'none';
+    document.getElementById("selectLabFor").style.display = 'none';
+    document.getElementById("selectParLab").style.display = 'none';
+    document.getElementById("selectNivVio").style.display = 'none';
     // tableDataPage.style.display = 'none';
     contact.style.display = 'block';
 });
@@ -104,45 +105,46 @@ document.getElementById('contactbtn').addEventListener('click', () => {
 document.getElementById('btnSecNivEdu').addEventListener('click', () => {
 
     sectionEdu.style.display = 'none';
-    selectNivEdu.style.display = 'block';
+    document.getElementById("selectNivEdu").style.display = 'block';
     selectNivEduOption();
 });
 // click cuando se hace click en inscripcion escolar 
     document.getElementById('btnSecInsSco').addEventListener('click', () => {
     sectionEdu.style.display = 'none';
-    selectInsSco.style.display = 'block';
+    document.getElementById("selectInsSco").style.display = 'block';
     selectInsScoOption(); 
 });
 // click cuando se hace click en nivel de inscripcion
 
     document.getElementById('btnSecNivIns').addEventListener('click', () => {
     sectionEdu.style.display = 'none';
-    selectNivIns.style.display = 'block';
+    document.getElementById("selectNivIns").style.display = 'block';
     selectNivInsOption();
 });
 //                                       CLICK SUBCATEGORIA LABORAL
 // click cuando se hace click en nivel de desempleo
     document.getElementById('btnSecNivDes').addEventListener('click', () => {
     sectionLab.style.display = 'none';
-    selectNivDes.style.display = 'block';
+    document.getElementById("selectNivDes").style.display = 'block';
     selectNiveDesOption();
 })
 
     document.getElementById('btnSecLabFor').addEventListener('click', () => {
     sectionLab.style.display = 'none';
-    selectLabFor.style.display = 'block';
+    document.getElementById("selectLabFor").style.display = 'block';
     selectForLabOption();
 });
     document.getElementById('btnSecParLab').addEventListener('click', () => {
     sectionLab.style.display = 'none';
-    selectParLab.style.display = 'block';
+    document.getElementById("selectParLab").style.display = 'block';
     selectParLabOption();
 });
 //                                       CLICK SUBCATEGORIA SOCIAL
 // click cuando se hace click en nivel de desempleo
+
     document.getElementById('btnSecNivVio').addEventListener('click', () => {
     sectionSoc.style.display = 'none';
-    selectNivVio.style.display = 'block';
+    document.getElementById("selectNivVio").style.display = 'block';
     selectNivVioOption();
 })
 
@@ -150,6 +152,8 @@ document.getElementById('btnSecNivEdu').addEventListener('click', () => {
 let year = "";
 let question = "";
 let country = "";
+let condition = "";
+
 //       S  E  L  E  C  T  I  O  N      O  F     T  H  E     U  S  E  R
 // STORING USER SELECTION - LEVEL OF EDUCATION
 // Country Selection:
@@ -225,7 +229,7 @@ selectNivDesCountrySave.addEventListener("change", () => {
 // Indicators Selection:  
 const selectNivDesIndicatorSave = document.getElementById("selectNivDesIndicator");
 selectNivDesIndicatorSave.addEventListener("change", () => {
-    question = selectNivDesIndicator.options[selectNivDesIndicator.selectedIndex].text;
+    question = document.getElementById("selectNivDesIndicator").options[document.getElementById("selectNivDesIndicator").selectedIndex].text;
   
 });
 //Year Selection
@@ -295,16 +299,16 @@ document.getElementById("btnData").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
         alert("Debe completar todos los datos requeridos");
     } else {
-        aplicar(year, question, country);
-        tableDataPage.style.display = 'block';
+        window.aplicar(year, question, country);
+        document.getElementById("tableDataPage").style.display = 'block';
     }
 });
 document.getElementById("btnDataInsSco").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
         alert("Debe completar todos los datos requeridos");
     } else {
-        aplicar(year, question, country);
-        tableDataPage.style.display = 'block';
+        window.aplicar(year, question, country);
+        document.getElementById("tableDataPage").style.display = 'block';
     }
   
 });
@@ -312,8 +316,8 @@ document.getElementById("btnDataNivIns").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
         alert("Debe completar todos los datos requeridos");
     } else {
-        aplicar(year, question, country);
-        tableDataPage.style.display = 'block';
+        window.aplicar(year, question, country);
+        document.getElementById("tableDataPage").style.display = 'block';
     }
    
 });
@@ -321,8 +325,8 @@ document.getElementById("btnDataNivDes").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
         alert("Debe completar todos los datos requeridos");
     } else {
-        aplicar(year, question, country);
-        tableDataPage.style.display = 'block';
+        window.aplicar(year, question, country);
+        document.getElementById("tableDataPage").style.display = 'block';
     }
    
 });
@@ -330,8 +334,8 @@ document.getElementById("btnDataLabFor").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
         alert("Debe completar todos los datos requeridos");
     } else {
-        aplicar(year, question, country);
-        tableDataPage.style.display = 'block';
+        window.aplicar(year, question, country);
+        document.getElementById("tableDataPage").style.display = 'block';
     }
 
 });
@@ -339,8 +343,8 @@ document.getElementById("btnDataParLab").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
         alert("Debe completar todos los datos requeridos");
     } else {
-        aplicar(year, question, country);
-        tableDataPage.style.display = 'block';
+        window.aplicar(year, question, country);
+        document.getElementById("tableDataPage").style.display = 'block';
     }
  
 });
@@ -348,8 +352,8 @@ document.getElementById("btnDataNivVio").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
         alert("Debe completar todos los datos requeridos");
     } else {
-        aplicar(year, question, country);
-        tableDataPage.style.display = 'block';
+        window.aplicar(year, question, country);
+        document.getElementById("tableDataPage").style.display = 'block';
     }
    
 });
@@ -375,7 +379,7 @@ const intervalos = ["1999",
                     "2000", "2001", "2002", "2003", "2004", "2005", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", 
                     "2014", "2015", "2016", "2017"];
 
-const {PER,MEX,BRA, CHL} = WORLDBANK;
+const {PER,MEX,BRA, CHL} = window.WORLDBANK;
 const arrPeru = PER.indicators;
 const arrMexico = MEX.indicators;
 const arrBrasil = BRA.indicators;
@@ -397,14 +401,14 @@ const arrselectInsScoIndicators = ["Inscripción escolar, nivel preprimario, muj
                                "Inscripción escolar, nivel secundario, mujeres (% bruto)",
                                "Inscripción escolar, nivel secundario, mujeres (% neto)",
                                "Inscripción escolar, nivel terciario, mujeres (% bruto)"];
-const arrselectNivInsIndicators = ["Nivel de instrucción, al menos ciclo inferior de la escuela secundaria completo, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos ciclo superior de la escuela secundaria completo, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos escuela de nivel posterior a la secundaria completa, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos escuela primaria completa, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos escuela terciaria de ciclo corto finalizada, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos nivel de doctorado o equivalente, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos nivel de licenciatura o equivalente, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos nivel de maestría o equivalente, población de más de 25 años, mujeres (%) (acumulativo)"];
+const arrselectNivInsIndicators = ["Nivel de instrucción, al menos ciclo inferior de la escuela secundaria completo, población de más de 25 años, mujeres (%) (acumulativo)",
+                              "Nivel de instrucción, al menos ciclo superior de la escuela secundaria completo, población de más de 25 años, mujeres (%) (acumulativo)",
+                              "Nivel de instrucción, al menos escuela de nivel posterior a la secundaria completa, población de más de 25 años, mujeres (%) (acumulativo)",
+                              "Nivel de instrucción, al menos escuela primaria completa, población de más de 25 años, mujeres (%) (acumulativo)",
+                              "Nivel de instrucción, al menos escuela terciaria de ciclo corto finalizada, población de más de 25 años, mujeres (%) (acumulativo)",
+                              "Nivel de instrucción, al menos nivel de doctorado o equivalente, población de más de 25 años, mujeres (%) (acumulativo)",
+                              "Nivel de instrucción, al menos nivel de licenciatura o equivalente, población de más de 25 años, mujeres (%) (acumulativo)",
+                              "Nivel de instrucción, al menos nivel de maestría o equivalente, población de más de 25 años, mujeres (%) (acumulativo)"];
 //  INDICATORS SUBCATEGORIA  LABORAL 
 const arrselectNivDesIndicators = ["Desempleo, total (% de participación total en la fuerza laboral) (estimación nacional)",
                               "Desempleo, total de jóvenes (% del total de participación en la fuerza laboral de 15 a 24 años) (estimación nacional)",
@@ -950,3 +954,31 @@ function selectNivVioOption() {
     }
 }                                                                                                                                                              
 
+//                                                                     FUNCTION ORDER
+
+// EVENT - FUNCTION ORDER ASCEN
+document.getElementById("btnOrdenarAscendente").addEventListener("click", () => {
+    const dataGeneral = WORLDBANK;
+    orderData(dataGeneral);
+    creandoListaorderData(resultFxOrdenar);
+  
+    document.getElementById("OrdenarAscendentecontenedor").style.display = "block";
+    document.getElementById("OrdenarDescendentecontenedor").style.display = "none";
+       
+  
+
+});
+// EVENT - FUNCTION ORDER DESC
+document.getElementById("btnOrdenardescendente").addEventListener("click", () => {
+  
+
+    const dataGeneral = WORLDBANK;
+    orderDataDescendente(dataGeneral);
+    document.getElementById("OrdenarDescendentecontenedor").style.display = "block";
+    document.getElementById("OrdenarAscendentecontenedor").style.display = "none";
+  
+ });
+
+
+
+ // NONE - BLOCK DIV CONTAINER LIST indicators in function order
