@@ -77,8 +77,8 @@ El usuario visualiza tabla de filtrado e información.
 ---
 Al pensar en los diferentes usuarios que visitarian la página pensamos en que harian los usuarios y que necesitarian ,para lograr sus resultados deseados. Para eso se creo el siguente mapa de usuario
 
-img
 
+![Historia de Usuario ](img/historia de usuario.jpg)
 ------------
 
 
@@ -161,6 +161,22 @@ La encuesta contiene una pregunta abierta, en la cual se le pregunta a los encue
 
 ![Resultados encuesta (segmento representativo)- pregunta abierta](img/preguntaAbiertaEncuesta.png)
 
+Tambien se pregunto sobre el tema a gente en la calle, sobre que pensaban sobre el tema y cual era su idea de pagina web.
+Acá mostramos algunas entrevistas:
+
+###Karla
+
+[Entrevista Karla](https://soundcloud.com/maria-jose-maldonado-o/calle-huerfanos/s-Jcg2Z "Entrevista Karla")
+
+###Alicia
+
+[Entrevista Alicia](https://soundcloud.com/maria-jose-maldonado-o/audio2/s-00CJj "Entrevista Alicia")
+
+###Paulina
+
+[Entrevista Alicia](https://soundcloud.com/maria-jose-maldonado-o/audio-3/s-XWgPh "Entrevista Paulina")
+
+
 
 Etapa n°4: 
 
@@ -220,20 +236,26 @@ No tuvo problemas para resolver la petición. DIce que menús e información se 
 Agregaria apoyo visual, como imagenes atras de los menús.
 que resultado sea mas llamativo y no tan formal.
 Carlos responde que pagina trata sobre porcentajes del rol de la mujer en la sociedad.
-[http://mfnkfnr](http://mfnkfnr)
+[Figma Carlos](https://youtu.be/yYSFhS5m4Jg "Prueba Carlos")
 
 #### Usuario 2
 ##### Alejandra, 17 años, estudiante.
 Alejandra pregunto una vez para resolver la peticion ya que no le quedo clara la division de segmentos, pero al aclararle las divisiones no tuvo problema para resolverlo. Dice que las subcategorias deberian tener una breve explicacion. para guiar.
-Ella dice que la páina trata sobre diferencias de la mujer en la sociedad.
-[http://mfnkfnr](http://mfnkfnr)
+Ella dice que la página trata sobre diferencias de la mujer en la sociedad.
 
-#### Usuario 1
-##### Alicia, 58 años, trabajador.
+#### Usuario 3
+##### Claudia, 58 años, trabajador.
 Siguio los pasos correctamente, llegó a ver los resultados.
 Dice que agregaria informacion extra sobre mujeres en Latinoamerica y links que den mas informacion.
 Alicia dice que se nota que la página da porcentaje de diferencias economicas de la mujer en America.
-[http://mfnkfnr](http://mfnkfnr)
+[figma Claudia](https://youtu.be/8nWqT_iHD1w "prueba Claudia")
+
+#### Usuario 3
+##### Javiera, 34 años, trabajador.
+Siguio los pasos correctamente, llegó a ver los resultados.
+Dice que le gustaria ver mas dinamismo en la pagina, queserian interesantes enlaces a otras paginas.
+Dice que la pagina trata sobre datos estadisticos en sudamerica.
+[Figma Javiera](https://youtu.be/8feYFUcuOAM "prueba Javiera")
 
 
 
@@ -254,10 +276,11 @@ Para esto nos enfocamos en crear una pagina simple y directa donde facilmente pu
 
 - Color : La pagina esta hecha con colores llamativos para lla mar la atención del usuario y que no pierda la atencion.
 La pagina esta en base a cuatro tonos, blanco, negro, amarillo y rosa.
-Elegimos blanco y negro para que sea  mas legible la información. y loo otros son porque el amarillo es el color del sol y se traduce en optimismo, alegría, felicidad, energía, brillo, calor, inteligencia.Si es un amarillo puro se usa para llamar la atención, es símbolo de alerta, especialmente si se combina con el negro.
+Elegimos blanco y negro para que sea  mas legible la información. y los otros son porque el amarillo es el color del sol y se traduce en optimismo, alegría, felicidad, energía, brillo, calor, inteligencia.Si es un amarillo puro se usa para llamar la atención, es símbolo de alerta, especialmente si se combina con el negro.
 El color rosa se asocia fuertemente a la feminidad  y tambien en el rosa palido lo podemos unir con la inocencia.
+Usamos de inspiración paginas feministas como "Bulletin" y tambien inspirandonos en los "fanzines" de decadas pasadas que se usaban para transmitir el mensaje"feminista", cuando era mas dificil acceder a la informacion, estos simplemente se fotcopiaban en hojas de colores y se pasaban de mano en mano.
 
-- Tipografia:
+- Tipografia: Arial letras simples con contrste para que sean legibles.
 
 ### **4.4 Implementación de la Interfaz de Usuario (HTML/CSS/JS)**
 

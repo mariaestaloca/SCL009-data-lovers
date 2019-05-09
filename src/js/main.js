@@ -50,7 +50,7 @@ document.getElementById('socbtn').addEventListener('click', () => {
     document.getElementById("selectLabFor").style.display = 'none';
     document.getElementById("selectParLab").style.display = 'none';
     document.getElementById("selectNivVio").style.display = 'none';
-    // tableDataPage.style.display = 'none';
+    document.getElementById("tableDataPage").style.display = 'none';
     sectionSoc.style.display = 'block';
 });
 // evento click categoria laboral
@@ -66,7 +66,7 @@ document.getElementById('labbtn').addEventListener('click', () => {
     document.getElementById("selectLabFor").style.display = 'none';
     document.getElementById("selectParLab").style.display = 'none';
     document.getElementById("selectNivVio").style.display = 'none';
-    // tableDataPage.style.display = 'none';
+    document.getElementById("tableDataPage").style.display = 'none';
     sectionLab.style.display = 'block';
 });
 // evento click en el home 
@@ -82,10 +82,10 @@ document.getElementById('homebtn').addEventListener('click', () => {
     document.getElementById("selectLabFor").style.display = 'none';
     document.getElementById("selectParLab").style.display = 'none';
     document.getElementById("selectNivVio").style.display = 'none';
-    // tableDataPage.style.display = 'none';
+    document.getElementById("tableDataPage").style.display = 'none';
     homePage.style.display = 'block';
 });
-document.getElementById('contactbtn').addEventListener('click', () => {
+document.getElementById('indexbtn').addEventListener('click', () => {
     homePage.style.display = 'none';
     sectionLab.style.display = 'none';
     sectionSoc.style.display = 'none';
@@ -97,7 +97,7 @@ document.getElementById('contactbtn').addEventListener('click', () => {
     document.getElementById("selectLabFor").style.display = 'none';
     document.getElementById("selectParLab").style.display = 'none';
     document.getElementById("selectNivVio").style.display = 'none';
-    // tableDataPage.style.display = 'none';
+    document.getElementById("tableDataPage").style.display = 'none';
     contact.style.display = 'block';
 });
 //                                       CLICK SUBCATEGORIA EDUCACION 
@@ -147,6 +147,8 @@ document.getElementById('btnSecNivEdu').addEventListener('click', () => {
     document.getElementById("selectNivVio").style.display = 'block';
     selectNivVioOption();
 })
+
+
 
 
 let year = "";
@@ -300,6 +302,7 @@ document.getElementById("btnData").addEventListener("click", () => {
         alert("Debe completar todos los datos requeridos");
     } else {
         window.aplicar(year, question, country);
+        document.getElementById("selectNivEdu").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
 });
@@ -308,6 +311,7 @@ document.getElementById("btnDataInsSco").addEventListener("click", () => {
         alert("Debe completar todos los datos requeridos");
     } else {
         window.aplicar(year, question, country);
+        document.getElementById("selectInsSco").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
   
@@ -317,6 +321,7 @@ document.getElementById("btnDataNivIns").addEventListener("click", () => {
         alert("Debe completar todos los datos requeridos");
     } else {
         window.aplicar(year, question, country);
+        document.getElementById("selectNivIns").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
    
@@ -326,6 +331,7 @@ document.getElementById("btnDataNivDes").addEventListener("click", () => {
         alert("Debe completar todos los datos requeridos");
     } else {
         window.aplicar(year, question, country);
+        document.getElementById("selectNivDes").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
    
@@ -335,6 +341,7 @@ document.getElementById("btnDataLabFor").addEventListener("click", () => {
         alert("Debe completar todos los datos requeridos");
     } else {
         window.aplicar(year, question, country);
+        document.getElementById("selectLabFor").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
 
@@ -344,6 +351,7 @@ document.getElementById("btnDataParLab").addEventListener("click", () => {
         alert("Debe completar todos los datos requeridos");
     } else {
         window.aplicar(year, question, country);
+        document.getElementById("selectParLab").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
  
@@ -353,6 +361,7 @@ document.getElementById("btnDataNivVio").addEventListener("click", () => {
         alert("Debe completar todos los datos requeridos");
     } else {
         window.aplicar(year, question, country);
+        document.getElementById("selectNivVio").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
    
@@ -953,9 +962,7 @@ function selectNivVioOption() {
         option.innerHTML = intervalos[m]; //Metemos el texto en la opción
     }
 }                                                                                                                                                              
-
 //                                                                     FUNCTION ORDER
-
 // EVENT - FUNCTION ORDER ASCEN
 document.getElementById("btnOrdenarAscendente").addEventListener("click", () => {
     const dataGeneral = WORLDBANK;
@@ -966,12 +973,10 @@ document.getElementById("btnOrdenarAscendente").addEventListener("click", () => 
     document.getElementById("OrdenarDescendentecontenedor").style.display = "none";
        
   
-
 });
 // EVENT - FUNCTION ORDER DESC
 document.getElementById("btnOrdenardescendente").addEventListener("click", () => {
   
-
     const dataGeneral = WORLDBANK;
     orderDataDes(dataGeneral);
     creandoListaorderDataDes(resultFxOrdenarDes);
@@ -979,7 +984,3 @@ document.getElementById("btnOrdenardescendente").addEventListener("click", () =>
     document.getElementById("OrdenarAscendentecontenedor").style.display = "none";
   
  });
-
-
-
- // NONE - BLOCK DIV CONTAINER LIST indicators in function order
