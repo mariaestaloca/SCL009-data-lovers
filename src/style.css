@@ -13,7 +13,7 @@ nav.navbar, navbar-toggler {
 
 
 
-  #edubtn, #socbtn, #labbtn, #homebtn, #indexbtn {
+  #edubtn, #socbtn, #labbtn, #homebtn, #contactbtn, #indexbtn {
     background-color: transparent;
     color: white;
     border:none;
@@ -98,7 +98,7 @@ height: 14rem;
 #selectNivEdu, #selectNivIns,#selectInsSco, #selectNivDes, #selectLabFor, #selectParLab, #selectNivVio{
   margin-left: 1rem;
 }
-#btnSection, #btnSecNivEdu, #btnSecNivIns, #btnSecInsSco, #btnSecNivDes, #btnSecLabFor, #btnSecParLab, #btnSecNivVio, #btnData, #btnDataNivIns, #btnDataInsSco, #btnDataNivDes, #btnDataLabFor, #btnDataParLab, #btnDataNivVio {
+#btnSection, #btnSecNivEdu, #btnSecNivIns, #btnSecInsSco, #btnSecNivDes, #btnSecLabFor, #btnSecParLab, #btnSecNivVio, #btnData, #btnDataNivIns, #btnDataInsSco, #btnDataNivDes, #btnDataLabFor, #btnDataParLab, #btnDataNivVio, #orderAZbtn, #orderZAbtn {
 background-color: #F7C3E5;
 border-color: #F7C3E5;
 margin-bottom:6rem;
@@ -106,7 +106,7 @@ border-radius: 1rem;
 
 }
 
-#btnSection:hover, #btnSecNivEdu:hover, #btnSecNivIns:hover, #btnSecInsSco:hover, #btnSecNivDes:hover, #btnSecLabFor:hover, #btnSecParLab:hover, #btnSecNivVio:hover, #btnData:hover, #btnDataNivIns:hover, #btnDataInsSco:hover, #btnDataNivDes:hover, #btnDataLabFor:hover, #btnDataParLab:hover, #btnDataNivVio:hover{
+#btnSection:hover, #btnSecNivEdu:hover, #btnSecNivIns:hover, #btnSecInsSco:hover, #btnSecNivDes:hover, #btnSecLabFor:hover, #btnSecParLab:hover, #btnSecNivVio:hover, #btnData:hover, #btnDataNivIns:hover, #btnDataInsSco:hover, #btnDataNivDes:hover, #btnDataLabFor:hover, #btnDataParLab:hover, #btnDataNivVio:hover, #orderAZbtn:hover, #orderZAbtn:hover{
   background-color: palevioletred;
 }
 
