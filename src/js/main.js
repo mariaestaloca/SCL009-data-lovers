@@ -1016,27 +1016,105 @@ function selectNivVioOption() {
     }
 }
 //                                                                     FUNCTION ORDER
-// EVENT - FUNCTION ORDER ASCEN
+
+//EVENT - FUNCTION ORDER ASCEN
 document.getElementById("orderAZbtn").addEventListener("click", () => {
+    const WORLDBANK = window.WORLDBANK;
     const dataGeneral = WORLDBANK;
-    orderData(dataGeneral);
+    window.orderData(dataGeneral);
+    const resultFxOrdenar = window.orderData(WORLDBANK);
+
+    function creandoListaorderData(resultFxOrdenar) {
+        let arrayListaIndicadoresDom = resultFxOrdenar;
+        var ul = document.createElement("ul");
+        document.getElementById("OrdenarAscendentecontenedor").appendChild(ul);
+        arrayListaIndicadoresDom.forEach(function (nombre) {
+            var li = document.createElement("li");
+            ul.appendChild(li);
+            li.innerHTML += nombre;
+        });
+    }
     creandoListaorderData(resultFxOrdenar);
+    document.getElementById("OrdenarAscendentecontenedor").style.display = "block";
+    document.getElementById("OrdenarDescendentecontenedor").style.display = "none";
+    document.getElementById("orderAZbtn").disabled = true;
+
 
     document.getElementById("OrdenarAscendentecontenedor").style.display = "block";
     document.getElementById("OrdenarDescendentecontenedor").style.display = "none";
     document.getElementById("orderAZbtn").disabled = true;
 
 
-
 });
-// EVENT - FUNCTION ORDER DESC
+// // EVENT - FUNCTION ORDER DESC
 document.getElementById("orderZAbtn").addEventListener("click", () => {
 
+    const WORLDBANK = window.WORLDBANK;
+
     const dataGeneral = WORLDBANK;
-    orderDataDes(dataGeneral);
+    window.orderDataDes(dataGeneral);
+    const resultFxOrdenarDes = window.orderDataDes(WORLDBANK);
+
+    function creandoListaorderDataDes(resultFxOrdenarDes) {
+        let arrayListaIndicadoresDom = resultFxOrdenarDes;
+        var ul = document.createElement("ul");
+        document.getElementById("OrdenarDescendentecontenedor").appendChild(ul);
+        arrayListaIndicadoresDom.forEach(function (nombre) {
+            var li = document.createElement("li");
+            ul.appendChild(li);
+            li.innerHTML += nombre;
+        });
+
+    }
     creandoListaorderDataDes(resultFxOrdenarDes);
     document.getElementById("OrdenarDescendentecontenedor").style.display = "block";
     document.getElementById("OrdenarAscendentecontenedor").style.display = "none";
     document.getElementById("orderZAbtn").disabled = true;
 
 });
+
+
+document.getElementById("btnInformacion").addEventListener("click", () => {
+
+    let porcentaje = "";
+    let fuerzaDeTrabajo = "";
+    const arrayObjectCountry = Object.values(window.WORLDBANK);
+
+    const arrayIndicadoresChile = arrayObjectCountry[3].indicators;
+
+    const indicadorDesempleo = arrayIndicadoresChile[106].indicatorName;
+    const dataDesempleoTotalVarones = arrayIndicadoresChile[106].data;
+
+    const dataDesempleoTotalMujeres = arrayIndicadoresChile[107].data;
+    const dataDesempleoTotal2017Varones = dataDesempleoTotalVarones[2017];
+    const dataDesempleoTotal2017Mujeres = dataDesempleoTotalMujeres[2017];
+    const fuerzaDeTrabajoVarones = 3744;
+    const fuerzaDeTrabajoMujeres = 3744;
+    window.empleoOcupados(porcentaje, fuerzaDeTrabajo);
+
+
+    function info() {
+
+        const parrafoInfoUno = document.createElement("p");
+        document.getElementById("containerInformacion").appendChild(parrafoInfoUno);
+        parrafoInfoUno.innerHTML += ("El año 2017 segun la Minuta de empleo Nacional, el indicador :  " + indicadorDesempleo +
+            "\nfue de un " + dataDesempleoTotal2017Varones.toFixed(2) + " % para HOMBRES y de un " + dataDesempleoTotal2017Mujeres.toFixed(2) + " % para MUJERES");
+
+
+        const parrafoInfoDos = document.createElement("p");
+        document.getElementById("containerInformacion").appendChild(parrafoInfoDos);
+        const datoUnoMujeres = window.empleoOcupados(dataDesempleoTotal2017Mujeres, fuerzaDeTrabajoMujeres);
+        
+        const datoDosHombres = window.empleoOcupados(dataDesempleoTotal2017Varones, fuerzaDeTrabajoVarones);
+        parrafoInfoDos.innerHTML += "De lo cual, se puede obtener la cantidad de trabajadores ocupados y desocupados, segun calculos estos son:" +
+            "\n Mujeres Trabajadoras Ocupadas = " + datoUnoMujeres + " miles" +
+            "\n Hombres Trabajadores Ocupados = " + datoDosHombres + "miles";
+
+    }
+    info();
+
+    // aqui una section para la informacion - aplicando function calcular en comparacion empleo por genero
+
+
+});
+

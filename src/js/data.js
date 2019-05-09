@@ -89,98 +89,68 @@ function aplicar(year,question,country) {
     }
   
   }
-  let data = WORLDBANK.BRA.indicators;
 
-window.WORLDBANK = WORLDBANK;
+
+// window.WORLDBANK = WORLDBANK;
+
+window.aplicar=aplicar;
+
+
+
+
+
+
 // function ordenar alfabeticamente A-Z
 function orderData(dataGral) {
-
   let data = dataGral.BRA.indicators;
-
   let contenedorLista = [];
   for (let element of data) {
     contenedorLista.push(element.indicatorName);
   }
-
   contenedorLista.sort();
   return contenedorLista;
 
 }
-
-let resultFxOrdenar = orderData(WORLDBANK);
-
-function creandoListaorderData(resultFxOrdenar) {
-
-
-  let arrayListaIndicadoresDom = resultFxOrdenar;
-
-  var ul = document.createElement("ul");
-  document.getElementById("OrdenarAscendentecontenedor").appendChild(ul);
-  arrayListaIndicadoresDom.forEach(function (nombre) {
-    var li = document.createElement("li");
-    ul.appendChild(li);
-    li.innerHTML += nombre;
-  });
-
-
-}
-
-
-
-
-
+window.orderData=orderData;
 
 
 // function ordenar alfabeticamente Z- A
 function orderDataDes(dataGral) {
 
   let data = dataGral.BRA.indicators;
-
   let contenedorLista = [];
   for (let element of data) {
     contenedorLista.push(element.indicatorName);
   }
-
   let contenedorListaOrdenada = contenedorLista.sort();
   return contenedorListaOrdenada.reverse();
 
 }
-
-let resultFxOrdenarDes = orderDataDes(WORLDBANK);
-
-function creandoListaorderDataDes(resultFxOrdenarDes) {
-
-
-  let arrayListaIndicadoresDom = resultFxOrdenarDes;
-
-  var ul = document.createElement("ul");
-  document.getElementById("OrdenarDescendentecontenedor").appendChild(ul);
-  arrayListaIndicadoresDom.forEach(function (nombre) {
-    var li = document.createElement("li");
-    ul.appendChild(li);
-    li.innerHTML += nombre;
-  });
-
-
-}
+window.orderDataDes=orderDataDes;
 
 
 
 
-// mostrar datos Chile - desempleo
 
-let arrayObjectChile = Object.values(WORLDBANK);
-console.log(arrayObjectChile);
 
-let arrayIndicadoresChile = arrayObjectChile[3].indicators;
-console.log(arrayIndicadoresChile);
 
-let indicadorDesempleoTotal = arrayIndicadoresChile[105].indicatorName;
-console.log(indicadorDesempleoTotal);
-let indicadorDesempleoVarones = arrayIndicadoresChile[106].indicatorName;
-console.log(indicadorDesempleoVarones);
-let indicadorDesempleoMujeres = arrayIndicadoresChile[107].indicatorName;
-console.log(indicadorDesempleoMujeres);
+
+
+// // FUNCTION      mostrar datos Chile - desempleo
+
+// const poblacionEdadDeTrabajarVarones = 7588.7; 
+// const poblacionEdadDeTrabajarMujeres = 7588; 
+
+let porcentaje = "";
+let fuerzaDeTrabajo="";
+
+function empleoOcupados(porcentaje,fuerzaDeTrabajo){
+ 
+let diferenciaPorcentaje = 100-porcentaje; 
+let deltaTrabajadores = diferenciaPorcentaje*fuerzaDeTrabajo;
+
+return ((deltaTrabajadores/100).toFixed(3));
+
 
 
 let dataDesempleoTotal = arrayIndicadoresChile[105].data;
@@ -205,4 +175,11 @@ let dataDesempleoTotal2016Mujeres = dataDesempleoTotalMujeres[2016];
 console.log("el desempleo total MUJERES  2016 es  = "+ dataDesempleoTotal2016Mujeres);
 
 
+}
+
+
+empleoOcupados(porcentaje,fuerzaDeTrabajo);
+window.empleoOcupados=empleoOcupados;
+=======
 window.aplicar=aplicar;
+
