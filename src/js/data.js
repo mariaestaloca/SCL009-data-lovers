@@ -23,7 +23,7 @@ function aplicar(year,question,country) {
   
         const newtabla = document.createElement('table');
         //esta el container div para la tabla donde esta fijado en main.js que se insertara la tabla 
-        const container = document.getElementById("tableDataPage");
+        const container = document.getElementById("tableData");
         container.appendChild(newtabla);
   
         let fila = document.createElement('tr');
@@ -153,7 +153,33 @@ return ((deltaTrabajadores/100).toFixed(3));
 
 
 
+let dataDesempleoTotal = arrayIndicadoresChile[105].data;
+console.log(dataDesempleoTotal);
+let dataDesempleoTotalVarones = arrayIndicadoresChile[106].data;
+console.log(dataDesempleoTotalVarones);
+let dataDesempleoTotalMujeres = arrayIndicadoresChile[107].data;
+console.log(dataDesempleoTotalMujeres);
+
+let dataDesempleoTotal2017 = dataDesempleoTotal[2017];
+console.log("el desempleo total 2017 es  = " + dataDesempleoTotal2017);
+let dataDesempleoTotal2016 = dataDesempleoTotal[2016];
+console.log("el desempleo total 2017 es  = " +dataDesempleoTotal2016);
+let dataDesempleoTotal2017Varones = dataDesempleoTotalVarones[2017];
+console.log("el desempleo total VARONES  2017 es  = "+ dataDesempleoTotal2017Varones);
+let dataDesempleoTotal2016Varones = dataDesempleoTotalVarones[2016];
+console.log("el desempleo total VARONES  2016 es  = "+ dataDesempleoTotal2016Varones);
+
+let dataDesempleoTotal2017Mujeres = dataDesempleoTotalMujeres[2017];
+console.log("el desempleo total MUJERES  2017 es  = "+ dataDesempleoTotal2017Mujeres);
+let dataDesempleoTotal2016Mujeres = dataDesempleoTotalMujeres[2016];
+console.log("el desempleo total MUJERES  2016 es  = "+ dataDesempleoTotal2016Mujeres);
+
+
 }
+
 
 empleoOcupados(porcentaje,fuerzaDeTrabajo);
 window.empleoOcupados=empleoOcupados;
+=======
+window.aplicar=aplicar;
+
