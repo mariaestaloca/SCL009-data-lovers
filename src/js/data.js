@@ -89,5 +89,120 @@ function aplicar(year,question,country) {
     }
   
   }
+  let data = WORLDBANK.BRA.indicators;
+
+window.WORLDBANK = WORLDBANK;
+// function ordenar alfabeticamente A-Z
+function orderData(dataGral) {
+
+  let data = dataGral.BRA.indicators;
+
+  let contenedorLista = [];
+  for (let element of data) {
+    contenedorLista.push(element.indicatorName);
+  }
+
+  contenedorLista.sort();
+  return contenedorLista;
+
+}
+
+let resultFxOrdenar = orderData(WORLDBANK);
+
+function creandoListaorderData(resultFxOrdenar) {
+
+
+  let arrayListaIndicadoresDom = resultFxOrdenar;
+
+  var ul = document.createElement("ul");
+  document.getElementById("OrdenarAscendentecontenedor").appendChild(ul);
+  arrayListaIndicadoresDom.forEach(function (nombre) {
+    var li = document.createElement("li");
+    ul.appendChild(li);
+    li.innerHTML += nombre;
+  });
+
+
+}
+
+
+
+
+
+
+
+// function ordenar alfabeticamente Z- A
+function orderDataDes(dataGral) {
+
+  let data = dataGral.BRA.indicators;
+
+  let contenedorLista = [];
+  for (let element of data) {
+    contenedorLista.push(element.indicatorName);
+  }
+
+  let contenedorListaOrdenada = contenedorLista.sort();
+  return contenedorListaOrdenada.reverse();
+
+}
+
+let resultFxOrdenarDes = orderDataDes(WORLDBANK);
+
+function creandoListaorderDataDes(resultFxOrdenarDes) {
+
+
+  let arrayListaIndicadoresDom = resultFxOrdenarDes;
+
+  var ul = document.createElement("ul");
+  document.getElementById("OrdenarDescendentecontenedor").appendChild(ul);
+  arrayListaIndicadoresDom.forEach(function (nombre) {
+    var li = document.createElement("li");
+    ul.appendChild(li);
+    li.innerHTML += nombre;
+  });
+
+
+}
+
+
+
+
+// mostrar datos Chile - desempleo
+
+let arrayObjectChile = Object.values(WORLDBANK);
+console.log(arrayObjectChile);
+
+let arrayIndicadoresChile = arrayObjectChile[3].indicators;
+console.log(arrayIndicadoresChile);
+
+let indicadorDesempleoTotal = arrayIndicadoresChile[105].indicatorName;
+console.log(indicadorDesempleoTotal);
+let indicadorDesempleoVarones = arrayIndicadoresChile[106].indicatorName;
+console.log(indicadorDesempleoVarones);
+let indicadorDesempleoMujeres = arrayIndicadoresChile[107].indicatorName;
+console.log(indicadorDesempleoMujeres);
+
+
+let dataDesempleoTotal = arrayIndicadoresChile[105].data;
+console.log(dataDesempleoTotal);
+let dataDesempleoTotalVarones = arrayIndicadoresChile[106].data;
+console.log(dataDesempleoTotalVarones);
+let dataDesempleoTotalMujeres = arrayIndicadoresChile[107].data;
+console.log(dataDesempleoTotalMujeres);
+
+let dataDesempleoTotal2017 = dataDesempleoTotal[2017];
+console.log("el desempleo total 2017 es  = " + dataDesempleoTotal2017);s
+let dataDesempleoTotal2016 = dataDesempleoTotal[2016];
+console.log("el desempleo total 2017 es  = " +dataDesempleoTotal2016);
+let dataDesempleoTotal2017Varones = dataDesempleoTotalVarones[2017];
+console.log("el desempleo total VARONES  2017 es  = "+ dataDesempleoTotal2017Varones);
+let dataDesempleoTotal2016Varones = dataDesempleoTotalVarones[2016];
+console.log("el desempleo total VARONES  2016 es  = "+ dataDesempleoTotal2016Varones);
+
+let dataDesempleoTotal2017Mujeres = dataDesempleoTotalMujeres[2017];
+console.log("el desempleo total MUJERES  2017 es  = "+ dataDesempleoTotal2017Mujeres);
+let dataDesempleoTotal2016Mujeres = dataDesempleoTotalMujeres[2016];
+console.log("el desempleo total MUJERES  2016 es  = "+ dataDesempleoTotal2016Mujeres);
+
 
 window.aplicar=aplicar;

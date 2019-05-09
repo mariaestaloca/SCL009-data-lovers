@@ -962,4 +962,25 @@ function selectNivVioOption() {
         option.innerHTML = intervalos[m]; //Metemos el texto en la opción
     }
 }                                                                                                                                                              
-
+//                                                                     FUNCTION ORDER
+// EVENT - FUNCTION ORDER ASCEN
+document.getElementById("btnOrdenarAscendente").addEventListener("click", () => {
+    const dataGeneral = WORLDBANK;
+    orderData(dataGeneral);
+    creandoListaorderData(resultFxOrdenar);
+  
+    document.getElementById("OrdenarAscendentecontenedor").style.display = "block";
+    document.getElementById("OrdenarDescendentecontenedor").style.display = "none";
+       
+  
+});
+// EVENT - FUNCTION ORDER DESC
+document.getElementById("btnOrdenardescendente").addEventListener("click", () => {
+  
+    const dataGeneral = WORLDBANK;
+    orderDataDes(dataGeneral);
+    creandoListaorderDataDes(resultFxOrdenarDes);
+    document.getElementById("OrdenarDescendentecontenedor").style.display = "block";
+    document.getElementById("OrdenarAscendentecontenedor").style.display = "none";
+  
+ });
