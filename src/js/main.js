@@ -3,11 +3,14 @@ const homePage = document.getElementById("homePage");
 const sectionEdu = document.getElementById("sectionEdu");
 const sectionLab = document.getElementById("sectionLab");
 const sectionSoc = document.getElementById("sectionSoc");
+const sectionOrder = document.getElementById("sectionOrder");
 const contact = document.getElementById("contact");
+
 
 sectionEdu.style.display = 'none';
 sectionLab.style.display = 'none';
 sectionSoc.style.display = 'none';
+sectionOrder.style.display = 'none';
 contact.style.display = 'none';
 document.getElementById("selectNivEdu").style.display = 'none';
 document.getElementById("selectInsSco").style.display = 'none';
@@ -23,6 +26,7 @@ document.getElementById("tableDataPage").style.display = 'none';
 //                                      EVENTOS CATEGORIAS EDU/SOC/LAB
 // evento click categoria educacion
 document.getElementById('edubtn').addEventListener('click', () => {
+    document.getElementById("selectParLabIndicator").value = "";
     sectionLab.style.display = 'none';
     sectionSoc.style.display = 'none';
     document.getElementById("selectNivEdu").style.display = 'none';
@@ -32,10 +36,12 @@ document.getElementById('edubtn').addEventListener('click', () => {
     document.getElementById("selectLabFor").style.display = 'none';
     document.getElementById("selectParLab").style.display = 'none';
     document.getElementById("selectNivVio").style.display = 'none';
+    sectionOrder.style.display = 'none';
     contact.style.display = 'none';
     homePage.style.display = 'none';
     document.getElementById("tableDataPage").style.display = 'none';
     sectionEdu.style.display = 'block';
+   
 });
 // evento click categoria social
 document.getElementById('socbtn').addEventListener('click', () => {
@@ -43,6 +49,7 @@ document.getElementById('socbtn').addEventListener('click', () => {
     contact.style.display = 'none';
     sectionEdu.style.display = 'none';
     sectionLab.style.display = 'none';
+    sectionOrder.style.display = 'none';
     document.getElementById("selectNivEdu").style.display = 'none';
     document.getElementById("selectInsSco").style.display = 'none';
     document.getElementById("selectNivIns").style.display = 'none';
@@ -59,6 +66,7 @@ document.getElementById('labbtn').addEventListener('click', () => {
     contact.style.display = 'none';
     sectionSoc.style.display = 'none';
     sectionEdu.style.display = 'none';
+    sectionOrder.style.display = 'none';
     document.getElementById("selectNivEdu").style.display = 'none';
     document.getElementById("selectInsSco").style.display = 'none';
     document.getElementById("selectNivIns").style.display = 'none';
@@ -75,6 +83,7 @@ document.getElementById('homebtn').addEventListener('click', () => {
     contact.style.display = 'none';
     sectionSoc.style.display = 'none';
     sectionEdu.style.display = 'none';
+    sectionOrder.style.display = 'none';
     document.getElementById("selectNivEdu").style.display = 'none';
     document.getElementById("selectInsSco").style.display = 'none';
     document.getElementById("selectNivIns").style.display = 'none';
@@ -85,11 +94,30 @@ document.getElementById('homebtn').addEventListener('click', () => {
     document.getElementById("tableDataPage").style.display = 'none';
     homePage.style.display = 'block';
 });
+
 document.getElementById('indexbtn').addEventListener('click', () => {
     homePage.style.display = 'none';
     sectionLab.style.display = 'none';
     sectionSoc.style.display = 'none';
     sectionEdu.style.display = 'none';
+    contact.style.display = 'none';
+    document.getElementById("selectNivEdu").style.display = 'none';
+    document.getElementById("selectInsSco").style.display = 'none';
+    document.getElementById("selectNivIns").style.display = 'none';
+    document.getElementById("selectNivDes").style.display = 'none';
+    document.getElementById("selectLabFor").style.display = 'none';
+    document.getElementById("selectParLab").style.display = 'none';
+    document.getElementById("selectNivVio").style.display = 'none';
+    document.getElementById("tableDataPage").style.display = 'none';
+    sectionOrder.style.display = 'block';
+});
+
+document.getElementById('contactbtn').addEventListener('click', () => {
+    homePage.style.display = 'none';
+    sectionLab.style.display = 'none';
+    sectionSoc.style.display = 'none';
+    sectionEdu.style.display = 'none';
+    sectionOrder.style.display = 'none';
     document.getElementById("selectNivEdu").style.display = 'none';
     document.getElementById("selectInsSco").style.display = 'none';
     document.getElementById("selectNivIns").style.display = 'none';
@@ -964,23 +992,26 @@ function selectNivVioOption() {
 }                                                                                                                                                              
 //                                                                     FUNCTION ORDER
 // EVENT - FUNCTION ORDER ASCEN
-document.getElementById("btnOrdenarAscendente").addEventListener("click", () => {
+document.getElementById("orderAZbtn").addEventListener("click", () => {
     const dataGeneral = WORLDBANK;
     orderData(dataGeneral);
     creandoListaorderData(resultFxOrdenar);
   
     document.getElementById("OrdenarAscendentecontenedor").style.display = "block";
     document.getElementById("OrdenarDescendentecontenedor").style.display = "none";
+    document.getElementById("orderAZbtn").disabled = true;
+    
        
   
 });
 // EVENT - FUNCTION ORDER DESC
-document.getElementById("btnOrdenardescendente").addEventListener("click", () => {
+document.getElementById("orderZAbtn").addEventListener("click", () => {
   
     const dataGeneral = WORLDBANK;
     orderDataDes(dataGeneral);
     creandoListaorderDataDes(resultFxOrdenarDes);
     document.getElementById("OrdenarDescendentecontenedor").style.display = "block";
     document.getElementById("OrdenarAscendentecontenedor").style.display = "none";
+    document.getElementById("orderZAbtn").disabled = true;
   
  });
