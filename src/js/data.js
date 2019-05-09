@@ -90,5 +90,4 @@ function aplicar(year,question,country) {
   
   }
 
-  
 window.aplicar=aplicar;
