@@ -1,9 +1,9 @@
 nav.navbar, navbar-toggler {
     z-index: 100;
-    height:70px;
+    height:5rem;
     font-family: Arial;
     font-size: 30px;
-    top: 10px;
+    top:0.6rem;
   
     
   }
@@ -27,7 +27,7 @@ nav.navbar, navbar-toggler {
   
   header {
     background-color:#FCEE5B;
-    height: 154px;
+    height: 9.6rem;
     
   
   }
@@ -37,24 +37,32 @@ nav.navbar, navbar-toggler {
 
    
   .logo{
-    width:140px;
-    height:140px;
+    width:8.7rem;
+    height:8.7rem;
    } 
 
 aside {
 text-align: center;
-top: 20px;
+top: 1.25rem;
 background: #FCEE5B;
+padding-top:2rem;
+
+}
+
+#links{
+  font-size: 20px;
+  padding-top:2rem;
 }
 
 #parrafo{
-  margin-bottom:100px;
+  margin-bottom:6rem;
 }
 
 main {
-top: 20px;
+top: 1.25rem;
 background: #FCEE5B;
 height:100%;
+padding-top:2rem;
 }
 
 
@@ -64,40 +72,43 @@ footer {
   position:fixed;
   left:0px;
   bottom:0px;
-  height:40px;
+  height:2.5rem;
   width:100%;
   background:#F7C3E5;
 }
 
 #adds {
-  top: 40px;
+  top: 2.5rem;
   background: #FCEE5B;
   }
   
 .card {  
     width: 18rem;
-    height: 426px;
-    padding: 10px;
+    height: 27rem;
+    padding: 0.6rem;
     
     }
 
 .card-img-top {  
 width: 18rem;
-height: 213px;
+height: 14rem;
 
+}
+
+#selectNivEdu, #selectNivIns,#selectInsSco, #selectNivDes, #selectLabFor, #selectParLab, #selectNivVio{
+  margin-left: 1rem;
 }
 #btnSection, #btnSecNivEdu, #btnSecNivIns, #btnSecInsSco, #btnSecNivDes, #btnSecLabFor, #btnSecParLab, #btnSecNivVio, #btnData, #btnDataNivIns, #btnDataInsSco, #btnDataNivDes, #btnDataLabFor, #btnDataParLab, #btnDataNivVio {
 background-color: #F7C3E5;
 border-color: #F7C3E5;
-margin-bottom:100px;
-border-radius: 15px;
+margin-bottom:6rem;
+border-radius: 1rem;
 
 }
 
 #btnSection:hover, #btnSecNivEdu:hover, #btnSecNivIns:hover, #btnSecInsSco:hover, #btnSecNivDes:hover, #btnSecLabFor:hover, #btnSecParLab:hover, #btnSecNivVio:hover, #btnData:hover, #btnDataNivIns:hover, #btnDataInsSco:hover, #btnDataNivDes:hover, #btnDataLabFor:hover, #btnDataParLab:hover, #btnDataNivVio:hover{
   background-color: palevioletred;
 }
-
 
 .styled-select select {
   background: #F7C3E5;
@@ -113,28 +124,12 @@ border-radius: 15px;
 }
 
 
-
   table {
     overflow: hidden;
-    height: 5rem;
-    width:9rem;
-    margin-left: 4rem;
-    margin-bottom: 2rem;
-
-  }
-  
-  td, th {
-    padding: 1rem;
-    position: relative;
-    margin-left: 4rem;
-    
-  
-  }
-  
-  table {
     background-color: #ffa;
     width: 40rem;
     height: 15rem;
+    margin-left: 4rem;
     margin-bottom: 20rem;
     font-weight: bold;
     font-size: 20px;
@@ -178,21 +173,21 @@ border-radius: 15px;
 
   input[type=text], select, textarea {
   width: 100%;
-  padding: 12px;
+  padding: 1rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0.3rem;
   box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
+  margin-top: 0,5rem;
+  margin-bottom: 1rem;
   resize: vertical;
 }
 
 input[type=submit] {
   background-color: #F7C3E5 ;
   color: white;
-  padding: 12px 20px;
+  padding: 1rem 1.5rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0,3rem;
   cursor: pointer;
 }
 
@@ -201,8 +196,9 @@ input[type=submit]:hover {
 }
 
 .container {
-  border-radius: 30px;
+  border-radius: 2rem;
   background-color: #f2f2f2;
-  padding: 20px;
-  margin-bottom:100px;
+  padding: 1.5rem;
+  margin-bottom:6.3rem;
 }
+
