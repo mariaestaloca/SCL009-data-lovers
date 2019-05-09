@@ -23,7 +23,7 @@ function aplicar(year,question,country) {
   
         const newtabla = document.createElement('table');
         //esta el container div para la tabla donde esta fijado en main.js que se insertara la tabla 
-        const container = document.getElementById("tableDataPage");
+        const container = document.getElementById("tableData");
         container.appendChild(newtabla);
   
         let fila = document.createElement('tr');
@@ -191,7 +191,7 @@ let dataDesempleoTotalMujeres = arrayIndicadoresChile[107].data;
 console.log(dataDesempleoTotalMujeres);
 
 let dataDesempleoTotal2017 = dataDesempleoTotal[2017];
-console.log("el desempleo total 2017 es  = " + dataDesempleoTotal2017);s
+console.log("el desempleo total 2017 es  = " + dataDesempleoTotal2017);
 let dataDesempleoTotal2016 = dataDesempleoTotal[2016];
 console.log("el desempleo total 2017 es  = " +dataDesempleoTotal2016);
 let dataDesempleoTotal2017Varones = dataDesempleoTotalVarones[2017];

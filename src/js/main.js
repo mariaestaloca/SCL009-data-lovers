@@ -26,7 +26,7 @@ document.getElementById("tableDataPage").style.display = 'none';
 //                                      EVENTOS CATEGORIAS EDU/SOC/LAB
 // evento click categoria educacion
 document.getElementById('edubtn').addEventListener('click', () => {
-    document.getElementById("selectParLabIndicator").value = "";
+    document.getElementById("tableData").innerHTML = "";
     sectionLab.style.display = 'none';
     sectionSoc.style.display = 'none';
     document.getElementById("selectNivEdu").style.display = 'none';
@@ -41,10 +41,11 @@ document.getElementById('edubtn').addEventListener('click', () => {
     homePage.style.display = 'none';
     document.getElementById("tableDataPage").style.display = 'none';
     sectionEdu.style.display = 'block';
-   
+
 });
 // evento click categoria social
 document.getElementById('socbtn').addEventListener('click', () => {
+    document.getElementById("tableData").innerHTML = "";
     homePage.style.display = 'none';
     contact.style.display = 'none';
     sectionEdu.style.display = 'none';
@@ -62,6 +63,7 @@ document.getElementById('socbtn').addEventListener('click', () => {
 });
 // evento click categoria laboral
 document.getElementById('labbtn').addEventListener('click', () => {
+    document.getElementById("tableData").innerHTML = "";
     homePage.style.display = 'none';
     contact.style.display = 'none';
     sectionSoc.style.display = 'none';
@@ -79,6 +81,7 @@ document.getElementById('labbtn').addEventListener('click', () => {
 });
 // evento click en el home 
 document.getElementById('homebtn').addEventListener('click', () => {
+    document.getElementById("tableData").innerHTML = "";
     sectionLab.style.display = 'none';
     contact.style.display = 'none';
     sectionSoc.style.display = 'none';
@@ -96,6 +99,7 @@ document.getElementById('homebtn').addEventListener('click', () => {
 });
 
 document.getElementById('indexbtn').addEventListener('click', () => {
+    document.getElementById("tableData").innerHTML = "";
     homePage.style.display = 'none';
     sectionLab.style.display = 'none';
     sectionSoc.style.display = 'none';
@@ -113,6 +117,7 @@ document.getElementById('indexbtn').addEventListener('click', () => {
 });
 
 document.getElementById('contactbtn').addEventListener('click', () => {
+    document.getElementById("tableData").innerHTML = "";
     homePage.style.display = 'none';
     sectionLab.style.display = 'none';
     sectionSoc.style.display = 'none';
@@ -131,38 +136,55 @@ document.getElementById('contactbtn').addEventListener('click', () => {
 //                                       CLICK SUBCATEGORIA EDUCACION 
 //click cuando se hace click en nivel de educacion 
 document.getElementById('btnSecNivEdu').addEventListener('click', () => {
-
+    document.getElementById("selectNivEduCountry").innerHTML = "";
+    document.getElementById("selectNivEduIndicator").innerHTML = "";
+    document.getElementById("selectNivEduDecade").innerHTML = "";
     sectionEdu.style.display = 'none';
     document.getElementById("selectNivEdu").style.display = 'block';
     selectNivEduOption();
 });
 // click cuando se hace click en inscripcion escolar 
-    document.getElementById('btnSecInsSco').addEventListener('click', () => {
+document.getElementById('btnSecInsSco').addEventListener('click', () => {
+    document.getElementById("selectInsScoCountry").innerHTML = "";
+    document.getElementById("selectInsScoIndicator").innerHTML = "";
+    document.getElementById("selectInsScoDecade").innerHTML = "";
     sectionEdu.style.display = 'none';
     document.getElementById("selectInsSco").style.display = 'block';
-    selectInsScoOption(); 
+    selectInsScoOption();
 });
 // click cuando se hace click en nivel de inscripcion
 
-    document.getElementById('btnSecNivIns').addEventListener('click', () => {
+document.getElementById('btnSecNivIns').addEventListener('click', () => {
+    document.getElementById("selectNivInsCountry").innerHTML = "";
+    document.getElementById("selectNivInsIndicator").innerHTML = "";
+    document.getElementById("selectNivInsDecade").innerHTML = "";
     sectionEdu.style.display = 'none';
     document.getElementById("selectNivIns").style.display = 'block';
     selectNivInsOption();
 });
 //                                       CLICK SUBCATEGORIA LABORAL
 // click cuando se hace click en nivel de desempleo
-    document.getElementById('btnSecNivDes').addEventListener('click', () => {
+document.getElementById('btnSecNivDes').addEventListener('click', () => {
+    document.getElementById("selectNivDesCountry").innerHTML = "";
+    document.getElementById("selectNivDesIndicator").innerHTML = "";
+    document.getElementById("selectNivDesDecade").innerHTML = "";
     sectionLab.style.display = 'none';
     document.getElementById("selectNivDes").style.display = 'block';
     selectNiveDesOption();
 })
 
-    document.getElementById('btnSecLabFor').addEventListener('click', () => {
+document.getElementById('btnSecLabFor').addEventListener('click', () => {
+    document.getElementById("selectLabForCountry").innerHTML = "";
+    document.getElementById("selectLabForIndicator").innerHTML = "";
+    document.getElementById("selectLabForDecade").innerHTML = "";
     sectionLab.style.display = 'none';
     document.getElementById("selectLabFor").style.display = 'block';
     selectForLabOption();
 });
-    document.getElementById('btnSecParLab').addEventListener('click', () => {
+document.getElementById('btnSecParLab').addEventListener('click', () => {
+    document.getElementById("selectParLabCountry").innerHTML = "";
+    document.getElementById("selectParLabIndicator").innerHTML = "";
+    document.getElementById("selectParLabDecade").innerHTML = "";
     sectionLab.style.display = 'none';
     document.getElementById("selectParLab").style.display = 'block';
     selectParLabOption();
@@ -170,7 +192,10 @@ document.getElementById('btnSecNivEdu').addEventListener('click', () => {
 //                                       CLICK SUBCATEGORIA SOCIAL
 // click cuando se hace click en nivel de desempleo
 
-    document.getElementById('btnSecNivVio').addEventListener('click', () => {
+document.getElementById('btnSecNivVio').addEventListener('click', () => {
+    document.getElementById("selectNivVioCountry").innerHTML = "";
+    document.getElementById("selectNivVioIndicator").innerHTML = "";
+    document.getElementById("selectNivVioDecade").innerHTML = "";
     sectionSoc.style.display = 'none';
     document.getElementById("selectNivVio").style.display = 'block';
     selectNivVioOption();
@@ -190,7 +215,7 @@ let condition = "";
 const selectNivEduCountrySave = document.getElementById("selectNivEduCountry");
 selectNivEduCountrySave.addEventListener("change", () => {
     condition = selectNivEduCountrySave.options[selectNivEduCountrySave.selectedIndex].text;
-  
+
     pais(condition);
 });
 // Indicators Selection:
@@ -198,129 +223,129 @@ const selectNivEduIndicatorSave = document.getElementById("selectNivEduIndicator
 // const containerDos = document.getElementById("containerselectNivEduPreguntas");
 selectNivEduIndicatorSave.addEventListener("change", () => {
     question = selectNivEduIndicatorSave.options[selectNivEduIndicatorSave.selectedIndex].text;
-    
+
 });
 //Year Selection
 const selectNivEduDecadeSave = document.getElementById("selectNivEduDecade");
 // const year = document.getElementById("containerselectNivEduDecada");
 selectNivEduDecadeSave.addEventListener("change", () => {
     year = selectNivEduDecadeSave.options[selectNivEduDecadeSave.selectedIndex].text;
-   
+
 });
 // STORING USER SELECTION - SCHOOL REGISTRATION
 // Country Selection:
 const selectInsScoCountrySave = document.getElementById("selectInsScoCountry");
 selectInsScoCountrySave.addEventListener("change", () => {
     condition = selectInsScoCountrySave.options[selectInsScoCountrySave.selectedIndex].text;
-    
+
     pais(condition);
 });
 // Indicators Selection:
-const selectInsScoIndicatorSave= document.getElementById("selectInsScoIndicator");
+const selectInsScoIndicatorSave = document.getElementById("selectInsScoIndicator");
 // const containerDos = document.getElementById("containerselectNivEduPreguntas");
 selectInsScoIndicatorSave.addEventListener("change", () => {
     question = selectInsScoIndicatorSave.options[selectInsScoIndicatorSave.selectedIndex].text;
-    
+
 });
 //Year Selection
 const selectInsScoDecadeSave = document.getElementById("selectInsScoDecade");
 selectInsScoDecadeSave.addEventListener("change", () => {
     year = selectInsScoDecadeSave.options[selectInsScoDecadeSave.selectedIndex].text;
-   
+
 });
 // STORING USER SELECTION - LEVEL OF INSTRUCTION 
 // Country Selection:
 const selectNivInsCountrySave = document.getElementById("selectNivInsCountry");
 selectNivInsCountrySave.addEventListener("change", () => {
     condition = selectNivInsCountrySave.options[selectNivInsCountrySave.selectedIndex].text;
-  
+
     pais(condition);
-}); 
+});
 // Indicators Selection:  
 const selectNivInsIndicatorSave = document.getElementById("selectNivInsIndicator");
 selectNivInsIndicatorSave.addEventListener("change", () => {
     question = selectNivInsIndicatorSave.options[selectNivInsIndicatorSave.selectedIndex].text;
-    
+
 });
 //Year Selection
 const selectNivInsDecadeSave = document.getElementById("selectNivInsDecade");
 selectNivInsDecadeSave.addEventListener("change", () => {
     year = selectNivInsDecadeSave.options[selectNivInsDecadeSave.selectedIndex].text;
-   
+
 });
 // STORING USER SELECTION -   LEVEL OF UNEMPLOYMENT
 // Country Selection:
 const selectNivDesCountrySave = document.getElementById("selectNivDesCountry");
 selectNivDesCountrySave.addEventListener("change", () => {
     condition = selectNivDesCountrySave.options[selectNivDesCountrySave.selectedIndex].text;
-    
+
     pais(condition);
-}); 
+});
 // Indicators Selection:  
 const selectNivDesIndicatorSave = document.getElementById("selectNivDesIndicator");
 selectNivDesIndicatorSave.addEventListener("change", () => {
     question = document.getElementById("selectNivDesIndicator").options[document.getElementById("selectNivDesIndicator").selectedIndex].text;
-  
+
 });
 //Year Selection
 const selectNivDesDecadeSave = document.getElementById("selectNivDesDecade");
 selectNivDesDecadeSave.addEventListener("change", () => {
     year = selectNivDesDecadeSave.options[selectNivDesDecadeSave.selectedIndex].text;
-  
+
 });
 // obteniendo eleccion de usuario -   FUERZA LABORAL
 const selectLabForCountrySave = document.getElementById("selectLabForCountry");
 selectLabForCountrySave.addEventListener("change", () => {
     condition = selectLabForCountrySave.options[selectLabForCountrySave.selectedIndex].text;
-    
+
     pais(condition);
-}); 
-  
+});
+
 const selectLabForIndicatorSave = document.getElementById("selectLabForIndicator");
 selectLabForIndicatorSave.addEventListener("change", () => {
     question = selectLabForIndicatorSave.options[selectLabForIndicatorSave.selectedIndex].text;
-   
+
 });
 const selectLabForDecadeSave = document.getElementById("selectLabForDecade");
 selectLabForDecadeSave.addEventListener("change", () => {
     year = selectLabForDecadeSave.options[selectLabForDecadeSave.selectedIndex].text;
-  
+
 });
 // obteniendo eleccion de usuario -   PARTICIPACION LABORAL 
 const selectParLabCountrySave = document.getElementById("selectParLabCountry");
 selectParLabCountrySave.addEventListener("change", () => {
     condition = selectParLabCountrySave.options[selectParLabCountrySave.selectedIndex].text;
-  
+
     pais(condition);
-}); 
-  
+});
+
 const selectParLabIndicatorSave = document.getElementById("selectParLabIndicator");
 selectParLabIndicatorSave.addEventListener("change", () => {
     question = selectParLabIndicatorSave.options[selectParLabIndicatorSave.selectedIndex].text;
-   
+
 });
 const selectParLabDecadeSave = document.getElementById("selectParLabDecade");
 selectParLabDecadeSave.addEventListener("change", () => {
     year = selectParLabDecadeSave.options[selectParLabDecadeSave.selectedIndex].text;
-  
+
 });
 // obteniendo eleccion de usuario -   NIVEL DE VIOLENCIA INTRAFAMILIAR
 const selectNivVioCountrySave = document.getElementById("selectNivVioCountry");
 selectNivVioCountrySave.addEventListener("change", () => {
     condition = selectNivVioCountrySave.options[selectNivVioCountrySave.selectedIndex].text;
-  
+
     pais(condition);
-}); 
-  
+});
+
 const selectNivVioIndicatorSave = document.getElementById("selectNivVioIndicator");
 selectNivVioIndicatorSave.addEventListener("change", () => {
     question = selectNivVioIndicatorSave.options[selectNivVioIndicatorSave.selectedIndex].text;
-   
+
 });
 const selectNivVioDecadeSave = document.getElementById("selectNivVioDecade");
 selectNivVioDecadeSave.addEventListener("change", () => {
     year = selectNivVioDecadeSave.options[selectNivVioDecadeSave.selectedIndex].text;
-   
+
 });
 //   M O S T R A R      D A T O S ; 
 //VARIABLES VACIAS fx aplicar()
@@ -342,7 +367,7 @@ document.getElementById("btnDataInsSco").addEventListener("click", () => {
         document.getElementById("selectInsSco").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
-  
+
 });
 document.getElementById("btnDataNivIns").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
@@ -352,7 +377,7 @@ document.getElementById("btnDataNivIns").addEventListener("click", () => {
         document.getElementById("selectNivIns").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
-   
+
 });
 document.getElementById("btnDataNivDes").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
@@ -362,7 +387,7 @@ document.getElementById("btnDataNivDes").addEventListener("click", () => {
         document.getElementById("selectNivDes").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
-   
+
 });
 document.getElementById("btnDataLabFor").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
@@ -382,7 +407,7 @@ document.getElementById("btnDataParLab").addEventListener("click", () => {
         document.getElementById("selectParLab").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
- 
+
 });
 document.getElementById("btnDataNivVio").addEventListener("click", () => {
     if (year == "" || question == "" || country == "") {
@@ -392,7 +417,7 @@ document.getElementById("btnDataNivVio").addEventListener("click", () => {
         document.getElementById("selectNivVio").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
     }
-   
+
 });
 // funcion condicional pais
 function pais(condition) {
@@ -412,11 +437,11 @@ function pais(condition) {
 
 const arrSelectGralCountry = ["PERU", "MEXICO", "BRASIL", "CHILE"];
 
-const intervalos = ["1999", 
-                    "2000", "2001", "2002", "2003", "2004", "2005", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", 
-                    "2014", "2015", "2016", "2017"];
+const intervalos = ["1999",
+    "2000", "2001", "2002", "2003", "2004", "2005", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013",
+    "2014", "2015", "2016", "2017"];
 
-const {PER,MEX,BRA, CHL} = window.WORLDBANK;
+const { PER, MEX, BRA, CHL } = window.WORLDBANK;
 const arrPeru = PER.indicators;
 const arrMexico = MEX.indicators;
 const arrBrasil = BRA.indicators;
@@ -426,61 +451,61 @@ const arrChile = CHL.indicators;
 // // inicialmente 
 //                                                          I N D I C A T O R S          S U B C  A T E G  O R  I  A 
 //  INDICATORS SUBCATEGORIA  EDUCACION 
-const arrSelectNivEduIndicators = ["Educacin terciaria, profesores (% de mujeres)", 
-                               "Educación de nivel primario, alumnos (% de mujeres)", 
-                               "Educación de nivel primario, maestras (% de mujeres)", 
-                               "Educación de nivel secundario, alumnos (% de mujeres)", 
-                               "Educación de nivel secundario, alumnos en programas de educación general (% de mujeres)", 
-                               "Educación de nivel secundario, alumnos en programas vocacionales (% de mujeres)"];
+const arrSelectNivEduIndicators = ["Educacin terciaria, profesores (% de mujeres)",
+    "Educación de nivel primario, alumnos (% de mujeres)",
+    "Educación de nivel primario, maestras (% de mujeres)",
+    "Educación de nivel secundario, alumnos (% de mujeres)",
+    "Educación de nivel secundario, alumnos en programas de educación general (% de mujeres)",
+    "Educación de nivel secundario, alumnos en programas vocacionales (% de mujeres)"];
 const arrselectInsScoIndicators = ["Inscripción escolar, nivel preprimario, mujeres (% bruto)",
-                               "Inscripción escolar, nivel primario, mujeres (% bruto)",
-                               "Inscripción escolar, nivel primario, mujeres (% neto)",
-                               "Inscripción escolar, nivel secundario, mujeres (% bruto)",
-                               "Inscripción escolar, nivel secundario, mujeres (% neto)",
-                               "Inscripción escolar, nivel terciario, mujeres (% bruto)"];
+    "Inscripción escolar, nivel primario, mujeres (% bruto)",
+    "Inscripción escolar, nivel primario, mujeres (% neto)",
+    "Inscripción escolar, nivel secundario, mujeres (% bruto)",
+    "Inscripción escolar, nivel secundario, mujeres (% neto)",
+    "Inscripción escolar, nivel terciario, mujeres (% bruto)"];
 const arrselectNivInsIndicators = ["Nivel de instrucción, al menos ciclo inferior de la escuela secundaria completo, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos ciclo superior de la escuela secundaria completo, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos escuela de nivel posterior a la secundaria completa, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos escuela primaria completa, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos escuela terciaria de ciclo corto finalizada, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos nivel de doctorado o equivalente, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos nivel de licenciatura o equivalente, población de más de 25 años, mujeres (%) (acumulativo)",
-                              "Nivel de instrucción, al menos nivel de maestría o equivalente, población de más de 25 años, mujeres (%) (acumulativo)"];
+    "Nivel de instrucción, al menos ciclo superior de la escuela secundaria completo, población de más de 25 años, mujeres (%) (acumulativo)",
+    "Nivel de instrucción, al menos escuela de nivel posterior a la secundaria completa, población de más de 25 años, mujeres (%) (acumulativo)",
+    "Nivel de instrucción, al menos escuela primaria completa, población de más de 25 años, mujeres (%) (acumulativo)",
+    "Nivel de instrucción, al menos escuela terciaria de ciclo corto finalizada, población de más de 25 años, mujeres (%) (acumulativo)",
+    "Nivel de instrucción, al menos nivel de doctorado o equivalente, población de más de 25 años, mujeres (%) (acumulativo)",
+    "Nivel de instrucción, al menos nivel de licenciatura o equivalente, población de más de 25 años, mujeres (%) (acumulativo)",
+    "Nivel de instrucción, al menos nivel de maestría o equivalente, población de más de 25 años, mujeres (%) (acumulativo)"];
 //  INDICATORS SUBCATEGORIA  LABORAL 
 const arrselectNivDesIndicators = ["Desempleo, total (% de participación total en la fuerza laboral) (estimación nacional)",
-                              "Desempleo, total de jóvenes (% del total de participación en la fuerza laboral de 15 a 24 años) (estimación nacional)",
-                              "Desempleo, mujeres (% de participación femenina en la fuerza laboral) (estimación nacional)",
-                              "Desempleo, varones (% de participación masculina en la fuerza laboral) (estimación nacional)",
-                              "Desempleo, mujeres jóvenes (% de participación en la fuerza laboral de mujeres de 15 a 24 años) (estimación nacional)",
-                              "Desempleo, varones jóvenes (% de participación en la fuerza laboral de varones de 15 a 24 años) (estimación nacional)"];
-const arrselectLabForIndicators = [ "Fuerza laboral con educación avanzada (% del total)",
-                              "Fuerza laboral con educación avanzada, mujeres (% de la fuerza laboral femenina)",
-                              "Fuerza laboral con educación avanzada, varones (% de la fuerza laboral masculina)",
-                              "Fuerza laboral con educación básica (% del total)",
-                              "Fuerza laboral con educación básica, mujeres (% de la fuerza laboral femenina)",
-                              "Fuerza laboral con educación básica, varones (% de la fuerza laboral masculina)",
-                              "Fuerza laboral con educación intermedia, mujeres (% de la fuerza laboral femenina)",
-                              "Fuerza laboral con educación intermedia, varones (% de la fuerza laboral masculina)"];
-  
-const arrselectLabParIndicators = [ "Tasa de población activa, mujeres (% de la población femenina mayor de 15 años) (estimación modelado OIT)",
-                              "Tasa de participación en la fuerza laboral, de 15 a 24 años, mujeres (%) (estimación nacional)",
-                              "Tasa de participación en la fuerza laboral, de 15 a 24 años, total (%) (estimación nacional)",
-                              "Tasa de participación en la fuerza laboral, de 15 a 24 años, varones (%) (estimación nacional)",
-                              "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-64 años) (estimación modelado OIT)",
-                              "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-64 años) (estimación modelado OIT)",
-                              "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina mayor de 15 años) (estimación nacional)",
-                              "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años) (estimación nacional)",
-                              "Tasa de participación en la fuerza laboral, total (% del total de la población entre 15-64 años) (estimación modelado OIT)",
-                              "Tasa de participación en la fuerza laboral, varones (% de la población masculina mayor de 15 años) (estimación nacional)"];
-                             
-const arrseleccNioVioIndicators = [ "Mujeres que creen que está justificado que un marido golpee a su esposa (cualquiera de las cinco razones) (%)",
-                              "Mujeres que creen que está justificado que un marido golpee a su esposa cuando a ella se le quema la comida (%)",
-                              "Mujeres que creen que está justificado que un marido golpee a su esposa cuando descuida a los hijos (%)",
-                              "Mujeres que creen que está justificado que un marido golpee a su esposa cuando ella discute con él (%)",
-                              "Mujeres que creen que está justificado que un marido golpee a su esposa cuando ella se niega a tener relaciones sexuales (%)",
-                              "Mujeres que creen que está justificado que un marido golpee a su esposa cuando sale sin avisarle (%)",
-                              "Mujeres que se casaron por primera vez antes de los 18 (% de mujeres 10-24)"];                              
- 
+    "Desempleo, total de jóvenes (% del total de participación en la fuerza laboral de 15 a 24 años) (estimación nacional)",
+    "Desempleo, mujeres (% de participación femenina en la fuerza laboral) (estimación nacional)",
+    "Desempleo, varones (% de participación masculina en la fuerza laboral) (estimación nacional)",
+    "Desempleo, mujeres jóvenes (% de participación en la fuerza laboral de mujeres de 15 a 24 años) (estimación nacional)",
+    "Desempleo, varones jóvenes (% de participación en la fuerza laboral de varones de 15 a 24 años) (estimación nacional)"];
+const arrselectLabForIndicators = ["Fuerza laboral con educación avanzada (% del total)",
+    "Fuerza laboral con educación avanzada, mujeres (% de la fuerza laboral femenina)",
+    "Fuerza laboral con educación avanzada, varones (% de la fuerza laboral masculina)",
+    "Fuerza laboral con educación básica (% del total)",
+    "Fuerza laboral con educación básica, mujeres (% de la fuerza laboral femenina)",
+    "Fuerza laboral con educación básica, varones (% de la fuerza laboral masculina)",
+    "Fuerza laboral con educación intermedia, mujeres (% de la fuerza laboral femenina)",
+    "Fuerza laboral con educación intermedia, varones (% de la fuerza laboral masculina)"];
+
+const arrselectLabParIndicators = ["Tasa de población activa, mujeres (% de la población femenina mayor de 15 años) (estimación modelado OIT)",
+    "Tasa de participación en la fuerza laboral, de 15 a 24 años, mujeres (%) (estimación nacional)",
+    "Tasa de participación en la fuerza laboral, de 15 a 24 años, total (%) (estimación nacional)",
+    "Tasa de participación en la fuerza laboral, de 15 a 24 años, varones (%) (estimación nacional)",
+    "Tasa de participación en la fuerza laboral, hombres (% de la población masculina entre 15-64 años) (estimación modelado OIT)",
+    "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina entre 15-64 años) (estimación modelado OIT)",
+    "Tasa de participación en la fuerza laboral, mujeres (% de la población femenina mayor de 15 años) (estimación nacional)",
+    "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años) (estimación nacional)",
+    "Tasa de participación en la fuerza laboral, total (% del total de la población entre 15-64 años) (estimación modelado OIT)",
+    "Tasa de participación en la fuerza laboral, varones (% de la población masculina mayor de 15 años) (estimación nacional)"];
+
+const arrseleccNioVioIndicators = ["Mujeres que creen que está justificado que un marido golpee a su esposa (cualquiera de las cinco razones) (%)",
+    "Mujeres que creen que está justificado que un marido golpee a su esposa cuando a ella se le quema la comida (%)",
+    "Mujeres que creen que está justificado que un marido golpee a su esposa cuando descuida a los hijos (%)",
+    "Mujeres que creen que está justificado que un marido golpee a su esposa cuando ella discute con él (%)",
+    "Mujeres que creen que está justificado que un marido golpee a su esposa cuando ella se niega a tener relaciones sexuales (%)",
+    "Mujeres que creen que está justificado que un marido golpee a su esposa cuando sale sin avisarle (%)",
+    "Mujeres que se casaron por primera vez antes de los 18 (% de mujeres 10-24)"];
+
 
 //     F U N C T I O N S   C R E A T I O N    S E L E C T 
 //            EDUCACION
@@ -508,7 +533,7 @@ function selectNivEduOption() {
         option.id = arrSelectGralCountry[m];
         option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
     }
-    
+
     let selectIndicatorNivEdu = document.getElementById("selectNivEduIndicator");
 
     option = document.createElement("option");//opcion por defecto
@@ -537,14 +562,14 @@ function selectNivEduOption() {
     option.setAttribute("value", "id");
     option.value = ""
     option.innerHTML = "Seleccione..."
-        
+
     for (let m = 0; m < intervalos.length; m++) {
 
         let option = document.createElement("option");
         selecIntervalosNivEdu.appendChild(option); //Metemos la opción en el select
 
         option.setAttribute("value", "id"); //Creamos la opcion y se le dan los atriculos
-       
+
         option.value = m;
         option.id = intervalos[m];
         option.innerHTML = intervalos[m]; //Metemos el texto en la opción
@@ -578,7 +603,7 @@ function selectInsScoOption() {
         option.id = arrSelectGralCountry[m];
         option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
     }
-   
+
     let selectIndicatorInsSco = document.getElementById("selectInsScoIndicator");
 
     //opcion por defecto
@@ -595,7 +620,7 @@ function selectInsScoOption() {
         selectIndicatorInsSco.appendChild(option); //Metemos la opción en el select
 
         option.setAttribute("value", "id");//Creamos la opcion y se le dan los atriculos
-        
+
         option.value = m;
         option.id = arrselectInsScoIndicators[m];
         option.innerHTML = arrselectInsScoIndicators[m]; //Metemos el texto en la opción
@@ -614,7 +639,7 @@ function selectInsScoOption() {
         selecIntervalosNivEdu.appendChild(option); //Metemos la opción en el select
 
         option.setAttribute("value", "id");//Creamos la opcion y se le dan los atriculos
-        
+
         option.value = m;
         option.id = intervalos[m];
         option.innerHTML = intervalos[m]; //Metemos el texto en la opción
@@ -648,7 +673,7 @@ function selectNivInsOption() {
         option.id = arrSelectGralCountry[m];
         option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
     }
-  
+
     let selectIndicatorNivIns = document.getElementById("selectNivInsIndicator");
 
     //opcion por defecto
@@ -684,7 +709,7 @@ function selectNivInsOption() {
         selecIntervalosNivIns.appendChild(option); //Metemos la opción en el select
 
         option.setAttribute("value", "id");//Creamos la opcion y se le dan los atriculos
-        
+
         option.value = m;
         option.id = intervalos[m];
         option.innerHTML = intervalos[m]; //Metemos el texto en la opción
@@ -736,7 +761,7 @@ function selectNiveDesOption() {
         selectIndicatorNivDes.appendChild(option); //Metemos la opción en el select
 
         option.setAttribute("value", "id");//Creamos la opcion y se le dan los atriculos
-        
+
         option.value = m;
         option.id = arrselectNivDesIndicators[m];
         option.innerHTML = arrselectNivDesIndicators[m]; //Metemos el texto en la opción
@@ -757,7 +782,7 @@ function selectNiveDesOption() {
         selecIntervalosNivDes.appendChild(option); //Metemos la opción en el select
 
         option.setAttribute("value", "id"); //Creamos la opcion y se le dan los atriculos
-       
+
         option.value = m;
         option.id = intervalos[m];
         option.innerHTML = intervalos[m]; //Metemos el texto en la opción
@@ -910,7 +935,7 @@ function selectParLabOption() {
         option.id = intervalos[m];
         option.innerHTML = intervalos[m]; //Metemos el texto en la opción
     }
-    
+
 }
 
 
@@ -921,7 +946,7 @@ function selectParLabOption() {
 function selectNivVioOption() {
 
     // se crea contenedor del select en pais 
-    let selectCountryNivVio= document.getElementById("selectNivVioCountry");
+    let selectCountryNivVio = document.getElementById("selectNivVioCountry");
     //opcion por defecto
     let option = document.createElement("option");
     selectCountryNivVio.appendChild(option);
@@ -989,29 +1014,29 @@ function selectNivVioOption() {
         option.id = intervalos[m];
         option.innerHTML = intervalos[m]; //Metemos el texto en la opción
     }
-}                                                                                                                                                              
+}
 //                                                                     FUNCTION ORDER
 // EVENT - FUNCTION ORDER ASCEN
 document.getElementById("orderAZbtn").addEventListener("click", () => {
     const dataGeneral = WORLDBANK;
     orderData(dataGeneral);
     creandoListaorderData(resultFxOrdenar);
-  
+
     document.getElementById("OrdenarAscendentecontenedor").style.display = "block";
     document.getElementById("OrdenarDescendentecontenedor").style.display = "none";
     document.getElementById("orderAZbtn").disabled = true;
-    
-       
-  
+
+
+
 });
 // EVENT - FUNCTION ORDER DESC
 document.getElementById("orderZAbtn").addEventListener("click", () => {
-  
+
     const dataGeneral = WORLDBANK;
     orderDataDes(dataGeneral);
     creandoListaorderDataDes(resultFxOrdenarDes);
     document.getElementById("OrdenarDescendentecontenedor").style.display = "block";
     document.getElementById("OrdenarAscendentecontenedor").style.display = "none";
     document.getElementById("orderZAbtn").disabled = true;
-  
- });
+
+});
