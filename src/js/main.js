@@ -973,7 +973,8 @@ document.getElementById("btnOrdenardescendente").addEventListener("click", () =>
   
 
     const dataGeneral = WORLDBANK;
-    orderDataDescendente(dataGeneral);
+    orderDataDes(dataGeneral);
+    creandoListaorderDataDes(resultFxOrdenarDes);
     document.getElementById("OrdenarDescendentecontenedor").style.display = "block";
     document.getElementById("OrdenarAscendentecontenedor").style.display = "none";
   
