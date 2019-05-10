@@ -17,16 +17,17 @@ nav.navbar, navbar-toggler {
     background-color: transparent;
     color: white;
     border:none;
+    margin-right: 1rem;
   }
   
-  #edubtn:hover, #socbtn:hover, #labbtn:hover, #homebtn:hover, #indexbtn:hover {
+  #edubtn:hover, #socbtn:hover, #labbtn:hover, #contactbtn:hover, #homebtn:hover, #indexbtn:hover {
     background-color: transparent;
     color:#F7C3E5;
     border:none;
   }
   
   header {
-    background-color:#FCEE5B;
+    background-color:#ffa;
     height: 9.6rem;
     
   
@@ -44,7 +45,7 @@ nav.navbar, navbar-toggler {
 aside {
 text-align: center;
 top: 1.25rem;
-background: #FCEE5B;
+background: #ffa;
 padding-top:2rem;
 
 }
@@ -60,7 +61,7 @@ padding-top:2rem;
 
 main {
 top: 1.25rem;
-background: #FCEE5B;
+background: #ffa;
 height:100%;
 padding-top:2rem;
 }
@@ -79,7 +80,7 @@ footer {
 
 #adds {
   top: 2.5rem;
-  background: #FCEE5B;
+  background: #ffa;
   }
   
 .card {  
@@ -126,7 +127,7 @@ border-radius: 1rem;
 
   table {
     overflow: hidden;
-    background-color: #ffa;
+    background-color: #f2f2f2;
     width: 40rem;
     height: 15rem;
     margin-left: 4rem;
@@ -139,7 +140,7 @@ border-radius: 1rem;
 
 
   td:hover {
-    background-color: #FCEE5B;
+    background-color: #ffa;
     font-size: 30px;
   }
   
