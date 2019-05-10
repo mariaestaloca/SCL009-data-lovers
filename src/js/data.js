@@ -23,7 +23,7 @@ function aplicar(year,question,country) {
   
         const newtabla = document.createElement('table');
         //esta el container div para la tabla donde esta fijado en main.js que se insertara la tabla 
-        const container = document.getElementById("tableDataPage");
+        const container = document.getElementById("tableData");
         container.appendChild(newtabla);
   
         let fila = document.createElement('tr');
@@ -63,25 +63,6 @@ function aplicar(year,question,country) {
           fila2.appendChild(columna);
   
         }
-        // let arrayvacio = [];
-        // arrayvacio.push(arrayValuesObjetos[j])
-        // arrayvacio.push(arrayValuesObjetos[j + 1])
-        // arrayvacio.push(arrayValuesObjetos[j + 2])
-        // arrayvacio.push(arrayValuesObjetos[j + 3])
-        // arrayvacio.push(arrayValuesObjetos[j + 4])
-        // console.log(arrayvacio);
-  
-        // initial = 0;
-        // const arrSum = arrayvacio.reduce((sum, current) => sum + current, initial);
-        // console.log(arrSum);
-  
-        // const promedio = (arrSum / arrayvacio.length).toFixed(2);
-        // console.log(promedio);
-  
-        // let parrafo = document.createElement('p');
-        // let promediocontainer = document.getElementById('promediocontainer');
-        // promediocontainer.appendChild(parrafo);
-        // parrafo.appendChild(promedio);
   
         newtabla.setAttribute("border", "3");
       }

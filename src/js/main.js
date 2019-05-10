@@ -26,7 +26,7 @@ document.getElementById("tableDataPage").style.display = 'none';
 //                                      EVENTOS CATEGORIAS EDU/SOC/LAB
 // evento click categoria educacion
 document.getElementById('edubtn').addEventListener('click', () => {
-    document.getElementById("selectParLabIndicator").value = "";
+    document.getElementById("tableData").innerHTML = "";
     sectionLab.style.display = 'none';
     sectionSoc.style.display = 'none';
     document.getElementById("selectNivEdu").style.display = 'none';
@@ -45,6 +45,7 @@ document.getElementById('edubtn').addEventListener('click', () => {
 });
 // evento click categoria social
 document.getElementById('socbtn').addEventListener('click', () => {
+    document.getElementById("tableData").innerHTML = "";
     homePage.style.display = 'none';
     contact.style.display = 'none';
     sectionEdu.style.display = 'none';
@@ -62,6 +63,7 @@ document.getElementById('socbtn').addEventListener('click', () => {
 });
 // evento click categoria laboral
 document.getElementById('labbtn').addEventListener('click', () => {
+    document.getElementById("tableData").innerHTML = "";
     homePage.style.display = 'none';
     contact.style.display = 'none';
     sectionSoc.style.display = 'none';
@@ -79,6 +81,7 @@ document.getElementById('labbtn').addEventListener('click', () => {
 });
 // evento click en el home 
 document.getElementById('homebtn').addEventListener('click', () => {
+    document.getElementById("tableData").innerHTML = "";
     sectionLab.style.display = 'none';
     contact.style.display = 'none';
     sectionSoc.style.display = 'none';
@@ -96,6 +99,7 @@ document.getElementById('homebtn').addEventListener('click', () => {
 });
 
 document.getElementById('indexbtn').addEventListener('click', () => {
+    document.getElementById("tableData").innerHTML = "";
     homePage.style.display = 'none';
     sectionLab.style.display = 'none';
     sectionSoc.style.display = 'none';
@@ -113,6 +117,7 @@ document.getElementById('indexbtn').addEventListener('click', () => {
 });
 
 document.getElementById('contactbtn').addEventListener('click', () => {
+    document.getElementById("tableData").innerHTML = "";
     homePage.style.display = 'none';
     sectionLab.style.display = 'none';
     sectionSoc.style.display = 'none';
@@ -131,13 +136,18 @@ document.getElementById('contactbtn').addEventListener('click', () => {
 //                                       CLICK SUBCATEGORIA EDUCACION 
 //click cuando se hace click en nivel de educacion 
 document.getElementById('btnSecNivEdu').addEventListener('click', () => {
-
+    document.getElementById("selectNivEduCountry").innerHTML = "";
+    document.getElementById("selectNivEduIndicator").innerHTML = "";
+    document.getElementById("selectNivEduDecade").innerHTML = "";
     sectionEdu.style.display = 'none';
     document.getElementById("selectNivEdu").style.display = 'block';
     selectNivEduOption();
 });
 // click cuando se hace click en inscripcion escolar 
 document.getElementById('btnSecInsSco').addEventListener('click', () => {
+    document.getElementById("selectInsScoCountry").innerHTML = "";
+    document.getElementById("selectInsScoIndicator").innerHTML = "";
+    document.getElementById("selectInsScoDecade").innerHTML = "";
     sectionEdu.style.display = 'none';
     document.getElementById("selectInsSco").style.display = 'block';
     selectInsScoOption();
@@ -145,6 +155,9 @@ document.getElementById('btnSecInsSco').addEventListener('click', () => {
 // click cuando se hace click en nivel de inscripcion
 
 document.getElementById('btnSecNivIns').addEventListener('click', () => {
+    document.getElementById("selectNivInsCountry").innerHTML = "";
+    document.getElementById("selectNivInsIndicator").innerHTML = "";
+    document.getElementById("selectNivInsDecade").innerHTML = "";
     sectionEdu.style.display = 'none';
     document.getElementById("selectNivIns").style.display = 'block';
     selectNivInsOption();
@@ -152,17 +165,26 @@ document.getElementById('btnSecNivIns').addEventListener('click', () => {
 //                                       CLICK SUBCATEGORIA LABORAL
 // click cuando se hace click en nivel de desempleo
 document.getElementById('btnSecNivDes').addEventListener('click', () => {
+    document.getElementById("selectNivDesCountry").innerHTML = "";
+    document.getElementById("selectNivDesIndicator").innerHTML = "";
+    document.getElementById("selectNivDesDecade").innerHTML = "";
     sectionLab.style.display = 'none';
     document.getElementById("selectNivDes").style.display = 'block';
     selectNiveDesOption();
 })
 
 document.getElementById('btnSecLabFor').addEventListener('click', () => {
+    document.getElementById("selectLabForCountry").innerHTML = "";
+    document.getElementById("selectLabForIndicator").innerHTML = "";
+    document.getElementById("selectLabForDecade").innerHTML = "";
     sectionLab.style.display = 'none';
     document.getElementById("selectLabFor").style.display = 'block';
     selectForLabOption();
 });
 document.getElementById('btnSecParLab').addEventListener('click', () => {
+    document.getElementById("selectParLabCountry").innerHTML = "";
+    document.getElementById("selectParLabIndicator").innerHTML = "";
+    document.getElementById("selectParLabDecade").innerHTML = "";
     sectionLab.style.display = 'none';
     document.getElementById("selectParLab").style.display = 'block';
     selectParLabOption();
@@ -171,6 +193,9 @@ document.getElementById('btnSecParLab').addEventListener('click', () => {
 // click cuando se hace click en nivel de desempleo
 
 document.getElementById('btnSecNivVio').addEventListener('click', () => {
+    document.getElementById("selectNivVioCountry").innerHTML = "";
+    document.getElementById("selectNivVioIndicator").innerHTML = "";
+    document.getElementById("selectNivVioDecade").innerHTML = "";
     sectionSoc.style.display = 'none';
     document.getElementById("selectNivVio").style.display = 'block';
     selectNivVioOption();
