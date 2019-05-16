@@ -1018,6 +1018,7 @@ function selectNivVioOption() {
 //                                                                     FUNCTION ORDER
 
 //EVENT - FUNCTION ORDER ASCEN
+
 document.getElementById("orderAZbtn").addEventListener("click", () => {
     const WORLDBANK = window.WORLDBANK;
     const dataGeneral = WORLDBANK;
@@ -1114,9 +1115,9 @@ document.getElementById("btnInformacion").addEventListener("click", () => {
     info();
 
 
-
-
-
-
 });
 
+    document.getElementById('closeModalbtn').addEventListener('click', () => {
+        document.getElementById("containerInformacion").innerHTML = "";
+     
+    });
