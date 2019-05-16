@@ -17,16 +17,17 @@ nav.navbar, navbar-toggler {
     background-color: transparent;
     color: white;
     border:none;
+    margin-right: 1rem;
   }
   
-  #edubtn:hover, #socbtn:hover, #labbtn:hover, #homebtn:hover, #indexbtn:hover {
+  #edubtn:hover, #socbtn:hover, #labbtn:hover, #contactbtn:hover, #homebtn:hover, #indexbtn:hover {
     background-color: transparent;
     color:#F7C3E5;
     border:none;
   }
   
   header {
-    background-color:#FCEE5B;
+    background-color:#ffa;
     height: 9.6rem;
     
   
@@ -44,7 +45,7 @@ nav.navbar, navbar-toggler {
 aside {
 text-align: center;
 top: 1.25rem;
-background: #FCEE5B;
+background: #ffa;
 padding-top:2rem;
 
 }
@@ -60,7 +61,7 @@ padding-top:2rem;
 
 main {
 top: 1.25rem;
-background: #FCEE5B;
+background: #ffa;
 height:100%;
 padding-top:2rem;
 }
@@ -79,7 +80,7 @@ footer {
 
 #adds {
   top: 2.5rem;
-  background: #FCEE5B;
+  background: #ffa;
   }
   
 .card {  
@@ -98,7 +99,7 @@ height: 14rem;
 #selectNivEdu, #selectNivIns,#selectInsSco, #selectNivDes, #selectLabFor, #selectParLab, #selectNivVio{
   margin-left: 1rem;
 }
-#btnSection, #btnSecNivEdu, #btnSecNivIns, #btnSecInsSco, #btnSecNivDes, #btnSecLabFor, #btnSecParLab, #btnSecNivVio, #btnData, #btnDataNivIns, #btnDataInsSco, #btnDataNivDes, #btnDataLabFor, #btnDataParLab, #btnDataNivVio, #orderAZbtn, #orderZAbtn {
+#btnSection, #btnSecNivEdu, #btnSecNivIns, #btnSecInsSco, #btnSecNivDes, #btnSecLabFor, #btnSecParLab, #btnSecNivVio, #btnData, #btnDataNivIns, #btnDataInsSco, #btnDataNivDes, #btnDataLabFor, #btnDataParLab, #btnDataNivVio, #orderAZbtn, #orderZAbtn, #btnInformacion, #closeModalbtn {
 background-color: #F7C3E5;
 border-color: #F7C3E5;
 margin-bottom:6rem;
@@ -106,7 +107,7 @@ border-radius: 1rem;
 
 }
 
-#btnSection:hover, #btnSecNivEdu:hover, #btnSecNivIns:hover, #btnSecInsSco:hover, #btnSecNivDes:hover, #btnSecLabFor:hover, #btnSecParLab:hover, #btnSecNivVio:hover, #btnData:hover, #btnDataNivIns:hover, #btnDataInsSco:hover, #btnDataNivDes:hover, #btnDataLabFor:hover, #btnDataParLab:hover, #btnDataNivVio:hover, #orderAZbtn:hover, #orderZAbtn:hover{
+#btnSection:hover, #btnSecNivEdu:hover, #btnSecNivIns:hover, #btnSecInsSco:hover, #btnSecNivDes:hover, #btnSecLabFor:hover, #btnSecParLab:hover, #btnSecNivVio:hover, #btnData:hover, #btnDataNivIns:hover, #btnDataInsSco:hover, #btnDataNivDes:hover, #btnDataLabFor:hover, #btnDataParLab:hover, #btnDataNivVio:hover, #orderAZbtn:hover, #orderZAbtn:hover, #btnInformacion:hover,#closeModalbtn{
   background-color: palevioletred;
 }
 
@@ -126,11 +127,11 @@ border-radius: 1rem;
 
   table {
     overflow: hidden;
-    background-color: #ffa;
+    background-color: #f2f2f2;
     width: 40rem;
     height: 15rem;
     margin-left: 4rem;
-    margin-bottom: 20rem;
+    margin-bottom: 2rem;
     font-weight: bold;
     font-size: 20px;
     border-color: #F7C3E5
@@ -139,7 +140,7 @@ border-radius: 1rem;
 
 
   td:hover {
-    background-color: #FCEE5B;
+    background-color: #ffa;
     font-size: 30px;
   }
   
@@ -147,8 +148,13 @@ border-radius: 1rem;
   th:focus::after {
     background-color: lightblue;
   }
-  
-  
+  #exampleModal{
+   border-radius:1rem;
+
+  }
+  .modal-content{
+    background-color:#ffa;
+  }
   
 
   #ordenar{

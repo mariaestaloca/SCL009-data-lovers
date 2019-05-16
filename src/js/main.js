@@ -1070,7 +1070,7 @@ document.getElementById("btnInformacion").addEventListener("click", () => {
         const parrafoInfoDos = document.createElement("p");
         document.getElementById("containerInformacion").appendChild(parrafoInfoDos);
         const datoUnoMujeres = window.empleoOcupados(dataDesempleoTotal2017Mujeres, fuerzaDeTrabajoMujeres);
-        
+
         const datoDosHombres = window.empleoOcupados(dataDesempleoTotal2017Varones, fuerzaDeTrabajoVarones);
         parrafoInfoDos.innerHTML += "De lo cual, se puede obtener la cantidad de trabajadores ocupados y desocupados, segun calculos estos son:" +
             "\n Mujeres Trabajadoras Ocupadas = " + datoUnoMujeres + " miles" +
@@ -1079,7 +1079,9 @@ document.getElementById("btnInformacion").addEventListener("click", () => {
     }
     info();
 
-    // aqui una section para la informacion - aplicando function calcular en comparacion empleo por genero
+
+
+
 
 
 });
