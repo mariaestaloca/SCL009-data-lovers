@@ -1,13 +1,10 @@
-
-#INDICE:
+## INDICE:
 
  1. Preambulo 
  2. Resumen del Proyecto
  3. Objetivos del Proyecto
  4. Etapas del Proyecto
 
-
-<br/>
 
 ##EQUIDAD DE GENERO
 
@@ -56,11 +53,9 @@ EQUIDAD DE GENERO, página informativa.  Página Web que proporciona informació
 
 ### **4.2 Historias de usuario**
 
-
 #### Historia de Usuario:
-
-## Usuario nº1
-### Estudiante
+##Usuario nº1
+###Estudiante
 
 *Como estudiante quiero buscar la tasa de participacion de mujeres de 15 a 24 años en la fuerza laboral.*
 
@@ -291,3 +286,15 @@ Usamos de inspiración páginas feministas como "Bulletin" y también inspirando
 
 ### **4.5 Pruebas unitarias**
 Se realizó test unitarios con lo cual se tomo la desición de complementar la página con imágenes direccionadas al contenido deseado, me quito texto y privilegio el contenido. Se hicieron modificaciones el color de la página con el fin de mejor facilidad en la lectura. 
+
+
+###Extra
+<br>
+![Diagrama flujo código](http://g.gravizo.com/g?<br>
+@startuml;
+Object <|-- ArrayList;
+Object : equals%48%49;
+ArrayList : Object[] elementData;
+ArrayList : size%48%49;
+@enduml
+)

@@ -1,4 +1,3 @@
-
 const homePage = document.getElementById("homePage");
 const sectionEdu = document.getElementById("sectionEdu");
 const sectionLab = document.getElementById("sectionLab");
@@ -20,6 +19,9 @@ document.getElementById("selectLabFor").style.display = 'none'
 document.getElementById("selectParLab").style.display = 'none';
 document.getElementById("selectNivVio").style.display = 'none';
 document.getElementById("tableDataPage").style.display = 'none';
+document.getElementById("containerInformacion").style.display = 'none';
+document.getElementById("containerSelectCountry").style.display = 'none';
+document.getElementById("containerSelectDecade").style.display = 'none';
 
 
 
@@ -41,6 +43,8 @@ document.getElementById('edubtn').addEventListener('click', () => {
     homePage.style.display = 'none';
     document.getElementById("tableDataPage").style.display = 'none';
     sectionEdu.style.display = 'block';
+    document.getElementById("containerSelectCountry").style.display = 'none';
+    document.getElementById("containerSelectDecade").style.display = 'none';
 
 });
 // evento click categoria social
@@ -60,6 +64,8 @@ document.getElementById('socbtn').addEventListener('click', () => {
     document.getElementById("selectNivVio").style.display = 'none';
     document.getElementById("tableDataPage").style.display = 'none';
     sectionSoc.style.display = 'block';
+    document.getElementById("containerSelectCountry").style.display = 'none';
+    document.getElementById("containerSelectDecade").style.display = 'none';
 });
 // evento click categoria laboral
 document.getElementById('labbtn').addEventListener('click', () => {
@@ -78,6 +84,8 @@ document.getElementById('labbtn').addEventListener('click', () => {
     document.getElementById("selectNivVio").style.display = 'none';
     document.getElementById("tableDataPage").style.display = 'none';
     sectionLab.style.display = 'block';
+    document.getElementById("containerSelectCountry").style.display = 'none';
+    document.getElementById("containerSelectDecade").style.display = 'none';
 });
 // evento click en el home 
 document.getElementById('homebtn').addEventListener('click', () => {
@@ -96,6 +104,8 @@ document.getElementById('homebtn').addEventListener('click', () => {
     document.getElementById("selectNivVio").style.display = 'none';
     document.getElementById("tableDataPage").style.display = 'none';
     homePage.style.display = 'block';
+    document.getElementById("containerSelectCountry").style.display = 'none';
+    document.getElementById("containerSelectDecade").style.display = 'none';
 });
 
 document.getElementById('indexbtn').addEventListener('click', () => {
@@ -114,6 +124,8 @@ document.getElementById('indexbtn').addEventListener('click', () => {
     document.getElementById("selectNivVio").style.display = 'none';
     document.getElementById("tableDataPage").style.display = 'none';
     sectionOrder.style.display = 'block';
+    document.getElementById("containerSelectCountry").style.display = 'none';
+    document.getElementById("containerSelectDecade").style.display = 'none';
 });
 
 document.getElementById('contactbtn').addEventListener('click', () => {
@@ -132,73 +144,117 @@ document.getElementById('contactbtn').addEventListener('click', () => {
     document.getElementById("selectNivVio").style.display = 'none';
     document.getElementById("tableDataPage").style.display = 'none';
     contact.style.display = 'block';
+    document.getElementById("containerSelectCountry").style.display = 'none';
+    document.getElementById("containerSelectDecade").style.display = 'none';
 });
 //                                       CLICK SUBCATEGORIA EDUCACION 
 //click cuando se hace click en nivel de educacion 
 document.getElementById('btnSecNivEdu').addEventListener('click', () => {
-    document.getElementById("selectNivEduCountry").innerHTML = "";
+    document.getElementById("containerSelectCountry").style.display = 'block';
+    document.getElementById("containerSelectDecade").style.display = 'block';
+
+    document.getElementById("containerInformacion").style.display = 'block';
+
+    document.getElementById("selectCountry").innerHTML = "";
     document.getElementById("selectNivEduIndicator").innerHTML = "";
-    document.getElementById("selectNivEduDecade").innerHTML = "";
+    document.getElementById("selectDecade").innerHTML = "";
     sectionEdu.style.display = 'none';
     document.getElementById("selectNivEdu").style.display = 'block';
+ 
+    selectCountryGeneral();
     selectNivEduOption();
+    selectDecadeGeneral();
 });
 // click cuando se hace click en inscripcion escolar 
 document.getElementById('btnSecInsSco').addEventListener('click', () => {
-    document.getElementById("selectInsScoCountry").innerHTML = "";
+    document.getElementById("containerSelectCountry").style.display = 'block';
+    document.getElementById("containerSelectDecade").style.display = 'block';
+
+    document.getElementById("containerInformacion").style.display = 'block';
+
+    document.getElementById("selectCountry").innerHTML = "";
     document.getElementById("selectInsScoIndicator").innerHTML = "";
-    document.getElementById("selectInsScoDecade").innerHTML = "";
+    document.getElementById("selectDecade").innerHTML = "";
     sectionEdu.style.display = 'none';
     document.getElementById("selectInsSco").style.display = 'block';
+    selectCountryGeneral();
     selectInsScoOption();
+    selectDecadeGeneral();
 });
 // click cuando se hace click en nivel de inscripcion
 
 document.getElementById('btnSecNivIns').addEventListener('click', () => {
-    document.getElementById("selectNivInsCountry").innerHTML = "";
+    document.getElementById("containerSelectCountry").style.display = 'block';
+    document.getElementById("containerSelectDecade").style.display = 'block';
+
+    document.getElementById("containerInformacion").style.display = 'block';
+    document.getElementById("selectCountry").innerHTML = "";
     document.getElementById("selectNivInsIndicator").innerHTML = "";
-    document.getElementById("selectNivInsDecade").innerHTML = "";
+    document.getElementById("selectDecade").innerHTML = "";
     sectionEdu.style.display = 'none';
     document.getElementById("selectNivIns").style.display = 'block';
     selectNivInsOption();
+    selectCountryGeneral();
+    selectDecadeGeneral();
 });
 //                                       CLICK SUBCATEGORIA LABORAL
 // click cuando se hace click en nivel de desempleo
 document.getElementById('btnSecNivDes').addEventListener('click', () => {
-    document.getElementById("selectNivDesCountry").innerHTML = "";
+    document.getElementById("containerSelectCountry").style.display = 'block';
+    document.getElementById("containerSelectDecade").style.display = 'block';
+
+    document.getElementById("containerInformacion").style.display = 'block';
+    document.getElementById("selectCountry").innerHTML = "";
     document.getElementById("selectNivDesIndicator").innerHTML = "";
-    document.getElementById("selectNivDesDecade").innerHTML = "";
+    document.getElementById("selectDecade").innerHTML = "";
     sectionLab.style.display = 'none';
     document.getElementById("selectNivDes").style.display = 'block';
     selectNiveDesOption();
+    selectCountryGeneral();
+    selectDecadeGeneral();
 })
 
 document.getElementById('btnSecLabFor').addEventListener('click', () => {
-    document.getElementById("selectLabForCountry").innerHTML = "";
+    document.getElementById("containerSelectCountry").style.display = 'block';
+    document.getElementById("containerSelectDecade").style.display = 'block';
+    document.getElementById("containerInformacion").style.display = 'block';
+    document.getElementById("selectCountry").innerHTML = "";
     document.getElementById("selectLabForIndicator").innerHTML = "";
-    document.getElementById("selectLabForDecade").innerHTML = "";
+    document.getElementById("selectDecade").innerHTML = "";
     sectionLab.style.display = 'none';
     document.getElementById("selectLabFor").style.display = 'block';
     selectForLabOption();
+    selectCountryGeneral();
+    selectDecadeGeneral();
 });
 document.getElementById('btnSecParLab').addEventListener('click', () => {
-    document.getElementById("selectParLabCountry").innerHTML = "";
+    document.getElementById("containerSelectCountry").style.display = 'block';
+    document.getElementById("containerSelectDecade").style.display = 'block';
+    document.getElementById("containerInformacion").style.display = 'block';
+    document.getElementById("selectCountry").innerHTML = "";
     document.getElementById("selectParLabIndicator").innerHTML = "";
-    document.getElementById("selectParLabDecade").innerHTML = "";
+    document.getElementById("selectDecade").innerHTML = "";
     sectionLab.style.display = 'none';
     document.getElementById("selectParLab").style.display = 'block';
     selectParLabOption();
+    selectCountryGeneral();
+    selectDecadeGeneral();
 });
 //                                       CLICK SUBCATEGORIA SOCIAL
 // click cuando se hace click en nivel de desempleo
 
 document.getElementById('btnSecNivVio').addEventListener('click', () => {
-    document.getElementById("selectNivVioCountry").innerHTML = "";
+    document.getElementById("containerSelectCountry").style.display = 'block';
+    document.getElementById("containerSelectDecade").style.display = 'block';
+    document.getElementById("containerInformacion").style.display = 'block';
+    document.getElementById("selectCountry").innerHTML = "";
     document.getElementById("selectNivVioIndicator").innerHTML = "";
-    document.getElementById("selectNivVioDecade").innerHTML = "";
+    document.getElementById("selectDecade").innerHTML = "";
     sectionSoc.style.display = 'none';
     document.getElementById("selectNivVio").style.display = 'block';
     selectNivVioOption();
+    selectCountryGeneral();
+    selectDecadeGeneral();
 })
 
 
@@ -209,216 +265,96 @@ let question = "";
 let country = "";
 let condition = "";
 
-//       S  E  L  E  C  T  I  O  N      O  F     T  H  E     U  S  E  R
+//                                     S  E  L  E  C  T  I  O  N      O  F     T  H  E     U  S  E  R
 // STORING USER SELECTION - LEVEL OF EDUCATION
-// Country Selection:
-const selectNivEduCountrySave = document.getElementById("selectNivEduCountry");
-selectNivEduCountrySave.addEventListener("change", () => {
-    condition = selectNivEduCountrySave.options[selectNivEduCountrySave.selectedIndex].text;
+// Country
+
+const selectCountrySave = document.getElementById("selectCountry");
+selectCountrySave.addEventListener("change", () => {
+    condition = selectCountrySave.options[selectCountrySave.selectedIndex].text;
 
     pais(condition);
 });
-// Indicators Selection:
+
+
+//                                       I  N  D  I  C  A  T  O  R  S
+// Indicators nivel educacion
 const selectNivEduIndicatorSave = document.getElementById("selectNivEduIndicator");
 // const containerDos = document.getElementById("containerselectNivEduPreguntas");
 selectNivEduIndicatorSave.addEventListener("change", () => {
     question = selectNivEduIndicatorSave.options[selectNivEduIndicatorSave.selectedIndex].text;
 
 });
-//Year Selection
-const selectNivEduDecadeSave = document.getElementById("selectNivEduDecade");
-// const year = document.getElementById("containerselectNivEduDecada");
-selectNivEduDecadeSave.addEventListener("change", () => {
-    year = selectNivEduDecadeSave.options[selectNivEduDecadeSave.selectedIndex].text;
-
-});
-// STORING USER SELECTION - SCHOOL REGISTRATION
-// Country Selection:
-const selectInsScoCountrySave = document.getElementById("selectInsScoCountry");
-selectInsScoCountrySave.addEventListener("change", () => {
-    condition = selectInsScoCountrySave.options[selectInsScoCountrySave.selectedIndex].text;
-
-    pais(condition);
-});
-// Indicators Selection:
+// Indicators Inscripcion Escolar
 const selectInsScoIndicatorSave = document.getElementById("selectInsScoIndicator");
 // const containerDos = document.getElementById("containerselectNivEduPreguntas");
 selectInsScoIndicatorSave.addEventListener("change", () => {
     question = selectInsScoIndicatorSave.options[selectInsScoIndicatorSave.selectedIndex].text;
 
 });
-//Year Selection
-const selectInsScoDecadeSave = document.getElementById("selectInsScoDecade");
-selectInsScoDecadeSave.addEventListener("change", () => {
-    year = selectInsScoDecadeSave.options[selectInsScoDecadeSave.selectedIndex].text;
-
-});
-// STORING USER SELECTION - LEVEL OF INSTRUCTION 
-// Country Selection:
-const selectNivInsCountrySave = document.getElementById("selectNivInsCountry");
-selectNivInsCountrySave.addEventListener("change", () => {
-    condition = selectNivInsCountrySave.options[selectNivInsCountrySave.selectedIndex].text;
-
-    pais(condition);
-});
-// Indicators Selection:  
+// Indicators Nivel de instruccion 
 const selectNivInsIndicatorSave = document.getElementById("selectNivInsIndicator");
 selectNivInsIndicatorSave.addEventListener("change", () => {
     question = selectNivInsIndicatorSave.options[selectNivInsIndicatorSave.selectedIndex].text;
-
 });
-//Year Selection
-const selectNivInsDecadeSave = document.getElementById("selectNivInsDecade");
-selectNivInsDecadeSave.addEventListener("change", () => {
-    year = selectNivInsDecadeSave.options[selectNivInsDecadeSave.selectedIndex].text;
-
-});
-// STORING USER SELECTION -   LEVEL OF UNEMPLOYMENT
-// Country Selection:
-const selectNivDesCountrySave = document.getElementById("selectNivDesCountry");
-selectNivDesCountrySave.addEventListener("change", () => {
-    condition = selectNivDesCountrySave.options[selectNivDesCountrySave.selectedIndex].text;
-
-    pais(condition);
-});
-// Indicators Selection:  
+// Indicators Nivel de Desempleo
 const selectNivDesIndicatorSave = document.getElementById("selectNivDesIndicator");
 selectNivDesIndicatorSave.addEventListener("change", () => {
     question = document.getElementById("selectNivDesIndicator").options[document.getElementById("selectNivDesIndicator").selectedIndex].text;
-
 });
-//Year Selection
-const selectNivDesDecadeSave = document.getElementById("selectNivDesDecade");
-selectNivDesDecadeSave.addEventListener("change", () => {
-    year = selectNivDesDecadeSave.options[selectNivDesDecadeSave.selectedIndex].text;
-
-});
-// obteniendo eleccion de usuario -   FUERZA LABORAL
-const selectLabForCountrySave = document.getElementById("selectLabForCountry");
-selectLabForCountrySave.addEventListener("change", () => {
-    condition = selectLabForCountrySave.options[selectLabForCountrySave.selectedIndex].text;
-
-    pais(condition);
-});
-
+// Indicators Fuerza Laboral
 const selectLabForIndicatorSave = document.getElementById("selectLabForIndicator");
 selectLabForIndicatorSave.addEventListener("change", () => {
     question = selectLabForIndicatorSave.options[selectLabForIndicatorSave.selectedIndex].text;
-
 });
-const selectLabForDecadeSave = document.getElementById("selectLabForDecade");
-selectLabForDecadeSave.addEventListener("change", () => {
-    year = selectLabForDecadeSave.options[selectLabForDecadeSave.selectedIndex].text;
-
-});
-// obteniendo eleccion de usuario -   PARTICIPACION LABORAL 
-const selectParLabCountrySave = document.getElementById("selectParLabCountry");
-selectParLabCountrySave.addEventListener("change", () => {
-    condition = selectParLabCountrySave.options[selectParLabCountrySave.selectedIndex].text;
-
-    pais(condition);
-});
-
+// Indicators Participacion Laboral
 const selectParLabIndicatorSave = document.getElementById("selectParLabIndicator");
 selectParLabIndicatorSave.addEventListener("change", () => {
     question = selectParLabIndicatorSave.options[selectParLabIndicatorSave.selectedIndex].text;
-
 });
-const selectParLabDecadeSave = document.getElementById("selectParLabDecade");
-selectParLabDecadeSave.addEventListener("change", () => {
-    year = selectParLabDecadeSave.options[selectParLabDecadeSave.selectedIndex].text;
-
-});
-// obteniendo eleccion de usuario -   NIVEL DE VIOLENCIA INTRAFAMILIAR
-const selectNivVioCountrySave = document.getElementById("selectNivVioCountry");
-selectNivVioCountrySave.addEventListener("change", () => {
-    condition = selectNivVioCountrySave.options[selectNivVioCountrySave.selectedIndex].text;
-
-    pais(condition);
-});
-
+// Indicators Nivel violencia 
 const selectNivVioIndicatorSave = document.getElementById("selectNivVioIndicator");
 selectNivVioIndicatorSave.addEventListener("change", () => {
     question = selectNivVioIndicatorSave.options[selectNivVioIndicatorSave.selectedIndex].text;
-
 });
-const selectNivVioDecadeSave = document.getElementById("selectNivVioDecade");
-selectNivVioDecadeSave.addEventListener("change", () => {
-    year = selectNivVioDecadeSave.options[selectNivVioDecadeSave.selectedIndex].text;
 
+//                          Y E A R  == D E C A D E 
+// D   E   C   A   D   E
+
+const selectDecadeSave = document.getElementById("selectDecade");
+// const year = document.getElementById("containerselectNivEduDecada");
+selectDecadeSave.addEventListener("change", () => {
+    year = selectDecadeSave.options[selectDecadeSave.selectedIndex].text;
 });
+
 //   M O S T R A R      D A T O S ; 
 //VARIABLES VACIAS fx aplicar()
 
-document.getElementById("btnData").addEventListener("click", () => {
-    if (year == "" || question == "" || country == "") {
-        alert("Debe completar todos los datos requeridos");
-    } else {
-        window.aplicar(year, question, country);
-        document.getElementById("selectNivEdu").style.display = 'none';
-        document.getElementById("tableDataPage").style.display = 'block';
-    }
-});
-document.getElementById("btnDataInsSco").addEventListener("click", () => {
-    if (year == "" || question == "" || country == "") {
-        alert("Debe completar todos los datos requeridos");
-    } else {
-        window.aplicar(year, question, country);
-        document.getElementById("selectInsSco").style.display = 'none';
-        document.getElementById("tableDataPage").style.display = 'block';
-    }
+// Aqui hay que hacer una linea de codigo de un solo boto cuando ese boton haya click toma el valor de los select 
+document.getElementById("btnGenerandoTable").addEventListener("click", () => {
+    document.getElementById("containerSelectCountry").style.display = 'none';
+    document.getElementById("containerSelectDecade").style.display = 'none';
 
-});
-document.getElementById("btnDataNivIns").addEventListener("click", () => {
+    document.getElementById("selectNivEdu").style.display = 'none';
+    document.getElementById("selectNivIns").style.display = 'none';
+    document.getElementById("selectNivIns").style.display = 'none';
+    document.getElementById("selectNivDes").style.display = 'none';
+    document.getElementById("selectLabFor").style.display = 'none'
+    document.getElementById("selectParLab").style.display = 'none';
+    document.getElementById("selectNivVio").style.display = 'none';
+    
+
+  
     if (year == "" || question == "" || country == "") {
         alert("Debe completar todos los datos requeridos");
     } else {
         window.aplicar(year, question, country);
-        document.getElementById("selectNivIns").style.display = 'none';
         document.getElementById("tableDataPage").style.display = 'block';
+        document.getElementById("containeBtnGenerandoTable").style.display = 'none';
     }
-
 });
-document.getElementById("btnDataNivDes").addEventListener("click", () => {
-    if (year == "" || question == "" || country == "") {
-        alert("Debe completar todos los datos requeridos");
-    } else {
-        window.aplicar(year, question, country);
-        document.getElementById("selectNivDes").style.display = 'none';
-        document.getElementById("tableDataPage").style.display = 'block';
-    }
 
-});
-document.getElementById("btnDataLabFor").addEventListener("click", () => {
-    if (year == "" || question == "" || country == "") {
-        alert("Debe completar todos los datos requeridos");
-    } else {
-        window.aplicar(year, question, country);
-        document.getElementById("selectLabFor").style.display = 'none';
-        document.getElementById("tableDataPage").style.display = 'block';
-    }
 
-});
-document.getElementById("btnDataParLab").addEventListener("click", () => {
-    if (year == "" || question == "" || country == "") {
-        alert("Debe completar todos los datos requeridos");
-    } else {
-        window.aplicar(year, question, country);
-        document.getElementById("selectParLab").style.display = 'none';
-        document.getElementById("tableDataPage").style.display = 'block';
-    }
-
-});
-document.getElementById("btnDataNivVio").addEventListener("click", () => {
-    if (year == "" || question == "" || country == "") {
-        alert("Debe completar todos los datos requeridos");
-    } else {
-        window.aplicar(year, question, country);
-        document.getElementById("selectNivVio").style.display = 'none';
-        document.getElementById("tableDataPage").style.display = 'block';
-    }
-
-});
 // funcion condicional pais
 function pais(condition) {
     if (condition === "PERU") {
@@ -432,8 +368,6 @@ function pais(condition) {
     }
     //  return country;
 }
-
-
 
 const arrSelectGralCountry = ["PERU", "MEXICO", "BRASIL", "CHILE"];
 
@@ -509,15 +443,14 @@ const arrseleccNioVioIndicators = ["Mujeres que creen que está justificado que 
 
 //     F U N C T I O N S   C R E A T I O N    S E L E C T 
 //            EDUCACION
+//     creacion de select generales = country y decade 
+function selectCountryGeneral(){
 
-//     creacion de select para nivel de educacion
 
-function selectNivEduOption() {
-    //Tu array de PAISES  aqui en el array tenemos el contenido de las opciones y tienen un id por pais PER,MEX,BRA,CHL
-    let selectCountryNivEdu = document.getElementById("selectNivEduCountry");
+    let selectCountry = document.getElementById("selectCountry");
 
     let option = document.createElement("option");  //opcion por defecto
-    selectCountryNivEdu.appendChild(option);
+    selectCountry.appendChild(option);
     option.setAttribute("value", "id");
     option.value = ""
     option.innerHTML = "Seleccione..."
@@ -526,13 +459,62 @@ function selectNivEduOption() {
     for (let m = 0; m < arrSelectGralCountry.length; m++) {
 
         let option = document.createElement("option");
-        selectCountryNivEdu.appendChild(option); //Metemos la opción en el select
+        selectCountry.appendChild(option); //Metemos la opción en el select
         option.setAttribute("value", "id"); //Creamos la opcion y se le dan los atriculos
 
         option.value = m;
         option.id = arrSelectGralCountry[m];
         option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
     }
+
+}
+
+function selectDecadeGeneral(){
+
+    let selecIntervalos = document.getElementById("selectDecade");
+    //opcion por defecto
+    option = document.createElement("option");
+    selecIntervalos.appendChild(option);
+    option.setAttribute("value", "id");
+    option.value = ""
+    option.innerHTML = "Seleccione..."
+
+    for (let m = 0; m < intervalos.length; m++) {
+
+        let option = document.createElement("option");
+        selecIntervalos.appendChild(option); //Metemos la opción en el select
+
+        option.setAttribute("value", "id"); //Creamos la opcion y se le dan los atriculos
+
+        option.value = m;
+        option.id = intervalos[m];
+        option.innerHTML = intervalos[m]; //Metemos el texto en la opción
+    }
+    
+}
+
+//     creacion de select para nivel de educacion
+function selectNivEduOption() {
+    //Tu array de PAISES  aqui en el array tenemos el contenido de las opciones y tienen un id por pais PER,MEX,BRA,CHL
+    // let selectCountryNivEdu = document.getElementById("selectNivEduCountry");
+
+    // let option = document.createElement("option");  //opcion por defecto
+    // selectCountryNivEdu.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
+
+    // //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
+    // for (let m = 0; m < arrSelectGralCountry.length; m++) {
+
+    //     let option = document.createElement("option");
+    //     selectCountryNivEdu.appendChild(option); //Metemos la opción en el select
+    //     option.setAttribute("value", "id"); //Creamos la opcion y se le dan los atriculos
+
+    //     option.value = m;
+    //     option.id = arrSelectGralCountry[m];
+    //     option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
+    // }
 
     let selectIndicatorNivEdu = document.getElementById("selectNivEduIndicator");
 
@@ -555,54 +537,53 @@ function selectNivEduOption() {
         option.innerHTML = arrSelectNivEduIndicators[m]; //Metemos el texto en la opción
     }
 
-    let selecIntervalosNivEdu = document.getElementById("selectNivEduDecade");
-    //opcion por defecto
-    option = document.createElement("option");
-    selecIntervalosNivEdu.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
+    // let selecIntervalosNivEdu = document.getElementById("selectNivEduDecade");
+    // //opcion por defecto
+    // option = document.createElement("option");
+    // selecIntervalosNivEdu.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
 
-    for (let m = 0; m < intervalos.length; m++) {
+    // for (let m = 0; m < intervalos.length; m++) {
 
-        let option = document.createElement("option");
-        selecIntervalosNivEdu.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selecIntervalosNivEdu.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id"); //Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id"); //Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = intervalos[m];
-        option.innerHTML = intervalos[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = intervalos[m];
+    //     option.innerHTML = intervalos[m]; //Metemos el texto en la opción
+    // }
 }
-
 // creacion de select para Inscripcion Escolar
 function selectInsScoOption() {
 
     //Tu array de PAISES  aqui en el array tenemos el contenido de las opciones y tienen un id por pais PER,MEX,BRA,CHL
-    let selectCountryNivEdu = document.getElementById("selectInsScoCountry");
+    // let selectCountryNivEdu = document.getElementById("selectInsScoCountry");
 
-    //opcion por defecto
-    let option = document.createElement("option");
-    selectCountryNivEdu.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
+    // //opcion por defecto
+    // let option = document.createElement("option");
+    // selectCountryNivEdu.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
 
 
-    //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
-    for (let m = 0; m < arrSelectGralCountry.length; m++) {
+    // //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
+    // for (let m = 0; m < arrSelectGralCountry.length; m++) {
 
-        let option = document.createElement("option");
-        selectCountryNivEdu.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selectCountryNivEdu.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id");
-        //Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id");
+    //     //Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = arrSelectGralCountry[m];
-        option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = arrSelectGralCountry[m];
+    //     option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
+    // }
 
     let selectIndicatorInsSco = document.getElementById("selectInsScoIndicator");
 
@@ -626,53 +607,52 @@ function selectInsScoOption() {
         option.innerHTML = arrselectInsScoIndicators[m]; //Metemos el texto en la opción
     }
 
-    let selecIntervalosNivEdu = document.getElementById("selectInsScoDecade");
-    //opcion por defecto
-    option = document.createElement("option");
-    selecIntervalosNivEdu.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
-    for (let m = 0; m < intervalos.length; m++) {
+    // let selecIntervalosNivEdu = document.getElementById("selectInsScoDecade");
+    // //opcion por defecto
+    // option = document.createElement("option");
+    // selecIntervalosNivEdu.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
+    // for (let m = 0; m < intervalos.length; m++) {
 
-        let option = document.createElement("option");
-        selecIntervalosNivEdu.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selecIntervalosNivEdu.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id");//Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id");//Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = intervalos[m];
-        option.innerHTML = intervalos[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = intervalos[m];
+    //     option.innerHTML = intervalos[m]; //Metemos el texto en la opción
+    // }
 }
-
 // creacion de select para Nivel de instruccion 
 function selectNivInsOption() {
 
     //Tu array de PAISES  aqui en el array tenemos el contenido de las opciones y tienen un id por pais PER,MEX,BRA,CHL
-    let selectCountryNivIns = document.getElementById("selectNivInsCountry");
+    // let selectCountryNivIns = document.getElementById("selectNivInsCountry");
 
-    //opcion por defecto
-    let option = document.createElement("option");
-    selectCountryNivIns.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
+    // //opcion por defecto
+    // let option = document.createElement("option");
+    // selectCountryNivIns.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
 
 
-    //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
-    for (let m = 0; m < arrSelectGralCountry.length; m++) {
+    // //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
+    // for (let m = 0; m < arrSelectGralCountry.length; m++) {
 
-        let option = document.createElement("option");
-        selectCountryNivIns.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selectCountryNivIns.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id");
-        //Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id");
+    //     //Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = arrSelectGralCountry[m];
-        option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = arrSelectGralCountry[m];
+    //     option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
+    // }
 
     let selectIndicatorNivIns = document.getElementById("selectNivInsIndicator");
 
@@ -696,54 +676,53 @@ function selectNivInsOption() {
         option.innerHTML = arrselectNivInsIndicators[m]; //Metemos el texto en la opción
     }
 
-    let selecIntervalosNivIns = document.getElementById("selectNivInsDecade");
-    //opcion por defecto
-    option = document.createElement("option");
-    selecIntervalosNivIns.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
-    for (let m = 0; m < intervalos.length; m++) {
+    // let selecIntervalosNivIns = document.getElementById("selectNivInsDecade");
+    // //opcion por defecto
+    // option = document.createElement("option");
+    // selecIntervalosNivIns.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
+    // for (let m = 0; m < intervalos.length; m++) {
 
-        let option = document.createElement("option");
-        selecIntervalosNivIns.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selecIntervalosNivIns.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id");//Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id");//Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = intervalos[m];
-        option.innerHTML = intervalos[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = intervalos[m];
+    //     option.innerHTML = intervalos[m]; //Metemos el texto en la opción
+    // }
 }
 
-//            LABORAL 
-
+//           LABORAL 
 // creacion de select para Nivel de Desempleo
 function selectNiveDesOption() {
 
     // se crea contenedor del select en pais 
-    let selectCountryNivDes = document.getElementById("selectNivDesCountry");
-    //opcion por defecto
-    let option = document.createElement("option");
-    selectCountryNivDes.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
+    // let selectCountryNivDes = document.getElementById("selectNivDesCountry");
+    // //opcion por defecto
+    // let option = document.createElement("option");
+    // selectCountryNivDes.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
 
 
-    //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
-    for (let m = 0; m < arrSelectGralCountry.length; m++) {
+    // //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
+    // for (let m = 0; m < arrSelectGralCountry.length; m++) {
 
-        let option = document.createElement("option");
-        selectCountryNivDes.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selectCountryNivDes.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id");
-        //Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id");
+    //     //Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = arrSelectGralCountry[m];
-        option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = arrSelectGralCountry[m];
+    //     option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
+    // }
 
     let selectIndicatorNivDes = document.getElementById("selectNivDesIndicator");
 
@@ -767,54 +746,54 @@ function selectNiveDesOption() {
         option.innerHTML = arrselectNivDesIndicators[m]; //Metemos el texto en la opción
     }
 
-    let selecIntervalosNivDes = document.getElementById("selectNivDesDecade");
-    //opcion por defecto
-    option = document.createElement("option");
-    selecIntervalosNivDes.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
-    // se toma los valores de los años y se crea la variable intervalos(aunque por mientras los valores estan de manera 
-    // general, es decir año a año desde 1990 hasta 2018-2017, lugo se espera crear intervalos).
-    for (let m = 0; m < intervalos.length; m++) {
+    // let selecIntervalosNivDes = document.getElementById("selectNivDesDecade");
+    // //opcion por defecto
+    // option = document.createElement("option");
+    // selecIntervalosNivDes.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
+    // // se toma los valores de los años y se crea la variable intervalos(aunque por mientras los valores estan de manera 
+    // // general, es decir año a año desde 1990 hasta 2018-2017, lugo se espera crear intervalos).
+    // for (let m = 0; m < intervalos.length; m++) {
 
-        let option = document.createElement("option");
-        selecIntervalosNivDes.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selecIntervalosNivDes.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id"); //Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id"); //Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = intervalos[m];
-        option.innerHTML = intervalos[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = intervalos[m];
+    //     option.innerHTML = intervalos[m]; //Metemos el texto en la opción
+    // }
 }
 
 // creacion de select para Fuerza Laboral
 function selectForLabOption() {
 
     // se crea contenedor del select en pais 
-    let selectCountryLabFor = document.getElementById("selectLabForCountry");
-    //opcion por defecto
-    let option = document.createElement("option");
-    selectCountryLabFor.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
+    // let selectCountryLabFor = document.getElementById("selectLabForCountry");
+    // //opcion por defecto
+    // let option = document.createElement("option");
+    // selectCountryLabFor.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
 
 
-    //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
-    for (let m = 0; m < arrSelectGralCountry.length; m++) {
+    // //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
+    // for (let m = 0; m < arrSelectGralCountry.length; m++) {
 
-        let option = document.createElement("option");
-        selectCountryLabFor.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selectCountryLabFor.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id");
-        //Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id");
+    //     //Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = arrSelectGralCountry[m];
-        option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = arrSelectGralCountry[m];
+    //     option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
+    // }
 
 
     let selectIndicatorLabFor = document.getElementById("selectLabForIndicator");
@@ -840,55 +819,55 @@ function selectForLabOption() {
         option.innerHTML = arrselectLabForIndicators[m]; //Metemos el texto en la opción
     }
 
-    let selectIntervalosLabFor = document.getElementById("selectLabForDecade");
-    //opcion por defecto
-    option = document.createElement("option");
-    selectIntervalosLabFor.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
-    // se toma los valores de los años y se crea la variable intervalos(aunque por mientras los valores estan de manera 
-    // general, es decir año a año desde 1990 hasta 2018-2017, lugo se espera crear intervalos).
-    for (let m = 0; m < intervalos.length; m++) {
+    // let selectIntervalosLabFor = document.getElementById("selectLabForDecade");
+    // //opcion por defecto
+    // option = document.createElement("option");
+    // selectIntervalosLabFor.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
+    // // se toma los valores de los años y se crea la variable intervalos(aunque por mientras los valores estan de manera 
+    // // general, es decir año a año desde 1990 hasta 2018-2017, lugo se espera crear intervalos).
+    // for (let m = 0; m < intervalos.length; m++) {
 
-        let option = document.createElement("option");
-        selectIntervalosLabFor.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selectIntervalosLabFor.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id");
-        //Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id");
+    //     //Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = intervalos[m];
-        option.innerHTML = intervalos[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = intervalos[m];
+    //     option.innerHTML = intervalos[m]; //Metemos el texto en la opción
+    // }
 }
 
 // creacion de select para Participacion Laboral 
 function selectParLabOption() {
 
     // se crea contenedor del select en pais 
-    let selectCountryParLab = document.getElementById("selectParLabCountry");
-    //opcion por defecto
-    let option = document.createElement("option");
-    selectCountryParLab.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
+    // let selectCountryParLab = document.getElementById("selectParLabCountry");
+    // //opcion por defecto
+    // let option = document.createElement("option");
+    // selectCountryParLab.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
 
 
-    //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
-    for (let m = 0; m < arrSelectGralCountry.length; m++) {
+    // //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
+    // for (let m = 0; m < arrSelectGralCountry.length; m++) {
 
-        let option = document.createElement("option");
-        selectCountryParLab.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selectCountryParLab.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id");
-        //Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id");
+    //     //Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = arrSelectGralCountry[m];
-        option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = arrSelectGralCountry[m];
+    //     option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
+    // }
 
 
     let selectIndicatorLabPar = document.getElementById("selectParLabIndicator");
@@ -914,60 +893,56 @@ function selectParLabOption() {
         option.innerHTML = arrselectLabParIndicators[m]; //Metemos el texto en la opción
     }
 
-    let selecIntervalosLabPar = document.getElementById("selectParLabDecade");
-    //opcion por defecto
-    option = document.createElement("option");
-    selecIntervalosLabPar.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
-    // se toma los valores de los años y se crea la variable intervalos(aunque por mientras los valores estan de manera 
-    // general, es decir año a año desde 1990 hasta 2018-2017, lugo se espera crear intervalos).
-    for (let m = 0; m < intervalos.length; m++) {
+    // let selecIntervalosLabPar = document.getElementById("selectParLabDecade");
+    // //opcion por defecto
+    // option = document.createElement("option");
+    // selecIntervalosLabPar.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
+    // // se toma los valores de los años y se crea la variable intervalos(aunque por mientras los valores estan de manera 
+    // // general, es decir año a año desde 1990 hasta 2018-2017, lugo se espera crear intervalos).
+    // for (let m = 0; m < intervalos.length; m++) {
 
-        let option = document.createElement("option");
-        selecIntervalosLabPar.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selecIntervalosLabPar.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id");
-        //Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id");
+    //     //Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = intervalos[m];
-        option.innerHTML = intervalos[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = intervalos[m];
+    //     option.innerHTML = intervalos[m]; //Metemos el texto en la opción
+    // }
 
 }
-
-
-
 //            SOCIAL
-
 // creacion de select para Nivel de Desempleo
 function selectNivVioOption() {
 
     // se crea contenedor del select en pais 
-    let selectCountryNivVio = document.getElementById("selectNivVioCountry");
-    //opcion por defecto
-    let option = document.createElement("option");
-    selectCountryNivVio.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
+    // let selectCountryNivVio = document.getElementById("selectNivVioCountry");
+    // //opcion por defecto
+    // let option = document.createElement("option");
+    // selectCountryNivVio.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
 
 
-    //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
-    for (let m = 0; m < arrSelectGralCountry.length; m++) {
+    // //Seleccionamos el select que contiene los paises para poder vincularlo  // con la variable fijada arriba ""
+    // for (let m = 0; m < arrSelectGralCountry.length; m++) {
 
-        let option = document.createElement("option");
-        selectCountryNivVio.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selectCountryNivVio.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id");
-        //Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id");
+    //     //Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = arrSelectGralCountry[m];
-        option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = arrSelectGralCountry[m];
+    //     option.innerHTML = arrSelectGralCountry[m]; //Metemos el texto en la opción
+    // }
 
 
     let selectIndicatorNivVio = document.getElementById("selectNivVioIndicator");
@@ -993,35 +968,36 @@ function selectNivVioOption() {
         option.innerHTML = arrseleccNioVioIndicators[m]; //Metemos el texto en la opción
     }
 
-    let selecIntervalosNivVio = document.getElementById("selectNivVioDecade");
-    //opcion por defecto
-    option = document.createElement("option");
-    selecIntervalosNivVio.appendChild(option);
-    option.setAttribute("value", "id");
-    option.value = ""
-    option.innerHTML = "Seleccione..."
-    // se toma los valores de los años y se crea la variable intervalos(aunque por mientras los valores estan de manera 
-    // general, es decir año a año desde 1990 hasta 2018-2017, lugo se espera crear intervalos).
-    for (let m = 0; m < intervalos.length; m++) {
+    // let selecIntervalosNivVio = document.getElementById("selectNivVioDecade");
+    // //opcion por defecto
+    // option = document.createElement("option");
+    // selecIntervalosNivVio.appendChild(option);
+    // option.setAttribute("value", "id");
+    // option.value = ""
+    // option.innerHTML = "Seleccione..."
+    // // se toma los valores de los años y se crea la variable intervalos(aunque por mientras los valores estan de manera 
+    // // general, es decir año a año desde 1990 hasta 2018-2017, lugo se espera crear intervalos).
+    // for (let m = 0; m < intervalos.length; m++) {
 
-        let option = document.createElement("option");
-        selecIntervalosNivVio.appendChild(option); //Metemos la opción en el select
+    //     let option = document.createElement("option");
+    //     selecIntervalosNivVio.appendChild(option); //Metemos la opción en el select
 
-        option.setAttribute("value", "id");
-        //Creamos la opcion y se le dan los atriculos
+    //     option.setAttribute("value", "id");
+    //     //Creamos la opcion y se le dan los atriculos
 
-        option.value = m;
-        option.id = intervalos[m];
-        option.innerHTML = intervalos[m]; //Metemos el texto en la opción
-    }
+    //     option.value = m;
+    //     option.id = intervalos[m];
+    //     option.innerHTML = intervalos[m]; //Metemos el texto en la opción
+    // }
 }
+
 //                                                                     FUNCTION ORDER
 
 //EVENT - FUNCTION ORDER ASCEN
 document.getElementById("orderAZbtn").addEventListener("click", () => {
     const WORLDBANK = window.WORLDBANK;
-    const dataGeneral = WORLDBANK;
-    window.orderData(dataGeneral);
+    const dataGral = WORLDBANK;
+    window.orderData(dataGral);
     const resultFxOrdenar = window.orderData(WORLDBANK);
 
     function creandoListaorderData(resultFxOrdenar) {
@@ -1042,8 +1018,8 @@ document.getElementById("orderAZbtn").addEventListener("click", () => {
 // // EVENT - FUNCTION ORDER DESC
 document.getElementById("orderZAbtn").addEventListener("click", () => {
     const WORLDBANK = window.WORLDBANK;
-    const dataGeneral = WORLDBANK;
-    window.orderDataDes(dataGeneral);
+    const dataGral = WORLDBANK;
+    window.orderDataDes(dataGral);
     const resultFxOrdenarDes = window.orderDataDes(WORLDBANK);
 
     function creandoListaorderDataDes(resultFxOrdenarDes) {
@@ -1063,7 +1039,6 @@ document.getElementById("orderZAbtn").addEventListener("click", () => {
     document.getElementById("orderZAbtn").disabled = true;
 
 });
-
 
 document.getElementById("btnInformacion").addEventListener("click", () => {
 
